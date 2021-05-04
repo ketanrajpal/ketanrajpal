@@ -1,6 +1,6 @@
 const fs = require("fs");
 const dotenv = require("dotenv");
-const lodash = require("lodash");
+
 dotenv.config();
 
 const { WebConfigurations, Employment, Education, Awards, FollowMe, Technology, TechnologyTemplate } = require("./modules");
@@ -8,9 +8,6 @@ const { WebConfigurations, Employment, Education, Awards, FollowMe, Technology, 
 let content = "";
 
 WebConfigurations((data) => {
-  let stack = data.filter((o) => {
-    return o.name === "current stack";
-  });
   content = `
   ### :necktie: Ketan Rajpal
   ${
@@ -19,7 +16,11 @@ WebConfigurations((data) => {
     })[0].value
   }
   
-  ### :octocat: Download my resume [here](https://ketanrajpal.dev/resume.pdf)
+  ### :beers: Download my resume [here](${
+    data.filter((o) => {
+      return o.name === "resume";
+    })[0].value
+  })
   
   `;
   content += `### :rocket: Technologies.
@@ -46,7 +47,7 @@ WebConfigurations((data) => {
   `;
         });
         Awards((data) => {
-          content += `### :beers: Awards.
+          content += `### :trophy: Awards.
   `;
           data.forEach((record) => {
             content += `* **${record.position === 1 ? "1st" : "2nd"}** position in **${record.event}** :point_right: ${record.institution}

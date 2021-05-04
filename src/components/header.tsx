@@ -7,12 +7,12 @@ const Header = () => {
         </h1>
       </div>
       <div className="contact">
-        <a href="mailto:contact@ketanrajpal.dev">
-          email. <span>contact@ketanrajpal.dev</span>
+        <a href="mailto:info@krpl.in">
+          email. <span>info@krpl.in</span>
         </a>
       </div>
       <div className="contact">
-        <a href="mailto:contact@ketanrajpal.dev">
+        <a href="tel:+4407397128043">
           phone. <span>+44 7397128043</span>
         </a>
       </div>
