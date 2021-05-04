@@ -2,7 +2,7 @@
   ### :necktie: Ketan Rajpal
   I am a passionate, successful, and multi-award-winning **Full Stack Developer** and **UI/UX Designer with** more than 9 years of experience. Since my youngest age, I have been passionate about design and art. I grew up with the Internet and naturally took a path according to this passion. I am familiar with both **front-end** and **back-end**; thorough understanding of user experience and possibly even product strategy.
   
-  ### :octocat: Download my resume [here](https://ketanrajpal.dev/resume.pdf)
+  ### :beers: Download my resume [here](https://ketanrajpal.dev/resume.pdf)
   
   ### :rocket: Technologies.
   * **Front-End** :point_right: HTML5, **Javascript**, CSS3, **SCSS**, JQuery, **React JS**, VueJS, **Twitter Bootstrap**, Semantic UI, and **Material UI**
@@ -23,7 +23,7 @@
   * **Master of Computer Application** :point_right: Guru Gobind Singh Indraprastha University
   * **Bachelor of Computer Application** :point_right: Guru Gobind Singh Indraprastha University
   * **Certificate in Website Designing** :point_right: F-Tech Computer Education
-  ### :beers: Awards.
+  ### :trophy: Awards.
   * **1st** position in **Digital Art** :point_right: Jagannath Institute of Management Sciences
   * **1st** position in **Script Maestros** :point_right: Institute of Informatics and Communication University of Delhi
   * **1st** position in **E-Spider** :point_right: Rukmani Devi Institute of Technology
