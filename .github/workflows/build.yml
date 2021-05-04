@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Run app.js
-        run: npm start
+        run: npm run server
         env:
           AIRTABLE_API_KEY: ${{secrets.AIRTABLE_API_KEY}}
       - name: Commit the new README.MD file
