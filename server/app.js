@@ -3,7 +3,15 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const { WebConfigurations, Employment, Education, Awards, FollowMe, Technology, TechnologyTemplate } = require("./modules");
+const {
+  WebConfigurations,
+  Employment,
+  Education,
+  Awards,
+  FollowMe,
+  Technology,
+  TechnologyTemplate,
+} = require("./modules");
 
 let content = "";
 
@@ -28,6 +36,7 @@ WebConfigurations((data) => {
   Technology((data) => {
     content = TechnologyTemplate(data, "Front-End", content);
     content = TechnologyTemplate(data, "Back-End", content);
+    content = TechnologyTemplate(data, "Framework & Database", content);
     content = TechnologyTemplate(data, "Deployment", content);
     content = TechnologyTemplate(data, "Testing frameworks", content);
     content = TechnologyTemplate(data, "Digital Design", content);
@@ -50,7 +59,11 @@ WebConfigurations((data) => {
           content += `### :trophy: Awards.
   `;
           data.forEach((record) => {
-            content += `* **${record.position === 1 ? "1st" : "2nd"}** position in **${record.event}** :point_right: ${record.institution}
+            content += `* **${
+              record.position === 1 ? "1st" : "2nd"
+            }** position in **${record.event}** :point_right: ${
+              record.institution
+            }
   `;
           });
           FollowMe((data) => {
