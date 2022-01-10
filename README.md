@@ -9,7 +9,7 @@
 * **Back-End** :point_right: **Typescript**, Node JS, **Python**, **GraphQL**, and **PHP**
 * **Framework & Database** :point_right: **Django**, Flask, PostgreSQL, **Express JS**, Mongo DB, **MySql**, and Sqlite
 * **Deployment** :point_right: **AWS (EC2, Amplify, Lambda, Elastic Beanstalk)**, **Serverless**, **Firebase**, Google Cloud, and Digital Ocean
-* **Testing frameworks** :point_right: 
+* **Testing Framework** :point_right: **Mocha**, Jest, **Chai**, and Supertest
 * **Digital Design** :point_right: **User Experience Journeys**, Prototyping & Wireframing, and Adobe (XD, InDesign, Photoshop)
 ### :briefcase: Professional Experience.
   * **Full Stack Developer (Programmer & Designer)** :point_right: London School of Commerce Group of Colleges

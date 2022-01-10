@@ -38,7 +38,7 @@ WebConfigurations((data) => {
     content = TechnologyTemplate(data, "Back-End", content);
     content = TechnologyTemplate(data, "Framework & Database", content);
     content = TechnologyTemplate(data, "Deployment", content);
-    content = TechnologyTemplate(data, "Testing frameworks", content);
+    content = TechnologyTemplate(data, "Testing Framework", content);
     content = TechnologyTemplate(data, "Digital Design", content);
 
     Employment((data) => {
