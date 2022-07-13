@@ -1,6 +1,6 @@
 
   ### :necktie: Ketan Rajpal
-  I am a passionate, successful, and multi-award-winning **Full Stack Developer** and **UI/UX Designer with** more than 9 years of experience. Since my youngest age, I have been passionate about design and art. I grew up with the Internet and naturally took a path according to this passion. I am familiar with both **front-end** and **back-end**; thorough understanding of user experience and possibly even product strategy.
+  I am a passionate, successful, and multi-award-winning **Full Stack Developer** and **UI/UX Designer** with more than **10 years** of experience. I have hands-on experience in developing **scalable** and **responsive web applications**, using modern software design techniques. I love working in environments where my skills can be consistently challenged to not only improve but revolutionise products or services. Highly motivated individual driven by passions and dreams. A talented leader with unique ideas and a history of successful contributions in the field.
   
   ### :beers: Download my resume [here](https://ketanrajpal.dev/resume.pdf)
   
