@@ -5,7 +5,7 @@
   ### :beers: Download my resume [here](https://ketanrajpal.dev/resume.pdf)
   
   ### :rocket: Technologies.
-  * **Front-End** :point_right: HTML5, **Javascript**, CSS3, **SCSS**, JQuery, **React JS**, VueJS, **Twitter Bootstrap**, Semantic UI, and **Material UI**
+  * **Front-End** :point_right: HTML5, **Javascript**, CSS3, **SCSS**, JQuery, **React JS**, **Bootstrap**, and **Material UI**
 * **Back-End** :point_right: **Typescript**, Node JS, **Python**, **GraphQL**, and **PHP**
 * **Framework & Database** :point_right: **Django**, Flask, PostgreSQL, **Express JS**, Mongo DB, **MySql**, and Sqlite
 * **Deployment** :point_right: **AWS (EC2, Amplify, Lambda, Elastic Beanstalk)**, **Serverless**, **Firebase**, Google Cloud, and Digital Ocean
