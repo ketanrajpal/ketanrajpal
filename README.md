@@ -12,7 +12,8 @@
 * **Testing Framework** :point_right: **Mocha**, Jest, **Chai**, and Supertest
 * **Digital Design** :point_right: **User Experience Journeys**, Prototyping & Wireframing, and Adobe (XD, InDesign, Photoshop)
 ### :briefcase: Professional Experience.
-  * **Full Stack Developer (Programmer & Designer)** :point_right: London School of Commerce Group of Colleges
+  * **Manager Developer** :point_right: KPMG UK
+  * **Full Stack Developer** :point_right: London School of Commerce Group of Colleges
   * **Front End Designer** :point_right: Torus Labs
   * **Founder** :point_right: KR Creative Agency
   * **Web Developer** :point_right: Study Smart Overseas Education
