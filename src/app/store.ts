@@ -1,9 +1,26 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import awardReducer from '../states/award';
+
+import educationReducer from '../states/education';
+import experienceReducer from '../states/experience';
+import methodologyReducer from '../states/methodology';
+import principleReducer from '../states/principle';
+import projectReducer from '../states/project';
+import reviewReducer from '../states/review';
+import settingReducer from '../states/setting';
+import technologyReducer from '../states/technology';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    award: awardReducer,
+    education: educationReducer,
+    experience: experienceReducer,
+    methodology: methodologyReducer,
+    principle: principleReducer,
+    project: projectReducer,
+    review: reviewReducer,
+    setting: settingReducer,
+    technology: technologyReducer,
   },
 });
 
