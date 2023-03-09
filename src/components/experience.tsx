@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addExperience, Experience } from '../states/experience'
+import { addExperience, Experience } from '../reducers/experience'
 import sanity from "../services/sanity"
 
 export const ExperienceComponent = () => {

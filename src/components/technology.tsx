@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addTechnology, Technology } from '../states/technology'
+import { addTechnology, Technology } from '../reducers/technology'
 import sanity from "../services/sanity"
 
 export const TechnologyComponent = () => {

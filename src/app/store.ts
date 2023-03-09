@@ -1,14 +1,14 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import awardReducer from '../states/award';
+import awardReducer from '../reducers/award';
 
-import educationReducer from '../states/education';
-import experienceReducer from '../states/experience';
-import methodologyReducer from '../states/methodology';
-import principleReducer from '../states/principle';
-import projectReducer from '../states/project';
-import reviewReducer from '../states/review';
-import settingReducer from '../states/setting';
-import technologyReducer from '../states/technology';
+import educationReducer from '../reducers/education';
+import experienceReducer from '../reducers/experience';
+import methodologyReducer from '../reducers/methodology';
+import principleReducer from '../reducers/principle';
+import projectReducer from '../reducers/project';
+import reviewReducer from '../reducers/review';
+import settingReducer from '../reducers/setting';
+import technologyReducer from '../reducers/technology';
 
 export const store = configureStore({
   reducer: {

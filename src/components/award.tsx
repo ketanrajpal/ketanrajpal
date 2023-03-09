@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addAward, Award } from '../states/award'
+import { addAward, Award } from '../reducers/award'
 import sanity from "../services/sanity"
 
 export const AwardComponent = () => {

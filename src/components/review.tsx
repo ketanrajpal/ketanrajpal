@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addReview, Review } from '../states/review'
+import { addReview, Review } from '../reducers/review'
 import sanity from "../services/sanity"
 
 export const ReviewComponent = () => {

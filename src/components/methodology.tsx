@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addMethodology, Methodology } from '../states/methodology'
+import { addMethodology, Methodology } from '../reducers/methodology'
 import sanity from "../services/sanity"
 
 export const MethodologyComponent = () => {

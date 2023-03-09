@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addPrinciple, Principle } from '../states/principle'
+import { addPrinciple, Principle } from '../reducers/principle'
 import sanity from "../services/sanity"
 
 export const PrincipleComponent = () => {

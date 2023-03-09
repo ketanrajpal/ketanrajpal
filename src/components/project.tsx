@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addProject, Project } from '../states/project'
+import { addProject, Project } from '../reducers/project'
 import sanity from "../services/sanity"
 
 export const ProjectComponent = () => {

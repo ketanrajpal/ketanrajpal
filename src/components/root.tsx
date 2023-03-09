@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom"
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addSetting, Setting } from '../states/setting'
+import { addSetting, Setting } from '../reducers/setting'
 import sanity from "../services/sanity"
 
 export const RootComponent = () => {

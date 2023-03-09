@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addEducation, Education } from '../states/education'
+import { addEducation, Education } from '../reducers/education'
 import sanity from "../services/sanity"
 
 export const EducationComponent = () => {
