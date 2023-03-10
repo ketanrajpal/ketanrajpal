@@ -1,0 +1,15 @@
+.HomeComponent {
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+div.dark .HomeComponent {
+    background-color: black;
+    color: #ffff;
+}
+
+div.light .HomeComponent {
+    background-color: white;
+    color: #000;
+}

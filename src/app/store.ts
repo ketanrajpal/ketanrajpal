@@ -1,6 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import awardReducer from '../reducers/award';
-
 import educationReducer from '../reducers/education';
 import experienceReducer from '../reducers/experience';
 import methodologyReducer from '../reducers/methodology';

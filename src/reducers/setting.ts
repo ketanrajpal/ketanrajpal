@@ -1,26 +1,37 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export interface SettingState {
+
+export interface ContentState {
     title: string;
     slug: string;
     description: string;
 }
 
-const initialSettingState: SettingState[] = [];
+export interface SettingState {
+    content: ContentState[];
+    theme: 'light' | 'dark';
+}
+
+const initialSettingState: SettingState = {
+    content: [],
+    theme: 'light',
+};
 
 export const SettingSlice = createSlice({
     name: 'setting',
     initialState: initialSettingState,
     reducers: {
-        addSetting: (state, action: PayloadAction<SettingState[]>) => {
-            state.length = 0;
-            state.push(...action.payload);
+        addContent: (state, action: PayloadAction<ContentState[]>) => {
+            return { ...state, content: action.payload };
+        },
+        changeTheme: (state, action: PayloadAction<'light' | 'dark'>) => {
+            return { ...state, theme: action.payload };
         }
     }
 })
 
-export const { addSetting } = SettingSlice.actions;
+export const { addContent, changeTheme } = SettingSlice.actions;
 
-export const Setting = (state: { setting: SettingState[]; }) => state.setting;
+export const Setting = (state: { setting: SettingState; }) => state.setting;
 
 export default SettingSlice.reducer;

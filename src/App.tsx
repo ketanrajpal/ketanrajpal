@@ -1,10 +1,16 @@
 import React from 'react';
 import RouterComponent from "./services/router";
 
-function App() {
+import { useAppSelector } from './app/hooks';
+import { Setting } from "./reducers/setting";
+
+function Application() {
+  const state = useAppSelector(Setting);
   return (
-    <RouterComponent />
+    <div className={`${state.theme}`}>
+      <RouterComponent />
+    </div>
   );
 }
 
-export default App;
+export default Application;

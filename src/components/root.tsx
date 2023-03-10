@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom"
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { addSetting, Setting } from '../reducers/setting'
+import { addContent, Setting, changeTheme } from '../reducers/setting'
 import sanity from "../services/sanity"
 
 export const RootComponent = () => {
@@ -9,23 +9,28 @@ export const RootComponent = () => {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        if (state.length > 0) return
+        if (state.content.length > 0) return
         sanity.fetch(`*[_type == "setting"]{
             title,
             "slug":slug.current,
             description,
         }`).then((data) => {
-            dispatch(addSetting(data))
+            dispatch(addContent(data))
         }).catch(console.error)
-    }, [state.length, dispatch])
+    }, [state.content.length, dispatch])
 
+    const HandleChangeMode = () => {
+        dispatch(changeTheme(state.theme === 'dark' ? 'light' : 'dark'))
+    }
 
-    return <>
+    return <div className='HomeComponent'>
         <div className="header-component">
             <div className="heading">Ketan Rajpal.</div>
             <div className="contact"><button>Keep in touch</button></div>
             <div className="navigation"><button>Menu</button></div>
         </div>
+
+        <button onClick={HandleChangeMode}>Dark Mode</button>
 
 
         <ul>
@@ -39,11 +44,11 @@ export const RootComponent = () => {
             <li><Link to="technology">Technology</Link></li>
         </ul>
 
-        {state.length > 0 ? (<ul>
-            {state.map((review, index) => (<li key={index}>{JSON.stringify(review)}</li>))}
+        {state.content.length > 0 ? (<ul>
+            {state.content.map((review, index) => (<li key={index}>{JSON.stringify(review)}</li>))}
         </ul>) : (<h1>Loading...</h1>)}
 
 
 
-        <Outlet /></>
+        <Outlet /></div>
 }
