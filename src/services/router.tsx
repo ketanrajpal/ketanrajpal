@@ -2,6 +2,7 @@ import { RootComponent } from "../components/root";
 import { AwardComponent } from "../components/award";
 import { EducationComponent } from "../components/education";
 import { ExperienceComponent } from "../components/experience";
+import { HomeComponent } from "../components/home";
 import { MethodologyComponent } from "../components/methodology";
 import { PrincipleComponent } from "../components/principle";
 import { ProjectComponent } from "../components/project";
@@ -16,9 +17,12 @@ const router = createBrowserRouter([
         element: <RootComponent />,
         children: [
             {
+                path: "/",
+                element: <HomeComponent />
+            },
+            {
                 path: "award",
                 element: <AwardComponent />
-
             }, {
                 path: "education",
                 element: <EducationComponent />
