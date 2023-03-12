@@ -21,6 +21,11 @@ export const project = {
             }
         },
         {
+            name: "featured",
+            type: "boolean",
+            title: "Featured",
+        },
+        {
             name: "description",
             type: "text",
             title: "Description",
@@ -34,6 +39,16 @@ export const project = {
             name: "URL",
             type: "url",
             title: "URL",
+        },
+        {
+            name: "client",
+            type: "reference",
+            title: "Client",
+            to: [
+                {
+                    type: "client",
+                }
+            ]
         },
         {
             name: "tags",
@@ -64,6 +79,12 @@ export const project = {
                     ],
                 },
             ],
+        },
+        {
+            name: "thumbnail",
+            type: "image",
+            title: "Thumbnail"
+
         },
         orderRankField({ type: "project" })
     ]
