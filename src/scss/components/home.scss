@@ -1,15 +1,32 @@
-.HomeComponent {
-    height: 100%;
-    width: 100%;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+.home_component {
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
+
+    div.container {
+        height: 100%;
+        width: 100%;
+        padding: 10rem 0;
+
+        h1 {
+            font-size: 2rem;
+            line-height: 4rem;
+            letter-spacing: 0.03em;
+            display: block;
+            font-weight: 400;
+            width: 70rem;
+
+            span {
+                color: map-get($color, 0);
+            }
+        }
+    }
 }
 
-div.dark .HomeComponent {
-    background-color: black;
-    color: #ffff;
+div.dark .home_component {
+    color: $light_color;
 }
 
-div.light .HomeComponent {
-    background-color: white;
-    color: #000;
+div.light .home_component {
+    color: $dark_color;
 }

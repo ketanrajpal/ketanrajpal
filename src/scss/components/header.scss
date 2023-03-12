@@ -1,0 +1,89 @@
+.header_component {
+    position: sticky;
+    top: 0;
+    padding: 2rem;
+
+    div.container {
+        width: 80vw;
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr auto auto auto;
+        column-gap: 2rem;
+        align-items: center;
+
+        a.heading {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        nav {
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 3rem;
+            align-items: center;
+            line-height: 1rem;
+
+            a {
+                &:hover {
+                    color: map-get($color, 0);
+                }
+            }
+        }
+
+        a.contact {
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            column-gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50rem;
+            border: 0.2rem solid map-get($color, 0);
+
+            &:hover {
+                background: map-get($color, 0);
+
+                span {
+                    color: #fff !important;
+                }
+            }
+        }
+
+        button {
+            border: none;
+            background: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            align-items: center;
+            line-height: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+div.dark .header_component {
+    color: $light_color;
+
+    span {
+        color: $light_color;
+    }
+
+    button span {
+        color: #ffd074;
+    }
+}
+
+div.light .header_component {
+    color: $dark_color;
+
+    span {
+        color: $dark_color
+    }
+}
