@@ -33,29 +33,21 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :computer: &nbsp; Featured Projects.
-* **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service..
-**Technologies used** :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud
+* **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service<br>**Technologies used** :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud
 
-* **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges..
-**Technologies used** :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services
+* **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services
 
-* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges..
-**Technologies used** :point_right: React JS, Material UI, Typescript, Serverless & Amazon Web Services
+* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: React JS, Material UI, Typescript, Serverless & Amazon Web Services
 
-* **[Luxury Travel Website](https://www.connexons.com)** for Connexons Travel..
-**Technologies used** :point_right: HTML5, CSS3, PHP, MySql & Wordpress
+* **[Luxury Travel Website](https://www.connexons.com)** for Connexons Travel<br>**Technologies used** :point_right: HTML5, CSS3, PHP, MySql & Wordpress
 
-* **[Official School Website](https://www.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges..
-**Technologies used** :point_right: HTML5, CSS3, SCSS, PHP & MySql
+* **[Official School Website](https://www.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: HTML5, CSS3, SCSS, PHP & MySql
 
-* **[IDF-OI Portal](https://www.mea.gov.in/images/attach/IDF_Trifold_Pamphlet_241016.pdf)** for Government of India..
-**Technologies used** :point_right: HTML5, CSS3, PHP & MySql
+* **[IDF-OI Portal](https://www.mea.gov.in/images/attach/IDF_Trifold_Pamphlet_241016.pdf)** for Government of India<br>**Technologies used** :point_right: HTML5, CSS3, PHP & MySql
 
-* **[E-Commerce Store](https://www.dressmyangel.com/)** for Dress my Angel..
-**Technologies used** :point_right: Wordpress & WooCommerce
+* **[E-Commerce Store](https://www.dressmyangel.com/)** for Dress my Angel<br>**Technologies used** :point_right: Wordpress & WooCommerce
 
-* **[Virtual Learning Environment](https://vle.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges..
-**Technologies used** :point_right: PHP, MySql & Moodle
+* **[Virtual Learning Environment](https://vle.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: PHP, MySql & Moodle
 
 
 

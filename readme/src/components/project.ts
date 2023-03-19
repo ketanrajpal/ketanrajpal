@@ -26,7 +26,7 @@ export const project_markdown = async () => {
             if (index < technologies.length - 2) technology_markdown += ', ';
         });
 
-        markdown += `* **[${title}](${URL})** for ${client}..\n**Technologies used** :point_right: ${technology_markdown}\n\n`;
+        markdown += `* **[${title}](${URL})** for ${client}<br>**Technologies used** :point_right: ${technology_markdown}\n\n`;
     }
 
     return markdown;
