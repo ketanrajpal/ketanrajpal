@@ -40,7 +40,6 @@ export const project = {
             type: "url",
             title: "URL",
         },
-
         {
             name: "client",
             type: "reference",
