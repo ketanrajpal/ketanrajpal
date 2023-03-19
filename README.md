@@ -23,14 +23,22 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :computer: Featured Projects.
-* **USA Taxi and Limo Service Website** for CT Limo Service :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud
-* **Global Admission Portal** for London School of Commerce Group of Colleges :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services
-* **Progressive Attendance Application** for London School of Commerce Group of Colleges :point_right: React JS, Material UI, Typescript, Serverless & Amazon Web Services
-* **Luxury Travel Website** for Connexons Travel :point_right: HTML5, CSS3, PHP, MySql & Wordpress
-* **Official School Website** for London School of Commerce Group of Colleges :point_right: HTML5, CSS3, SCSS, PHP & MySql
-* **IDF-OI Portal** for Government of India :point_right: HTML5, CSS3, PHP & MySql
-* **E-Commerce Store** for Dress my Angel :point_right: Wordpress & WooCommerce
-* **Virtual Learning Environment** for London School of Commerce Group of Colleges :point_right: PHP, MySql & Moodle
+* **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service :hammer: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud*
+
+* **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges :hammer: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services*
+
+* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges :hammer: *React JS, Material UI, Typescript, Serverless & Amazon Web Services*
+
+* **[Luxury Travel Website](https://www.connexons.com)** for Connexons Travel :hammer: *HTML5, CSS3, PHP, MySql & Wordpress*
+
+* **[Official School Website](https://www.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges :hammer: *HTML5, CSS3, SCSS, PHP & MySql*
+
+* **[IDF-OI Portal](https://www.mea.gov.in/images/attach/IDF_Trifold_Pamphlet_241016.pdf)** for Government of India :hammer: *HTML5, CSS3, PHP & MySql*
+
+* **[E-Commerce Store](https://www.dressmyangel.com/)** for Dress my Angel :hammer: *Wordpress & WooCommerce*
+
+* **[Virtual Learning Environment](https://vle.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges :hammer: *PHP, MySql & Moodle*
+
 
 
 ### :star: Reviews.

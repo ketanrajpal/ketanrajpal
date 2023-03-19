@@ -7,7 +7,7 @@ const project_fetch = async () => {
         "slug":slug.current,
         "client":client->name,
         description,
-        url,
+        URL,
         "tags":tags[]->name,
         "technologies":technologies[]->name,
     }`);
@@ -18,16 +18,15 @@ export const project_markdown = async () => {
 
     let markdown = '';
 
-    for (const { title, client, technologies } of project) {
+    for (const { title, client, technologies, URL } of project) {
         let technology_markdown = '';
         technologies.forEach((technology: string, index: number) => {
             if (index === technologies.length - 1) technology_markdown += ' & ';
             technology_markdown += `${technology}`;
             if (index < technologies.length - 2) technology_markdown += ', ';
-
         });
 
-        markdown += `* **${title}** for ${client} :point_right: ${technology_markdown}\n`;
+        markdown += `* **[${title}](${URL})** for ${client} :hammer: *${technology_markdown}*\n\n`;
     }
 
     return markdown;
