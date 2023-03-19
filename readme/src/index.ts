@@ -27,23 +27,23 @@ import { technology_markdown } from './components/technology';
     markdown += await technology_markdown();
 
     // write experience to readme
-    markdown += `\n\n### :briefcase:  Professional Experience.\n`;
+    markdown += `\n\n### :briefcase: &nbsp; Professional Experience.\n`;
     markdown += await experience_markdown();
 
     // write education to readme
-    markdown += `\n\n### :mortar_board:  Education.\n`;
+    markdown += `\n\n### :mortar_board: &nbsp; Education.\n`;
     markdown += await education_markdown();
 
     // write projects to readme
-    markdown += `\n\n### :computer:  Featured Projects.\n`;
+    markdown += `\n\n### :computer: &nbsp; Featured Projects.\n`;
     markdown += await project_markdown();
 
     // write reviews to readme
-    markdown += `\n\n### :star:  Reviews.\n`;
+    markdown += `\n\n### :star: &nbsp; Reviews.\n`;
     markdown += await review_markdown();
 
     // write awards to readme
-    markdown += `\n\n### :trophy:  Awards.\n`;
+    markdown += `\n\n### :trophy: &nbsp; Awards.\n`;
     markdown += await award_markdown();
 
     const readme_file = fs.createWriteStream('../README.md');
