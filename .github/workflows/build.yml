@@ -25,12 +25,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - name: Go to the directory
-        run: cd ./server
       - name: Install Dependencies
         run: npm install
+        with:
+          working-directory: ketanrajpal/server
       - name: Run app.js
         run: npm start
+        with:
+          working-directory: ketanrajpal/server
       - name: Commit the new README.MD file
         run: |-
           git diff
