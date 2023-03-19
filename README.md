@@ -64,6 +64,8 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 * **Altaf Daya** (Founder **@** S3 Education) :point_right: *Have worked with Ketan in various capacities. Always found him to be very professional and highly talented at what he does. He is very creative and always thinks out of the box - a quality that is very much in demand, especially in Digital Marketing!*
 
+* **Parth Gambhir** (Founder **@** Needs Infrastructure) :point_right: *Your work was very good. It was exactly how I wanted it and you're valuable inputs made it even better.*
+
 
 
 ### :trophy: &nbsp; Awards.
