@@ -19,8 +19,8 @@ export const experience_markdown = async () => {
 
     let markdown = '';
 
-    for (const { company, title, companyURL } of experience) {
-        markdown += `* **${title} @** [${company}](${companyURL})\n`;
+    for (const { company, title, companyURL, present } of experience) {
+        markdown += `* **${title}** :point_right: [${company}](${companyURL}) ${present === true ? ':heavy_check_mark:' : ''}\n`;
     }
 
     return markdown;

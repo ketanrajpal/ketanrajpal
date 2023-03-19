@@ -5,14 +5,14 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :briefcase: Professional Experience.
-* **Manager Developer @** [KPMG UK](https://kpmg.com/)
-* **Full Stack Developer @** [London School of Commerce](https://www.lsclondon.co.uk)
-* **Web Developer @** [Study Smart Overseas Education](https://www.studysmart.co.in)
-* **Front End Designer @** [Torus Labs](https://www.tor.us)
-* **Intern @** [Infogain India Pvt Ltd](https://www.infogain.com)
-* **Intern @** [Cross Section Interactive](https://www.csipl.net)
-* **Intern @** [Samtech Infonet Limited](https://samtechinfonet.com)
-* **Founder @** [KR Creative Agency](https://www.krcreativeagency.com)
+* **Manager Developer** :point_right: [KPMG UK](https://kpmg.com/) :heavy_check_mark:
+* **Full Stack Developer** :point_right: [London School of Commerce](https://www.lsclondon.co.uk) 
+* **Web Developer** :point_right: [Study Smart Overseas Education](https://www.studysmart.co.in) 
+* **Front End Designer** :point_right: [Torus Labs](https://www.tor.us) 
+* **Intern** :point_right: [Infogain India Pvt Ltd](https://www.infogain.com) 
+* **Intern** :point_right: [Cross Section Interactive](https://www.csipl.net) 
+* **Intern** :point_right: [Samtech Infonet Limited](https://samtechinfonet.com) 
+* **Founder** :point_right: [KR Creative Agency](https://www.krcreativeagency.com) 
 
 
 ### :mortar_board: Education.
