@@ -49,30 +49,30 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :trophy: Awards.
-* **1st** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **1st** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **1st** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management
-* **1st** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **1st** position in **Corona** :point_right: Bhagwan Parshuram Institute of Technology
-* **1st** position in **Techsurge & Mridang** :point_right: Maharaja Agrasen Institute of Technology
-* **1st** position in **Tantra-e-Naya** :point_right: Rukmani Devi Institute of Technology
-* **2nd** position in **Sankalan** :point_right: Delhi University Computer Science Society
-* **1st** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
-* **2nd** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
-* **1st** position in **Trojanz** :point_right: G.B. Pant Engineering College
-* **1st** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
-* **1st** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
-* **2nd** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
-* **2nd** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
-* **1st** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **1st** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **1st** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **1st** position in **NSC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
-* **1st** position in **ACT** :point_right: Amity School of Engineering and Technology
-* **1st** position in **ASC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
-* **1st** position in **Technokaal** :point_right: Kalka Institute for Research and Advanced Studies
-* **2nd** position in **Zealicon** :point_right: JSS Academy of Technical Education
-* **1st** position in **Neurotrix** :point_right: Guru Gobind Singh Indraprastha University
-* **1st** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
-* **2nd** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
-* **2nd** position in **Innovision** :point_right: Netaji Subhas Institute of Technology
+* **1<sup>st</sup>** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **1<sup>st</sup>** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **1<sup>st</sup>** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management
+* **1<sup>st</sup>** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **1<sup>st</sup>** position in **Corona** :point_right: Bhagwan Parshuram Institute of Technology
+* **1<sup>st</sup>** position in **Techsurge & Mridang** :point_right: Maharaja Agrasen Institute of Technology
+* **1<sup>st</sup>** position in **Tantra-e-Naya** :point_right: Rukmani Devi Institute of Technology
+* **2<sup>nd</sup>** position in **Sankalan** :point_right: Delhi University Computer Science Society
+* **1<sup>st</sup>** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
+* **2<sup>nd</sup>** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
+* **1<sup>st</sup>** position in **Trojanz** :point_right: G.B. Pant Engineering College
+* **1<sup>st</sup>** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
+* **1<sup>st</sup>** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
+* **2<sup>nd</sup>** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
+* **2<sup>nd</sup>** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
+* **1<sup>st</sup>** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **1<sup>st</sup>** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **1<sup>st</sup>** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **1<sup>st</sup>** position in **NSC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
+* **1<sup>st</sup>** position in **ACT** :point_right: Amity School of Engineering and Technology
+* **1<sup>st</sup>** position in **ASC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
+* **1<sup>st</sup>** position in **Technokaal** :point_right: Kalka Institute for Research and Advanced Studies
+* **2<sup>nd</sup>** position in **Zealicon** :point_right: JSS Academy of Technical Education
+* **1<sup>st</sup>** position in **Neurotrix** :point_right: Guru Gobind Singh Indraprastha University
+* **1<sup>st</sup>** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
+* **2<sup>nd</sup>** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
+* **2<sup>nd</sup>** position in **Innovision** :point_right: Netaji Subhas Institute of Technology
