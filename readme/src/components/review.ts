@@ -16,8 +16,8 @@ export const review_markdown = async () => {
 
     let markdown = '';
 
-    for (const { name, designation, description } of review) {
-        markdown += `* **${name}** (${designation}) :point_right: ${description}\n`;
+    for (const { name, designation, description, organisation } of review) {
+        markdown += `* **${name}** (${designation} **@** ${organisation}) \n*${description}*\n\n`;
     }
 
     return markdown;

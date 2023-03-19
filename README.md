@@ -33,39 +33,51 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :star: Reviews.
-* **Vanja Garaj** (Senior Lecturer in Digital Design) :point_right: Ketan is a highly motivated digital designer with an excellent mix of design and IT skills and the understanding of the industry.
-* **Benny Abraham** (Director) :point_right: I have to know Ketan Rajpal in my role as the Group Director of Marketing at the London School of Commerce Group of Colleges. Ketan was responsible for all the online and web development activities for the Group and I had the privilege and opportunity to work closely with him. I have found him to be a hardworking and conscientious person who takes his responsibilities seriously and always delivers on time. I wish him every success in his future endeavours.
-* **Karan Singh** (Founder) :point_right: Having my website made by you was a great experience! You're easy to work with and I know I can call u anytime!! Quality work!
-* **Kainaaz Mistry** (Senior General Manager) :point_right: Ketan has worked with me at the London School of Commerce and has demonstrated a remarkable quality of being progressive in his working knowledge and has always been with the current trend. He has an innovative and proactive approach to work. I also found him to be socially engaging in the work place and very easy to get along, with a helping personality. He brings a lot to the table within his skill set and is definitely an asset to the company where he currently works.
-* **Chetan Jain** (Founder) :point_right: Ketan has excellent technical skills, communication skills and is very task-oriented. He is one of the most reliable employees one can have, Would highly recommend him.
-* **Altaf Daya** (Founder) :point_right: Have worked with Ketan in various capacities. Always found him to be very professional and highly talented at what he does. He is very creative and always thinks out of the box - a quality that is very much in demand, especially in Digital Marketing!
+* **Vanja Garaj** (Senior Lecturer in Digital Design **@** Brunel University) 
+*Ketan is a highly motivated digital designer with an excellent mix of design and IT skills and the understanding of the industry.*
+
+* **Benny Abraham** (Director **@** The Education Group) 
+*I have to know Ketan Rajpal in my role as the Group Director of Marketing at the London School of Commerce Group of Colleges. Ketan was responsible for all the online and web development activities for the Group and I had the privilege and opportunity to work closely with him. I have found him to be a hardworking and conscientious person who takes his responsibilities seriously and always delivers on time. I wish him every success in his future endeavours.*
+
+* **Karan Singh** (Founder **@** Indian Track Club) 
+*Having my website made by you was a great experience! You're easy to work with and I know I can call u anytime!! Quality work!*
+
+* **Kainaaz Mistry** (Senior General Manager **@** Probitas Global) 
+*Ketan has worked with me at the London School of Commerce and has demonstrated a remarkable quality of being progressive in his working knowledge and has always been with the current trend. He has an innovative and proactive approach to work. I also found him to be socially engaging in the work place and very easy to get along, with a helping personality. He brings a lot to the table within his skill set and is definitely an asset to the company where he currently works.*
+
+* **Chetan Jain** (Founder **@** Study Smart Overseas Education) 
+*Ketan has excellent technical skills, communication skills and is very task-oriented. He is one of the most reliable employees one can have, Would highly recommend him.*
+
+* **Altaf Daya** (Founder **@** S3 Education) 
+*Have worked with Ketan in various capacities. Always found him to be very professional and highly talented at what he does. He is very creative and always thinks out of the box - a quality that is very much in demand, especially in Digital Marketing!*
+
 
 
 ### :trophy: Awards.
-* **2nd** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **2nd** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **2nd** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management
-* **2nd** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **2nd** position in **Corona** :point_right: Bhagwan Parshuram Institute of Technology
-* **2nd** position in **Techsurge & Mridang** :point_right: Maharaja Agrasen Institute of Technology
-* **2nd** position in **Tantra-e-Naya** :point_right: Rukmani Devi Institute of Technology
+* **1st** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **1st** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **1st** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management
+* **1st** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **1st** position in **Corona** :point_right: Bhagwan Parshuram Institute of Technology
+* **1st** position in **Techsurge & Mridang** :point_right: Maharaja Agrasen Institute of Technology
+* **1st** position in **Tantra-e-Naya** :point_right: Rukmani Devi Institute of Technology
 * **2nd** position in **Sankalan** :point_right: Delhi University Computer Science Society
+* **1st** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
 * **2nd** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
-* **2nd** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
-* **2nd** position in **Trojanz** :point_right: G.B. Pant Engineering College
-* **2nd** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
-* **2nd** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
+* **1st** position in **Trojanz** :point_right: G.B. Pant Engineering College
+* **1st** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
+* **1st** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
 * **2nd** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
 * **2nd** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
-* **2nd** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **2nd** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **2nd** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **2nd** position in **NSC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
-* **2nd** position in **ACT** :point_right: Amity School of Engineering and Technology
-* **2nd** position in **ASC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
-* **2nd** position in **Technokaal** :point_right: Kalka Institute for Research and Advanced Studies
+* **1st** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **1st** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **1st** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **1st** position in **NSC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
+* **1st** position in **ACT** :point_right: Amity School of Engineering and Technology
+* **1st** position in **ASC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
+* **1st** position in **Technokaal** :point_right: Kalka Institute for Research and Advanced Studies
 * **2nd** position in **Zealicon** :point_right: JSS Academy of Technical Education
-* **2nd** position in **Neurotrix** :point_right: Guru Gobind Singh Indraprastha University
-* **2nd** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
+* **1st** position in **Neurotrix** :point_right: Guru Gobind Singh Indraprastha University
+* **1st** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
 * **2nd** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
 * **2nd** position in **Innovision** :point_right: Netaji Subhas Institute of Technology
