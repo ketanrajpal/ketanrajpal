@@ -53,7 +53,6 @@ export const HomeComponent = () => {
           </div>
         ) : null}
       </div>
-      <ProjectComponent />
     </>
   );
 };

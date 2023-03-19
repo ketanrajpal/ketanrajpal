@@ -10,9 +10,9 @@ export const HeaderComponent = () => {
                     Ketan Rajpal
                 </Link>
                 <nav>
-                    <Link to="about">About</Link>
-                    <Link to="projects">Projects</Link>
-                    <Link to="contact">Contact</Link>
+                    <Link to="about"></Link>
+                    <Link to="projects"></Link>
+                    <Link to="contact"></Link>
                 </nav>
                 <Link to="contact" className="contact">
                     <span className="material-symbols-rounded">alternate_email</span>
