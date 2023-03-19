@@ -1,0 +1,45 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+$dark_color: (
+    0:#16181c,
+    1:#23262d
+);
+$light_color: (
+    0:#fff0eb,
+    1:#f7e1da
+);
+
+$color: (
+    0:#f12f16,
+    1:#000000,
+);
+
+body,
+html,
+#root {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+* {
+    transition: background-color 0.5s ease-in-out, color 0.2s ease-in-out;
+}
+
+div.dark {
+    background-color: map-get($dark_color, 0);
+}
+
+div.light {
+    background: map-get($light_color, 0);
+}
+
+@import "components/header";
+@import "components/home";
+@import "components/project";

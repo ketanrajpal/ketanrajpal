@@ -1,24 +1,22 @@
-import React from "react";
-import { hydrate, render } from "react-dom";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-const rootElement = document.getElementById("root");
-if (rootElement?.hasChildNodes()) {
-  hydrate(
-    <React.StrictMode>
+import "./scss/default.scss";
+
+const container = document.getElementById('root')!;
+const root = createRoot(container);
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </React.StrictMode>,
-    rootElement
-  );
-} else {
-  render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-    rootElement
-  );
-}
+    </Provider>
+  </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

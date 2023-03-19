@@ -8,7 +8,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "0 0 * * 0"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,10 +27,10 @@ jobs:
           node-version: "12.x"
       - name: Install Dependencies
         run: npm install
+        working-directory: server
       - name: Run app.js
-        run: npm run server
-        env:
-          AIRTABLE_API_KEY: ${{secrets.AIRTABLE_API_KEY}}
+        run: npm start
+        working-directory: server
       - name: Commit the new README.MD file
         run: |-
           git diff

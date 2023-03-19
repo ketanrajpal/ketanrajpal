@@ -1,25 +1,16 @@
-import { Switch, BrowserRouter, Route } from "react-router-dom";
-import "./scss/app.scss";
+import React from 'react';
+import RouterComponent from "./services/router";
 
-import HeaderComponent from "./components/header";
-import FooterComponent from "./components/footer";
+import { useAppSelector } from './app/hooks';
+import { Setting } from "./reducers/setting";
 
-import HomeComponent from "./components/home";
-
-const app = () => {
+function Application() {
+  const state = useAppSelector(Setting);
   return (
-    <div className="container">
-      <HeaderComponent />
-      <div className="content">
-        <BrowserRouter>
-          <Switch>
-            <Route path="*" component={HomeComponent} />
-          </Switch>
-        </BrowserRouter>
-      </div>
-      <FooterComponent />
+    <div className={`${state.theme}`}>
+      <RouterComponent />
     </div>
   );
-};
+}
 
-export default app;
+export default Application;

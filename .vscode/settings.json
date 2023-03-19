@@ -1,11 +1,6 @@
 {
-    "cSpell.words": [
-        "Ketan",
-        "Rajpal",
-        "airtable",
-        "browserslist",
-        "ketanrajpal",
-        "postbuild",
-        "predeploy"
-    ]
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
