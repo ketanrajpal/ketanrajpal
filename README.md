@@ -1,10 +1,10 @@
-### :necktie: Ketan Rajpal
+### :necktie:  Ketan Rajpal
 As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing **high-performance**, **adaptable web applications** using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
 
 *At present, my role is Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
 
 
-### :toolbox: Technologies.
+### :toolbox:  Technologies.
 * **Front-End** :point_right: React JS, CSS3, Material UI, Javascript, Bootstrap, SCSS, HTML5 & JQuery
 * **Back-End** :point_right: PHP, Typescript, Node JS, Python & GraphQL
 * **Framework & Database** :point_right: Express JS, Mongo DB, PostgreSQL, Sqlite, Flask, MySql & Django
@@ -14,7 +14,7 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 * **Platforms** :point_right: Moodle & WooCommerce
 
 
-### :briefcase: Professional Experience.
+### :briefcase:  Professional Experience.
 * **Manager Developer** :point_right: [KPMG UK](https://kpmg.com/) :heavy_check_mark:
 * **Full Stack Developer** :point_right: [London School of Commerce](https://www.lsclondon.co.uk) 
 * **Web Developer** :point_right: [Study Smart Overseas Education](https://www.studysmart.co.in) 
@@ -25,14 +25,14 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 * **Founder** :point_right: [KR Creative Agency](https://www.krcreativeagency.com) 
 
 
-### :mortar_board: Education.
+### :mortar_board:  Education.
 * **Digital Design and Branding MSc** :point_right: [Brunel University London](https://www.brunel.ac.uk)
 * **Master of Computer Application** :point_right: [Guru Gobind Singh Indraprastha University](http://www.ipu.ac.in)
 * **Bachelor of Computer Application** :point_right: [Guru Gobind Singh Indraprastha University](http://www.ipu.ac.in)
 * **Certificate in Website Designing** :point_right: [F-Tech Computer Education](https://www.f-tec.net.in)
 
 
-### :computer: Featured Projects.
+### :computer:  Featured Projects.
 * **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service :point_right: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud*
 
 * **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges :point_right: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services*
@@ -51,7 +51,7 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 
-### :star: Reviews.
+### :star:  Reviews.
 * **Vanja Garaj** (Senior Lecturer in Digital Design **@** Brunel University) :point_right: *Ketan is a highly motivated digital designer with an excellent mix of design and IT skills and the understanding of the industry.*
 
 * **Benny Abraham** (Director **@** The Education Group) :point_right: *I have to know Ketan Rajpal in my role as the Group Director of Marketing at the London School of Commerce Group of Colleges. Ketan was responsible for all the online and web development activities for the Group and I had the privilege and opportunity to work closely with him. I have found him to be a hardworking and conscientious person who takes his responsibilities seriously and always delivers on time. I wish him every success in his future endeavours.*
@@ -66,7 +66,7 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 
-### :trophy: Awards.
+### :trophy:  Awards.
 * **1<sup>st</sup>** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
 * **1<sup>st</sup>** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
 * **1<sup>st</sup>** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management

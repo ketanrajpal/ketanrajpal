@@ -16,34 +16,34 @@ import { technology_markdown } from './components/technology';
 
     // write description to readme
     const setting = await setting_markdown();
-    markdown += `### :necktie: Ketan Rajpal\n`;
+    markdown += `### :necktie:  Ketan Rajpal\n`;
     markdown += setting.description;
 
     // write sub heading to readme
     markdown += `\n\n*${setting.sub_heading}*\n`;
 
     // write technologies to readme
-    markdown += `\n\n### :toolbox: Technologies.\n`;
+    markdown += `\n\n### :toolbox:  Technologies.\n`;
     markdown += await technology_markdown();
 
     // write experience to readme
-    markdown += `\n\n### :briefcase: Professional Experience.\n`;
+    markdown += `\n\n### :briefcase:  Professional Experience.\n`;
     markdown += await experience_markdown();
 
     // write education to readme
-    markdown += `\n\n### :mortar_board: Education.\n`;
+    markdown += `\n\n### :mortar_board:  Education.\n`;
     markdown += await education_markdown();
 
     // write projects to readme
-    markdown += `\n\n### :computer: Featured Projects.\n`;
+    markdown += `\n\n### :computer:  Featured Projects.\n`;
     markdown += await project_markdown();
 
     // write reviews to readme
-    markdown += `\n\n### :star: Reviews.\n`;
+    markdown += `\n\n### :star:  Reviews.\n`;
     markdown += await review_markdown();
 
     // write awards to readme
-    markdown += `\n\n### :trophy: Awards.\n`;
+    markdown += `\n\n### :trophy:  Awards.\n`;
     markdown += await award_markdown();
 
     const readme_file = fs.createWriteStream('../README.md');
