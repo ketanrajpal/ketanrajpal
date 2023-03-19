@@ -1,4 +1,5 @@
-
+### :necktie: Ketan Rajpal
+As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing **high-performance**, **adaptable web applications** using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
 
 ### :briefcase: Experience.
 * **Torus Labs** :point_right: Front End Designer
@@ -21,8 +22,9 @@
 * **Connexons Travel Website** for Connexons Travel :point_right: Web Design and Development
 * **USA Taxi and Limo Service Website** for CT Limo Service :point_right: Web Application Development
 * **LSC Malta Website** for London School of Commerce Group of Colleges :point_right: Web Design and Development
-* **LSC Payments Portal** for London School of Commerce Group of Colleges :point_right: Web Application Development
 * **India Development Foundation of Overseas Indians** for Government of India :point_right: Web Design and Development
+* **Dress My Angel E-Commerce Website** for Dress my Angel :point_right: E-Commerce
+* **LSC Malta Virtual Learning Environment** for London School of Commerce Group of Colleges :point_right: Moodle Development
 * **LSC Group Admission Portal** for London School of Commerce Group of Colleges :point_right: Web Application Development
 
 
