@@ -20,7 +20,7 @@ export const experience_markdown = async () => {
     let markdown = '';
 
     for (const { company, title, companyURL } of experience) {
-        markdown += `* **[${company}](${companyURL})** :point_right: ${title}\n`;
+        markdown += `* **${title} @** [${company}](${companyURL})\n`;
     }
 
     return markdown;
