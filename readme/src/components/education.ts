@@ -5,7 +5,7 @@ const education_fetch = async () => {
     *[_type == "education"]|order(endDate desc) {
         programme,
         school,
-        schoolUrl,
+        schoolURL,
         location,
         startDate,
         endDate,
@@ -20,8 +20,8 @@ export const education_markdown = async () => {
 
     let markdown = '';
 
-    for (const { programme, school } of education) {
-        markdown += `* **${programme}** :point_right: ${school}\n`;
+    for (const { programme, school, schoolURL } of education) {
+        markdown += `* **${programme}** :point_right: [${school}](${schoolURL})\n`;
     }
 
     return markdown;

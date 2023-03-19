@@ -17,9 +17,12 @@ import { setting_markdown } from './components/setting';
     readme_file.write(`### :necktie: Ketan Rajpal\n`);
     readme_file.write(setting.description);
 
+    // write sub heading to readme
+    readme_file.write(`\n\n*${setting.sub_heading}*\n`);
+
     // write experience to readme
     const experience = await experience_markdown();
-    readme_file.write(`\n\n### :briefcase: Experience.\n`);
+    readme_file.write(`\n\n### :briefcase: Professional Experience.\n`);
     readme_file.write(experience);
 
     // write education to readme

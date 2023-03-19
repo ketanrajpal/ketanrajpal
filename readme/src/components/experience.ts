@@ -2,9 +2,9 @@ import { client } from "../services/sanity";
 
 const experience_fetch = async () => {
     return await client.fetch(`
-    *[_type == "experience"]|order(present desc, endDate desc) {
+    *[_type == "experience"]|order(present desc) {
         company,
-        companyUrl,
+        companyURL,
         title,
         location,
         startDate,
@@ -19,8 +19,8 @@ export const experience_markdown = async () => {
 
     let markdown = '';
 
-    for (const { company, title } of experience) {
-        markdown += `* **${company}** :point_right: ${title}\n`;
+    for (const { company, title, companyURL } of experience) {
+        markdown += `* **[${company}](${companyURL})** :point_right: ${title}\n`;
     }
 
     return markdown;

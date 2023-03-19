@@ -1,21 +1,25 @@
 ### :necktie: Ketan Rajpal
 As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing **high-performance**, **adaptable web applications** using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
 
-### :briefcase: Experience.
-* **Torus Labs** :point_right: Front End Designer
-* **Study Smart Overseas Education** :point_right: Web Developer
-* **Samtech Infonet Limited** :point_right: Intern
-* **Cross Section Interactive** :point_right: Intern
-* **Infogain India Pvt Ltd** :point_right: Intern
-* **London School of Commerce** :point_right: Full Stack Developer
-* **KR Creative Agency** :point_right: Founder
+*At present, my role is Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
+
+
+### :briefcase: Professional Experience.
+* **[KPMG UK](https://kpmg.com/)** :point_right: Manager Developer
+* **[London School of Commerce](https://www.lsclondon.co.uk)** :point_right: Full Stack Developer
+* **[Study Smart Overseas Education](https://www.studysmart.co.in)** :point_right: Web Developer
+* **[Torus Labs](https://www.tor.us)** :point_right: Front End Designer
+* **[Infogain India Pvt Ltd](https://www.infogain.com)** :point_right: Intern
+* **[Cross Section Interactive](https://www.csipl.net)** :point_right: Intern
+* **[Samtech Infonet Limited](https://samtechinfonet.com)** :point_right: Intern
+* **[KR Creative Agency](https://www.krcreativeagency.com)** :point_right: Founder
 
 
 ### :mortar_board: Education.
-* **Digital Design and Branding MSc** :point_right: Brunel University London
-* **Master of Computer Application** :point_right: Guru Gobind Singh Indraprastha University
-* **Bachelor of Computer Application** :point_right: Guru Gobind Singh Indraprastha University
-* **Certificate in Website Designing** :point_right: F-Tech Computer Education
+* **Digital Design and Branding MSc** :point_right: [Brunel University London](https://www.brunel.ac.uk)
+* **Master of Computer Application** :point_right: [Guru Gobind Singh Indraprastha University](http://www.ipu.ac.in)
+* **Bachelor of Computer Application** :point_right: [Guru Gobind Singh Indraprastha University](http://www.ipu.ac.in)
+* **Certificate in Website Designing** :point_right: [F-Tech Computer Education](https://www.f-tec.net.in)
 
 
 ### :computer: Featured Projects.
@@ -38,30 +42,30 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :trophy: Awards.
-* **1** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **1** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **1** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management
-* **1** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
-* **1** position in **Corona** :point_right: Bhagwan Parshuram Institute of Technology
-* **1** position in **Techsurge & Mridang** :point_right: Maharaja Agrasen Institute of Technology
-* **1** position in **Tantra-e-Naya** :point_right: Rukmani Devi Institute of Technology
-* **2** position in **Sankalan** :point_right: Delhi University Computer Science Society
-* **1** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
-* **2** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
-* **1** position in **Trojanz** :point_right: G.B. Pant Engineering College
-* **1** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
-* **1** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
-* **2** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
-* **2** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
-* **1** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **1** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **1** position in **Cybus** :point_right: Amity Institute of Information Technology
-* **1** position in **NSC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
-* **1** position in **ACT** :point_right: Amity School of Engineering and Technology
-* **1** position in **ASC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
-* **1** position in **Technokaal** :point_right: Kalka Institute for Research and Advanced Studies
-* **2** position in **Zealicon** :point_right: JSS Academy of Technical Education
-* **1** position in **Neurotrix** :point_right: Guru Gobind Singh Indraprastha University
-* **1** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
-* **2** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
-* **2** position in **Innovision** :point_right: Netaji Subhas Institute of Technology
+* **2nd** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **2nd** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **2nd** position in **Tatva** :point_right: Lal Bahadur Shastri Institute of Management
+* **2nd** position in **Cynet** :point_right: Jagannath Institute of Management Sciences
+* **2nd** position in **Corona** :point_right: Bhagwan Parshuram Institute of Technology
+* **2nd** position in **Techsurge & Mridang** :point_right: Maharaja Agrasen Institute of Technology
+* **2nd** position in **Tantra-e-Naya** :point_right: Rukmani Devi Institute of Technology
+* **2nd** position in **Sankalan** :point_right: Delhi University Computer Science Society
+* **2nd** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
+* **2nd** position in **Envisage** :point_right: Institute of Informatics and Communication University of Delhi
+* **2nd** position in **Trojanz** :point_right: G.B. Pant Engineering College
+* **2nd** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
+* **2nd** position in **Technophilia** :point_right: School of Computer and System Science Jawaharlal Nehru University
+* **2nd** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
+* **2nd** position in **Info Expression** :point_right: Guru Gobind Singh Indraprastha University
+* **2nd** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **2nd** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **2nd** position in **Cybus** :point_right: Amity Institute of Information Technology
+* **2nd** position in **NSC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
+* **2nd** position in **ACT** :point_right: Amity School of Engineering and Technology
+* **2nd** position in **ASC** :point_right: Bharati Vidyapeeth's Institute of Computer Application and Management
+* **2nd** position in **Technokaal** :point_right: Kalka Institute for Research and Advanced Studies
+* **2nd** position in **Zealicon** :point_right: JSS Academy of Technical Education
+* **2nd** position in **Neurotrix** :point_right: Guru Gobind Singh Indraprastha University
+* **2nd** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
+* **2nd** position in **Impulse** :point_right: Indra Gandhi Institute of Technology
+* **2nd** position in **Innovision** :point_right: Netaji Subhas Institute of Technology

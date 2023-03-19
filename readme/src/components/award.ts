@@ -17,7 +17,7 @@ export const award_markdown = async () => {
     let markdown = '';
 
     for (const { rank, event, institution } of award) {
-        markdown += `* **${rank}** position in **${event}** :point_right: ${institution}\n`;
+        markdown += `* **${rank === "1" ? "1st" : "2nd"}** position in **${event}** :point_right: ${institution}\n`;
     }
 
     return markdown;
