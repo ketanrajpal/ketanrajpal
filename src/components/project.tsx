@@ -3,8 +3,6 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { addProject, Project } from "../reducers/project";
 import sanity from "../services/sanity";
 
-import img from "../assets/project/usa-taxi-and-limo-service-website.png";
-
 export const ProjectComponent = () => {
   const state = useAppSelector(Project);
   const dispatch = useAppDispatch();
@@ -36,8 +34,6 @@ export const ProjectComponent = () => {
             <article>
               <h2>{project.tags}</h2>
               <h1>{project.title}</h1>
-
-              <img src={img} alt="project" />
             </article>
           );
         })}
