@@ -27,6 +27,11 @@ export const review = {
             title: "Description"
         },
         {
+            name: "show_on_github",
+            type: "boolean",
+            title: "Show on Github"
+        },
+        {
             name: "image",
             type: "image",
             title: "Image"
