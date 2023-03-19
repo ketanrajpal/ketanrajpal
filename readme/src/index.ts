@@ -6,46 +6,49 @@ import { experience_markdown } from './components/experience';
 import { project_markdown } from './components/project';
 import { review_markdown } from './components/review';
 import { setting_markdown } from './components/setting';
+import { technology_markdown } from './components/technology';
 
 
 (async () => {
     console.log('Generating README.md...');
-    const readme_file = fs.createWriteStream('../README.md');
+
+    let markdown = '';
 
     // write description to readme
     const setting = await setting_markdown();
-    readme_file.write(`### :necktie: Ketan Rajpal\n`);
-    readme_file.write(setting.description);
+    markdown += `### :necktie: Ketan Rajpal\n`;
+    markdown += setting.description;
 
     // write sub heading to readme
-    readme_file.write(`\n\n*${setting.sub_heading}*\n`);
+    markdown += `\n\n*${setting.sub_heading}*\n`;
+
+    // write technologies to readme
+    markdown += `\n\n### :toolbox: Technologies.\n`;
+    markdown += await technology_markdown();
 
     // write experience to readme
-    const experience = await experience_markdown();
-    readme_file.write(`\n\n### :briefcase: Professional Experience.\n`);
-    readme_file.write(experience);
+    markdown += `\n\n### :briefcase: Professional Experience.\n`;
+    markdown += await experience_markdown();
 
     // write education to readme
-    const education = await education_markdown();
-    readme_file.write(`\n\n### :mortar_board: Education.\n`);
-    readme_file.write(education);
+    markdown += `\n\n### :mortar_board: Education.\n`;
+    markdown += await education_markdown();
 
     // write projects to readme
-    const project = await project_markdown();
-    readme_file.write(`\n\n### :computer: Featured Projects.\n`);
-    readme_file.write(project);
+    markdown += `\n\n### :computer: Featured Projects.\n`;
+    markdown += await project_markdown();
 
     // write reviews to readme
-    const review = await review_markdown();
-    readme_file.write(`\n\n### :star: Reviews.\n`);
-    readme_file.write(review);
+    markdown += `\n\n### :star: Reviews.\n`;
+    markdown += await review_markdown();
 
     // write awards to readme
-    const award = await award_markdown();
-    readme_file.write(`\n\n### :trophy: Awards.\n`);
-    readme_file.write(award);
+    markdown += `\n\n### :trophy: Awards.\n`;
+    markdown += await award_markdown();
 
+    const readme_file = fs.createWriteStream('../README.md');
+    readme_file.write(markdown);
     readme_file.end();
-    console.log('README.md generated successfully.');
 
+    console.log('README.md generated successfully.');
 })();

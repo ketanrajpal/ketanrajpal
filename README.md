@@ -4,6 +4,16 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 *At present, my role is Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
 
 
+### :toolbox: Technologies.
+* **Front-End** :point_right: React JS, CSS3, Material UI, Javascript, Bootstrap, SCSS, HTML5 & JQuery
+* **Back-End** :point_right: PHP, Typescript, Node JS, Python & GraphQL
+* **Framework & Database** :point_right: Express JS, Mongo DB, PostgreSQL, Sqlite, Flask, MySql & Django
+* **Deployment** :point_right: Google Cloud, Serverless & Amazon Web Services
+* **Testing Framework** :point_right: Chai, Supertest, Jest & Mocha
+* **Digital Design** :point_right: Adobe Creative Suite, User Experience Journeys & Prototyping & Wireframing
+* **Platforms** :point_right: Moodle & WooCommerce
+
+
 ### :briefcase: Professional Experience.
 * **Manager Developer** :point_right: [KPMG UK](https://kpmg.com/) :heavy_check_mark:
 * **Full Stack Developer** :point_right: [London School of Commerce](https://www.lsclondon.co.uk) 
@@ -23,21 +33,21 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :computer: Featured Projects.
-* **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service :hammer: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud*
+* **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service :point_right: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud*
 
-* **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges :hammer: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services*
+* **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges :point_right: *HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services*
 
-* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges :hammer: *React JS, Material UI, Typescript, Serverless & Amazon Web Services*
+* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges :point_right: *React JS, Material UI, Typescript, Serverless & Amazon Web Services*
 
-* **[Luxury Travel Website](https://www.connexons.com)** for Connexons Travel :hammer: *HTML5, CSS3, PHP, MySql & Wordpress*
+* **[Luxury Travel Website](https://www.connexons.com)** for Connexons Travel :point_right: *HTML5, CSS3, PHP, MySql & Wordpress*
 
-* **[Official School Website](https://www.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges :hammer: *HTML5, CSS3, SCSS, PHP & MySql*
+* **[Official School Website](https://www.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges :point_right: *HTML5, CSS3, SCSS, PHP & MySql*
 
-* **[IDF-OI Portal](https://www.mea.gov.in/images/attach/IDF_Trifold_Pamphlet_241016.pdf)** for Government of India :hammer: *HTML5, CSS3, PHP & MySql*
+* **[IDF-OI Portal](https://www.mea.gov.in/images/attach/IDF_Trifold_Pamphlet_241016.pdf)** for Government of India :point_right: *HTML5, CSS3, PHP & MySql*
 
-* **[E-Commerce Store](https://www.dressmyangel.com/)** for Dress my Angel :hammer: *Wordpress & WooCommerce*
+* **[E-Commerce Store](https://www.dressmyangel.com/)** for Dress my Angel :point_right: *Wordpress & WooCommerce*
 
-* **[Virtual Learning Environment](https://vle.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges :hammer: *PHP, MySql & Moodle*
+* **[Virtual Learning Environment](https://vle.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges :point_right: *PHP, MySql & Moodle*
 
 
 
