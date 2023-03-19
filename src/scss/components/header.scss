@@ -1,6 +1,4 @@
 .header_component {
-    position: sticky;
-    top: 0;
     padding: 2rem;
 
     div.container {
@@ -69,10 +67,11 @@
 }
 
 div.dark .header_component {
-    color: $light_color;
+
+    color: map-get($light_color, 0);
 
     span {
-        color: $light_color;
+        color: map-get($light_color, 0);
     }
 
     button span {
@@ -81,9 +80,10 @@ div.dark .header_component {
 }
 
 div.light .header_component {
-    color: $dark_color;
+
+    color: map-get($dark_color, 0);
 
     span {
-        color: $dark_color
+        color: map-get($dark_color, 0);
     }
 }

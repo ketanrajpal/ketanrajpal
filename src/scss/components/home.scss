@@ -24,9 +24,9 @@
 }
 
 div.dark .home_component {
-    color: $light_color;
+    color: map-get($light_color, 0);
 }
 
 div.light .home_component {
-    color: $dark_color;
+    color: map-get($dark_color, 0);
 }

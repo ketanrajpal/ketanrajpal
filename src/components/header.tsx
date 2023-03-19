@@ -16,7 +16,7 @@ export const HeaderComponent = () => {
                 </nav>
                 <Link to="contact" className="contact">
                     <span className="material-symbols-rounded">alternate_email</span>
-                    <span>hello@ketanrajpal.dev</span>
+                    <span>info@krpl.in</span>
                 </Link>
                 <DarkLightModeComponent />
             </div>

@@ -4,6 +4,8 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { addContent, Setting } from "../reducers/setting";
 import sanity from "../services/sanity";
 
+import { ProjectComponent } from "./project";
+
 export const HomeComponent = () => {
   const state = useAppSelector(Setting);
   const dispatch = useAppDispatch();
@@ -39,16 +41,19 @@ export const HomeComponent = () => {
   };
 
   return (
-    <div className="home_component">
-      {state.content.length > 0 ? (
-        <div className="container">
-          <h1
-            dangerouslySetInnerHTML={HandleTitleString(
-              HandleSettingContent("title")
-            )}
-          ></h1>
-        </div>
-      ) : null}
-    </div>
+    <>
+      <div className="home_component">
+        {state.content.length > 0 ? (
+          <div className="container">
+            <h1
+              dangerouslySetInnerHTML={HandleTitleString(
+                HandleSettingContent("title")
+              )}
+            ></h1>
+          </div>
+        ) : null}
+      </div>
+      <ProjectComponent />
+    </>
   );
 };
