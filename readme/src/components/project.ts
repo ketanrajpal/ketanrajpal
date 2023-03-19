@@ -18,8 +18,16 @@ export const project_markdown = async () => {
 
     let markdown = '';
 
-    for (const { title, client, tags } of project) {
-        markdown += `* **${title}** for ${client} :point_right: ${tags[0]}\n`;
+    for (const { title, client, technologies } of project) {
+        let technology_markdown = '';
+        technologies.forEach((technology: string, index: number) => {
+            if (index === technologies.length - 1) technology_markdown += ' & ';
+            technology_markdown += `${technology}`;
+            if (index < technologies.length - 2) technology_markdown += ', ';
+
+        });
+
+        markdown += `* **${title}** for ${client} :point_right: ${technology_markdown}\n`;
     }
 
     return markdown;

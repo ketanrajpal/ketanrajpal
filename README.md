@@ -23,33 +23,28 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :computer: Featured Projects.
-* **Connexons Travel Website** for Connexons Travel :point_right: Web Design and Development
-* **USA Taxi and Limo Service Website** for CT Limo Service :point_right: Web Application Development
-* **LSC Malta Website** for London School of Commerce Group of Colleges :point_right: Web Design and Development
-* **India Development Foundation of Overseas Indians** for Government of India :point_right: Web Design and Development
-* **Dress My Angel E-Commerce Website** for Dress my Angel :point_right: E-Commerce
-* **LSC Malta Virtual Learning Environment** for London School of Commerce Group of Colleges :point_right: Moodle Development
-* **LSC Group Admission Portal** for London School of Commerce Group of Colleges :point_right: Web Application Development
+* **USA Taxi and Limo Service Website** for CT Limo Service :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud
+* **Global Admission Portal** for London School of Commerce Group of Colleges :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services
+* **Progressive Attendance Application** for London School of Commerce Group of Colleges :point_right: React JS, Material UI, Typescript, Serverless & Amazon Web Services
+* **Luxury Travel Website** for Connexons Travel :point_right: HTML5, CSS3, PHP, MySql & Wordpress
+* **Official School Website** for London School of Commerce Group of Colleges :point_right: HTML5, CSS3, SCSS, PHP & MySql
+* **IDF-OI Portal** for Government of India :point_right: HTML5, CSS3, PHP & MySql
+* **E-Commerce Store** for Dress my Angel :point_right: Wordpress & WooCommerce
+* **Virtual Learning Environment** for London School of Commerce Group of Colleges :point_right: PHP, MySql & Moodle
 
 
 ### :star: Reviews.
-* **Vanja Garaj** (Senior Lecturer in Digital Design **@** Brunel University) 
-*Ketan is a highly motivated digital designer with an excellent mix of design and IT skills and the understanding of the industry.*
+* **Vanja Garaj** (Senior Lecturer in Digital Design **@** Brunel University) :point_right: *Ketan is a highly motivated digital designer with an excellent mix of design and IT skills and the understanding of the industry.*
 
-* **Benny Abraham** (Director **@** The Education Group) 
-*I have to know Ketan Rajpal in my role as the Group Director of Marketing at the London School of Commerce Group of Colleges. Ketan was responsible for all the online and web development activities for the Group and I had the privilege and opportunity to work closely with him. I have found him to be a hardworking and conscientious person who takes his responsibilities seriously and always delivers on time. I wish him every success in his future endeavours.*
+* **Benny Abraham** (Director **@** The Education Group) :point_right: *I have to know Ketan Rajpal in my role as the Group Director of Marketing at the London School of Commerce Group of Colleges. Ketan was responsible for all the online and web development activities for the Group and I had the privilege and opportunity to work closely with him. I have found him to be a hardworking and conscientious person who takes his responsibilities seriously and always delivers on time. I wish him every success in his future endeavours.*
 
-* **Karan Singh** (Founder **@** Indian Track Club) 
-*Having my website made by you was a great experience! You're easy to work with and I know I can call u anytime!! Quality work!*
+* **Karan Singh** (Founder **@** Indian Track Club) :point_right: *Having my website made by you was a great experience! You're easy to work with and I know I can call u anytime!! Quality work!*
 
-* **Kainaaz Mistry** (Senior General Manager **@** Probitas Global) 
-*Ketan has worked with me at the London School of Commerce and has demonstrated a remarkable quality of being progressive in his working knowledge and has always been with the current trend. He has an innovative and proactive approach to work. I also found him to be socially engaging in the work place and very easy to get along, with a helping personality. He brings a lot to the table within his skill set and is definitely an asset to the company where he currently works.*
+* **Kainaaz Mistry** (Senior General Manager **@** Probitas Global) :point_right: *Ketan has worked with me at the London School of Commerce and has demonstrated a remarkable quality of being progressive in his working knowledge and has always been with the current trend. He has an innovative and proactive approach to work. I also found him to be socially engaging in the work place and very easy to get along, with a helping personality. He brings a lot to the table within his skill set and is definitely an asset to the company where he currently works.*
 
-* **Chetan Jain** (Founder **@** Study Smart Overseas Education) 
-*Ketan has excellent technical skills, communication skills and is very task-oriented. He is one of the most reliable employees one can have, Would highly recommend him.*
+* **Chetan Jain** (Founder **@** Study Smart Overseas Education) :point_right: *Ketan has excellent technical skills, communication skills and is very task-oriented. He is one of the most reliable employees one can have, Would highly recommend him.*
 
-* **Altaf Daya** (Founder **@** S3 Education) 
-*Have worked with Ketan in various capacities. Always found him to be very professional and highly talented at what he does. He is very creative and always thinks out of the box - a quality that is very much in demand, especially in Digital Marketing!*
+* **Altaf Daya** (Founder **@** S3 Education) :point_right: *Have worked with Ketan in various capacities. Always found him to be very professional and highly talented at what he does. He is very creative and always thinks out of the box - a quality that is very much in demand, especially in Digital Marketing!*
 
 
 
