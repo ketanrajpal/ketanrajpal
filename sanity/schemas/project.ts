@@ -40,11 +40,7 @@ export const project = {
             type: "url",
             title: "URL",
         },
-        {
-            name: "show_on_github",
-            type: "boolean",
-            title: "Show on Github"
-        },
+
         {
             name: "client",
             type: "reference",
