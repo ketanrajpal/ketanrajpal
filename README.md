@@ -1,10 +1,10 @@
-### :necktie:  Ketan Rajpal
+### :necktie: &nbsp; Ketan Rajpal
 As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing **high-performance**, **adaptable web applications** using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
 
 *At present, my role is Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
 
 
-### :toolbox:  Technologies.
+### :toolbox: &nbsp; Technologies.
 * **Front-End** :point_right: React JS, CSS3, Material UI, Javascript, Bootstrap, SCSS, HTML5 & JQuery
 * **Back-End** :point_right: PHP, Typescript, Node JS, Python & GraphQL
 * **Framework & Database** :point_right: Express JS, Mongo DB, PostgreSQL, Sqlite, Flask, MySql & Django

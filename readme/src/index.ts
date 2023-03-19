@@ -16,14 +16,14 @@ import { technology_markdown } from './components/technology';
 
     // write description to readme
     const setting = await setting_markdown();
-    markdown += `### :necktie:  Ketan Rajpal\n`;
+    markdown += `### :necktie: &nbsp; Ketan Rajpal\n`;
     markdown += setting.description;
 
     // write sub heading to readme
     markdown += `\n\n*${setting.sub_heading}*\n`;
 
     // write technologies to readme
-    markdown += `\n\n### :toolbox:  Technologies.\n`;
+    markdown += `\n\n### :toolbox: &nbsp; Technologies.\n`;
     markdown += await technology_markdown();
 
     // write experience to readme
