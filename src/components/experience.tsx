@@ -67,7 +67,5 @@ export const ExperienceComponent = () => {
         ))}
       </ul>
     </section>
-  ) : (
-    <h1>Loading...</h1>
-  );
+  ) : null;
 };
