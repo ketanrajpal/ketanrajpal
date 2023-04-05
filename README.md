@@ -1,7 +1,7 @@
 ### :necktie: &nbsp; Ketan Rajpal
 As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing **high-performance**, **adaptable web applications** using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
 
-*At present, my role is Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
+*At present, my role is a Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
 
 
 ### :toolbox: &nbsp; Technologies.
@@ -11,11 +11,11 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 * **Deployment** :point_right: Google Cloud, Serverless & Amazon Web Services
 * **Testing Framework** :point_right: Chai, Supertest, Jest & Mocha
 * **Digital Design** :point_right: Adobe Creative Suite, User Experience Journeys & Prototyping & Wireframing
-* **Platforms** :point_right: Moodle & WooCommerce
+* **Platforms** :point_right: Wordpress, Moodle & WooCommerce
 
 
 ### :briefcase: &nbsp; Professional Experience.
-* **Manager Developer** :point_right: [KPMG UK](https://kpmg.com/) :heavy_check_mark:
+* **Manager Developer** :point_right: [KPMG LLP](https://kpmg.com/) :heavy_check_mark:
 * **Full Stack Developer** :point_right: [London School of Commerce](https://www.lsclondon.co.uk) 
 * **Web Developer** :point_right: [Study Smart Overseas Education](https://www.studysmart.co.in) 
 * **Front End Designer** :point_right: [Torus Labs](https://www.tor.us) 
