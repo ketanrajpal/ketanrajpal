@@ -5,6 +5,7 @@ import { addContent, Setting } from "../reducers/setting";
 import sanity from "../services/sanity";
 
 import { ProjectComponent } from "./project";
+import { ExperienceComponent } from "./experience";
 
 export const HomeComponent = () => {
   const state = useAppSelector(Setting);
@@ -53,6 +54,7 @@ export const HomeComponent = () => {
           </div>
         ) : null}
       </div>
+      <ExperienceComponent />
     </>
   );
 };

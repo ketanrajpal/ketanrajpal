@@ -3,7 +3,11 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { addProject, Project } from "../reducers/project";
 import sanity from "../services/sanity";
 
-export const ProjectComponent = () => {
+interface IProjectProps{
+  featured?: boolean;
+}
+
+export const ProjectComponent = ({featured}:IProjectProps) => {
   const state = useAppSelector(Project);
   const dispatch = useAppDispatch();
 
