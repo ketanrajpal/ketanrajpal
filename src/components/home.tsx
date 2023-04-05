@@ -1,10 +1,7 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { addContent, Setting } from "../reducers/setting";
 import sanity from "../services/sanity";
-
-import { ProjectComponent } from "./project";
 import { ExperienceComponent } from "./experience";
 
 export const HomeComponent = () => {
