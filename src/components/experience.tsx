@@ -55,11 +55,11 @@ export const ExperienceComponent = () => {
               </h1>
               <p>
                 {experience.description.map((experience, index) => (
-                  <>
+                  <span key={index}>
                     {experience}
                     <br />
                     <br />
-                  </>
+                  </span>
                 ))}
               </p>
             </div>

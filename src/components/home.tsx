@@ -48,6 +48,32 @@ export const HomeComponent = () => {
                 HandleSettingContent("title")
               )}
             ></h1>
+            <div className="social_link">
+              <a
+                href="https://github.com/ketanrajpal"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="material-symbols-rounded">call_made</span>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ketanrajpal/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="material-symbols-rounded">call_made</span>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://www.behance.net/ketanrajpal/projects"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="material-symbols-rounded">call_made</span>
+                <span>Behance</span>
+              </a>
+            </div>
           </div>
         ) : null}
       </div>

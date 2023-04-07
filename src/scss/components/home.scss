@@ -18,6 +18,26 @@
                 color: map-get($color, 0);
             }
         }
+
+        .social_link {
+            display: flex;
+            flex-direction: row;
+            column-gap: 2rem;
+            margin-top: 3rem;
+
+            a {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 0.5rem;
+                align-items: center;
+                font-size: 1rem;
+
+                span:first-child {
+                    font-weight: 600;
+                    color: map-get($color, 0);
+                }
+            }
+        }
     }
 }
 
