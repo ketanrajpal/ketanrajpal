@@ -1,18 +1,12 @@
 .home_component {
-    width: 80vw;
-    margin: 15rem auto;
 
     div.container {
         height: 100%;
         width: 100%;
 
         h1 {
-            font-size: 2rem;
-            line-height: 4rem;
-            letter-spacing: 0.03em;
             display: block;
             font-weight: 400;
-            width: 70rem;
 
             span {
                 color: map-get($color, 0);
@@ -28,8 +22,8 @@
             a {
                 display: grid;
                 grid-template-columns: auto auto;
-                column-gap: 0.5rem;
                 align-items: center;
+                column-gap: 0.5rem;
                 font-size: 1rem;
 
                 span:first-child {
@@ -47,4 +41,77 @@ div.dark .home_component {
 
 div.light .home_component {
     color: map-get($dark_color, 0);
+}
+
+.home_component {
+
+    @media (max-width: 40rem) {
+        width: 90vw;
+        margin: 8rem auto;
+
+        div.container {
+            h1 {
+                width: 85vw;
+                font-size: 1.4rem;
+                line-height: 2.8rem;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+
+    @media(min-width: 40rem)and (max-width: 60rem) {
+        width: 35rem;
+        margin: 10rem auto;
+
+        div.container {
+            h1 {
+                width: 35rem;
+                font-size: 1.6rem;
+                line-height: 3.2rem;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+
+    @media(min-width: 60rem)and (max-width: 80rem) {
+        width: 55rem;
+        margin: 10rem auto;
+
+        div.container {
+            h1 {
+                width: 55rem;
+                font-size: 1.8rem;
+                line-height: 3.6rem;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+
+    @media(min-width: 80rem)and (max-width: 100rem) {
+        width: 75rem;
+        margin: 10rem auto;
+
+        div.container {
+            h1 {
+                width: 70rem;
+                font-size: 2rem;
+                line-height: 4rem;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+
+    @media(min-width: 100rem) {
+        width: 95rem;
+        margin: 15rem auto;
+
+        div.container {
+            h1 {
+                width: 85rem;
+                font-size: 2rem;
+                line-height: 4rem;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
 }

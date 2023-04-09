@@ -26,8 +26,10 @@ export const HomeComponent = () => {
 
   const HandleSettingContent = (slug: string) => {
     const content = state.content;
-    return content.filter((item: { slug: string }) => item.slug === slug)[0]
-      .description;
+    const { title, description } = content.filter(
+      (item: { slug: string }) => item.slug === slug
+    )[0];
+    return { title, description };
   };
 
   const HandleTitleString = (string: string) => {
@@ -45,33 +47,33 @@ export const HomeComponent = () => {
           <div className="container">
             <h1
               dangerouslySetInnerHTML={HandleTitleString(
-                HandleSettingContent("title")
+                HandleSettingContent("title").description
               )}
             ></h1>
             <div className="social_link">
               <a
-                href="https://github.com/ketanrajpal"
+                href={HandleSettingContent("github").description}
                 target="_blank"
                 rel="noreferrer"
               >
                 <span className="material-symbols-rounded">call_made</span>
-                <span>GitHub</span>
+                <span>{HandleSettingContent("github").title}</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/ketanrajpal/"
+                href={HandleSettingContent("linkedin").description}
                 target="_blank"
                 rel="noreferrer"
               >
                 <span className="material-symbols-rounded">call_made</span>
-                <span>LinkedIn</span>
+                <span>{HandleSettingContent("linkedin").title}</span>
               </a>
               <a
-                href="https://www.behance.net/ketanrajpal/projects"
+                href={HandleSettingContent("behance").description}
                 target="_blank"
                 rel="noreferrer"
               >
                 <span className="material-symbols-rounded">call_made</span>
-                <span>Behance</span>
+                <span>{HandleSettingContent("behance").title}</span>
               </a>
             </div>
           </div>

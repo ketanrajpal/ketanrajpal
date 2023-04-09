@@ -1,18 +1,13 @@
 .header_component {
-    padding: 2rem;
+    box-sizing: border-box;
 
     div.container {
-        width: 80vw;
         display: grid;
         margin: auto;
         grid-template-columns: 1fr auto auto auto;
-        column-gap: 2rem;
         align-items: center;
 
         a.heading {
-            font-size: 1.2rem;
-            line-height: 1.2rem;
-            letter-spacing: 0.2rem;
             text-transform: uppercase;
             font-weight: 600;
         }
@@ -20,11 +15,7 @@
         nav {
             font-size: 1.1rem;
             letter-spacing: 0.1rem;
-            font-weight: 500;
-            display: grid;
-            grid-template-columns: repeat(3, auto);
             grid-gap: 3rem;
-            align-items: center;
             line-height: 1rem;
 
             a {
@@ -35,14 +26,10 @@
         }
 
         a.contact {
-            font-size: 1.1rem;
             font-weight: 500;
             display: grid;
             grid-template-columns: auto auto;
             align-items: center;
-            column-gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50rem;
             border: 0.2rem solid map-get($color, 0);
 
             &:hover {
@@ -57,10 +44,8 @@
         button {
             border: none;
             background: none;
-            font-size: 1.2rem;
             font-weight: 600;
             align-items: center;
-            line-height: 1.2rem;
             cursor: pointer;
         }
     }
@@ -85,5 +70,107 @@ div.light .header_component {
 
     span {
         color: map-get($dark_color, 0);
+    }
+}
+
+
+.header_component {
+    @media (max-width: 40rem) {
+        div.container {
+            width: 90vw;
+        }
+    }
+
+    @media(min-width: 40rem)and (max-width: 60rem) {
+        div.container {
+            width: 35rem;
+        }
+    }
+
+    @media(min-width: 60rem)and (max-width: 80rem) {
+
+        div.container {
+            width: 55rem;
+        }
+    }
+
+    @media(min-width: 80rem)and (max-width: 100rem) {
+        div.container {
+            width: 75rem;
+        }
+    }
+
+    @media(min-width: 100rem) {
+        div.container {
+            width: 95rem;
+        }
+    }
+
+    @media (max-width: 40rem) {
+        padding: 1rem;
+
+        div.container {
+            column-gap: 1rem;
+
+            a.heading {
+                font-size: 1.1rem;
+                line-height: 1.1rem;
+                letter-spacing: 0.1rem;
+            }
+
+            nav {
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+                grid-gap: 2rem;
+                line-height: 1rem;
+            }
+
+            a.contact {
+                font-size: 1rem;
+                column-gap: 0.4rem;
+                padding: 0.6rem 1.3rem;
+                border-radius: 50rem;
+            }
+
+            button {
+                font-size: 1.1rem;
+                line-height: 1.1rem;
+            }
+        }
+
+    }
+
+    @media(min-width: 40rem) {
+        padding: 2rem;
+
+        div.container {
+            column-gap: 2rem;
+
+            a.heading {
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+                letter-spacing: 0.2rem;
+            }
+
+            nav {
+                font-size: 1.1rem;
+                letter-spacing: 0.1rem;
+                grid-gap: 3rem;
+                line-height: 1rem;
+            }
+
+            a.contact {
+                font-size: 1.1rem;
+                column-gap: 0.5rem;
+                padding: 0.8rem 1.5rem;
+                border-radius: 50rem;
+            }
+
+            button {
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+            }
+        }
+
     }
 }
