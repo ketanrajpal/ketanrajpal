@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { addContent, Setting } from "../reducers/setting";
 import sanity from "../services/sanity";
+
 import { ExperienceComponent } from "./experience";
 
 export const HomeComponent = () => {

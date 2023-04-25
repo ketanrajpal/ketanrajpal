@@ -1,11 +1,12 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
-import { HeaderComponent } from "./header"
+import { HeaderComponent } from "./header";
 
 export const RootComponent = () => {
-    return <>
-        <HeaderComponent />
-        {/*
+  return (
+    <>
+      <HeaderComponent />
+      {/*
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="award">Award</Link></li>
@@ -18,6 +19,7 @@ export const RootComponent = () => {
             <li><Link to="technology">Technology</Link></li>
         </ul>
 */}
-        <Outlet />
+      <Outlet />
     </>
-}
+  );
+};

@@ -1,0 +1,83 @@
+section.award_component {
+
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+
+    div.swiper {
+        margin: 5rem 0;
+
+        div.swiper-wrapper {
+            display: flex;
+
+            div.swiper-slide {
+                border-right: 0.2rem solid map-get($color, 0);
+                padding: 2rem;
+
+
+                &:first-child {
+                    background-color: map-get($color, 0);
+                    display: flex;
+
+                    div {
+                        width: 15rem;
+                        align-self: center;
+
+                        h1 {
+                            align-self: center;
+                            font-size: 2rem;
+                            letter-spacing: 0.03em;
+                            font-weight: 400;
+                            text-align: center;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                div {
+                    width: 14rem;
+
+                    h1 {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                        margin: 3rem 0 2rem 0;
+                        line-height: 2.3rem;
+                    }
+
+                    h2 {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        line-height: 1.9rem;
+                    }
+
+                    h3 {
+                        background-color: map-get($color, 0);
+                        display: inline-block;
+                        font-weight: 500;
+                        padding: 0.6em 1em;
+                        color: #fff;
+                        font-size: 0.8rem;
+                        border-radius: 50rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.dark .award_component {
+    div.swiper {
+        div.swiper-wrapper {
+            div.swiper-slide {
+                div {
+
+                    h1,
+                    h2 {
+                        color: map-get($light_color, 0);
+                    }
+                }
+            }
+        }
+    }
+}

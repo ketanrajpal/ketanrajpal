@@ -46,13 +46,13 @@ export const ExperienceComponent = () => {
                   ? "Present"
                   : HandleDate(experience.endDate)}
               </h3>
-              <h1>
+              <h2>
                 <span>{experience.title}</span>
                 <span className="material-symbols-rounded">
                   alternate_email
                 </span>
                 <span>{experience.company}</span>
-              </h1>
+              </h2>
               <p>
                 {experience.description.map((experience, index) => (
                   <span key={index}>

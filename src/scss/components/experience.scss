@@ -55,6 +55,7 @@
 
 
 .experience_component {
+    border-bottom: 0.3rem solid map-get($color, 0);
     display: block;
 
     ul {
@@ -97,7 +98,7 @@
                 animation: revealFromLeft 0.5s 0s ease both 1;
                 padding-top: 0.4rem;
 
-                h1 {
+                h2 {
 
                     letter-spacing: 0.03em;
                     font-weight: 400;
@@ -157,7 +158,7 @@ div.light .experience_component {
             }
 
             .content {
-                h1 {
+                h2 {
                     color: map-get($dark_color, 0);
                 }
 
@@ -178,7 +179,7 @@ div.dark .experience_component {
             }
 
             .content {
-                h1 {
+                h2 {
                     color: map-get($light_color, 0);
                 }
 
@@ -225,7 +226,7 @@ div.dark .experience_component {
         ul {
             li {
                 .content {
-                    h1 {
+                    h2 {
                         display: grid;
                         font-size: 1.2rem;
                         grid-template-columns: auto 1fr;
@@ -247,7 +248,7 @@ div.dark .experience_component {
         ul {
             li {
                 .content {
-                    h1 {
+                    h2 {
                         display: grid;
                         font-size: 1.5rem;
                         grid-template-columns: auto auto 1fr;
