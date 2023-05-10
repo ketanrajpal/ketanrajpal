@@ -146,7 +146,7 @@
                     span {
                         border: 0.15rem solid map-get($color, 0);
 
-                        font-weight: 700;
+                        font-weight: 500;
                         padding: 0.5em 0.9em;
                         font-size: 0.8rem;
                         border-radius: 50rem;
@@ -190,6 +190,12 @@ div.light .experience_component {
                 p {
                     color: map-get($dark_color, 0);
                 }
+
+                div.technologies {
+                    span {
+                        color: map-get($dark_color, 0);
+                    }
+                }
             }
         }
     }
@@ -210,6 +216,12 @@ div.dark .experience_component {
 
                 p {
                     color: map-get($light_color, 0);
+                }
+
+                div.technologies {
+                    span {
+                        color: map-get($light_color, 0);
+                    }
                 }
             }
         }
