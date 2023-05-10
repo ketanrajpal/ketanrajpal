@@ -25,7 +25,8 @@ export const ExperienceComponent = () => {
             startDate,
             endDate,
             present,
-            description
+            description,
+            "technologies": technologies[]->name,
         }`
       )
       .then((data) => {
@@ -55,13 +56,15 @@ export const ExperienceComponent = () => {
               </h2>
               <p>
                 {experience.description.map((experience, index) => (
-                  <span key={index}>
-                    {experience}
-                    <br />
-                    <br />
-                  </span>
+                  <span key={index}>{experience}</span>
                 ))}
               </p>
+              <div className="technologies">
+                {experience.technologies.map((technology, index) => (
+                  <span key={index}>{technology}</span>
+                ))}
+              </div>
+              <br />
             </div>
           </li>
         ))}
