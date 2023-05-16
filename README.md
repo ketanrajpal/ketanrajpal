@@ -39,6 +39,8 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 * **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: React JS, Material UI, Typescript, Serverless & Amazon Web Services
 
+* **[Moodle Integration Plugin](https://www.new-portal.lsclondon.co.uk/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: Typescript, Node JS, Express JS, PHP, MySql, Moodle & Serverless
+
 * **[Luxury Travel Website](https://www.connexons.com)** for Connexons Travel<br>**Technologies used** :point_right: HTML5, CSS3, PHP, MySql & Wordpress
 
 * **[Official School Website](https://www.lscmalta.edu.mt/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: HTML5, CSS3, SCSS, PHP & MySql
