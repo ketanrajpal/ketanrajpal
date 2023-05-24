@@ -4,7 +4,7 @@
     div.container {
         display: grid;
         margin: auto;
-        grid-template-columns: 1fr auto auto auto;
+        grid-template-columns: 1fr auto auto;
         align-items: center;
 
         a.heading {
@@ -110,7 +110,7 @@ div.light .header_component {
         padding: 1rem;
 
         div.container {
-            column-gap: 1rem;
+            column-gap: 0.5rem;
 
             a.heading {
                 font-size: 1.1rem;
@@ -126,9 +126,9 @@ div.light .header_component {
             }
 
             a.contact {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 column-gap: 0.4rem;
-                padding: 0.6rem 1.3rem;
+                padding: 0.5rem 1rem;
                 border-radius: 50rem;
             }
 

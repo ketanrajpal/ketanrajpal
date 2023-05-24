@@ -9,7 +9,6 @@ export const HeaderComponent = () => {
         <Link to="/" className="heading">
           Ketan Rajpal
         </Link>
-        <nav></nav>
         <a href="mailto:info@krpl.in" className="contact">
           <span className="material-symbols-rounded">alternate_email</span>
           <span>info@krpl.in</span>
