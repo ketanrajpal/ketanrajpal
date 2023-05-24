@@ -1,6 +1,7 @@
 {
   "short_name": "Ketan Rajpal Full Stack Developer",
   "name": "Ketan Rajpal Full Stack Developer in London, UK",
+  "description": "Ketan Rajpal: London-based Full Stack Developer specializing in web design, development, and software engineering. Skilled in frontend and application development.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -22,7 +23,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "id": "/?utm_source=pwa",
+  "start_url": "/?utm_source=pwa",
   "display": "standalone",
   "theme_color": "#f12f16",
   "background_color": "#fff0eb"
