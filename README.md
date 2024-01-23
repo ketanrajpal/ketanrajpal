@@ -12,6 +12,7 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 * **Testing Framework** :point_right: Chai, Supertest, Jest & Mocha
 * **Digital Design** :point_right: Adobe Creative Suite, User Experience Journeys & Prototyping & Wireframing
 * **Platforms** :point_right: Wordpress, Moodle & WooCommerce
+* **Legal Tech** :point_right:  & HighQ
 
 
 ### :briefcase: &nbsp; Professional Experience.
@@ -33,11 +34,13 @@ As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** wi
 
 
 ### :computer: &nbsp; Featured Projects.
+* **[International Business Reorganisation (IBR)](https://kpmg.com/uk/en/home.html)** for KPMG LLP<br>**Technologies used** :point_right: HighQ, HTML5, SCSS, Typescript, Node JS, React JS, Express JS & JQuery
+
 * **[USA Taxi and Limo Service Website](https://usairportlimoservice.com/)** for CT Limo Service<br>**Technologies used** :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Google Cloud
 
 * **[Global Admission Portal](https://crm.lsc.group/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: HTML5, CSS3, SCSS, Python, Django, PostgreSQL & Amazon Web Services
 
-* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: React JS, Material UI, Typescript, Serverless & Amazon Web Services
+* **[Progressive Attendance Application](https://app.lsc.group/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: React JS, Material UI, Typescript, Serverless, Amazon Web Services, Django, Python & PostgreSQL
 
 * **[Moodle Integration Plugin](https://www.new-portal.lsclondon.co.uk/)** for London School of Commerce Group of Colleges<br>**Technologies used** :point_right: Typescript, Node JS, Express JS, PHP, MySql, Moodle & Serverless
 
