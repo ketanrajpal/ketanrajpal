@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #007bff;
+}
+
+[theme-mode="light"] {
+  --background-color: #ffffff;
+}
+
+[theme-mode="dark"] {
+  --background-color: #000000;
+}
