@@ -4,6 +4,7 @@ import { addContent, Setting } from "../reducers/setting";
 import sanity from "../services/sanity";
 
 import { ExperienceComponent } from "./experience";
+import { Link } from "react-router-dom";
 
 export const HomeComponent = () => {
   const state = useAppSelector(Setting);
@@ -27,17 +28,12 @@ export const HomeComponent = () => {
 
   const HandleSettingContent = (slug: string) => {
     const content = state.content;
-    const { title, description } = content.filter(
-      (item: { slug: string }) => item.slug === slug
-    )[0];
+    const { title, description } = content.filter((item: { slug: string }) => item.slug === slug)[0];
     return { title, description };
   };
 
   const HandleTitleString = (string: string) => {
-    string = string.replace(
-      "{experience}",
-      (new Date().getFullYear() - 2010).toString()
-    );
+    string = string.replace("{experience}", (new Date().getFullYear() - 2010).toString());
     return { __html: string };
   };
 
@@ -46,36 +42,24 @@ export const HomeComponent = () => {
       <div className="home_component">
         {state.content.length > 0 ? (
           <div className="container">
-            <h1
-              dangerouslySetInnerHTML={HandleTitleString(
-                HandleSettingContent("title").description
-              )}
-            ></h1>
+            <h1 dangerouslySetInnerHTML={HandleTitleString(HandleSettingContent("title").description)}></h1>
             <div className="social_link">
-              <a
-                href={HandleSettingContent("github").description}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={HandleSettingContent("github").description} target="_blank" rel="noreferrer">
                 <span className="material-symbols-rounded">call_made</span>
                 <span>{HandleSettingContent("github").title}</span>
               </a>
-              <a
-                href={HandleSettingContent("linkedin").description}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={HandleSettingContent("linkedin").description} target="_blank" rel="noreferrer">
                 <span className="material-symbols-rounded">call_made</span>
                 <span>{HandleSettingContent("linkedin").title}</span>
               </a>
-              <a
-                href={HandleSettingContent("behance").description}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={HandleSettingContent("behance").description} target="_blank" rel="noreferrer">
                 <span className="material-symbols-rounded">call_made</span>
                 <span>{HandleSettingContent("behance").title}</span>
               </a>
+              <Link to="/blog">
+                <span className="material-symbols-rounded">call_made</span>
+                <span>Blog</span>
+              </Link>
             </div>
           </div>
         ) : null}
