@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Ketan Rajpal - Web Developer & Digital Designer",
-  description:
-    "A portfolio website showcasing my work as a web developer and digital designer.",
-};
-
+import { metaData } from "@/utils/metadata";
 import "./app.scss";
+
+export async function generateMetadata() {
+  const metadata = await metaData("home");
+
+  return {
+    ...metadata,
+  };
+}
 
 export default function RootLayout({
   children,
