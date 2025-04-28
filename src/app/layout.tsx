@@ -1,4 +1,5 @@
 import { metaData } from "@/utils/metadata";
+
 import "./app.scss";
 
 export async function generateMetadata() {

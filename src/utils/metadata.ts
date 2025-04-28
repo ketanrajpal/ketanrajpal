@@ -1,4 +1,4 @@
-import { getOption, getPage } from "@/sanity/fetch";
+import { getOption, getPage } from "@/sanity/utils/fetch";
 import { Metadata } from "next";
 
 export async function metaData(currentPage: string): Promise<Metadata> {
@@ -7,33 +7,33 @@ export async function metaData(currentPage: string): Promise<Metadata> {
 
   if (!page) {
     return {
-      title: "Page not found",
       description: "This page does not exist",
+      title: "Page not found",
     };
   }
 
   return {
-    title: page.title,
     description: page.description,
     keywords: page.keywords,
     openGraph: {
-      title: page.title,
       description: page.description,
-      siteName: siteName?.value,
       locale: "en_GB",
+      siteName: siteName?.value,
+      title: page.title,
       type: "website",
     },
     robots: {
-      index: true,
       follow: true,
       googleBot: {
-        index: true,
         follow: true,
+        index: true,
       },
+      index: true,
     },
+    title: page.title,
     twitter: {
-      title: page.title,
       description: page.description,
+      title: page.title,
     },
   };
 }

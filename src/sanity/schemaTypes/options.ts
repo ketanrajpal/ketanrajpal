@@ -1,40 +1,40 @@
 import { defineField, defineType } from "sanity";
 
 export const options = defineType({
-  type: "document",
-  name: "options",
-  title: "Options",
-  preview: {
-    select: {
-      title: "name",
-      subtitle: "slug.current",
-    },
-  },
   fields: [
     defineField({
-      type: "string",
+      description: "This is the name of the option",
       name: "name",
       title: "Name",
-      validation: (e) => e.required(),
-      description: "This is the name of the option",
-    }),
-    defineField({
-      type: "slug",
-      name: "slug",
-      title: "Slug",
-      validation: (e) => e.required(),
-      description: "This is the slug of the option",
-      options: {
-        source: "name",
-        maxLength: 96,
-      },
-    }),
-    defineField({
       type: "string",
+      validation: (e) => e.required(),
+    }),
+    defineField({
+      description: "This is the slug of the option",
+      name: "slug",
+      options: {
+        maxLength: 96,
+        source: "name",
+      },
+      title: "Slug",
+      type: "slug",
+      validation: (e) => e.required(),
+    }),
+    defineField({
+      description: "This is the value of the option",
       name: "value",
       title: "Value",
+      type: "string",
       validation: (e) => e.required(),
-      description: "This is the value of the option",
     }),
   ],
+  name: "options",
+  preview: {
+    select: {
+      subtitle: "slug.current",
+      title: "name",
+    },
+  },
+  title: "Options",
+  type: "document",
 });

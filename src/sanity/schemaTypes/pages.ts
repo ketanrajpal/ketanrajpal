@@ -1,59 +1,59 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 export const pages = defineType({
-  type: "document",
-  name: "pages",
-  title: "Pages",
-  preview: {
-    select: {
-      title: "name",
-      subtitle: "slug.current",
-    },
-  },
   fields: [
     defineField({
-      type: "string",
+      description: "This is the name of the page",
       name: "name",
       title: "Name",
-      validation: (e) => e.required(),
-      description: "This is the name of the page",
-    }),
-    defineField({
-      type: "slug",
-      name: "slug",
-      title: "Slug",
-      validation: (e) => e.required(),
-      description: "This is the slug of the page",
-      options: {
-        source: "name",
-        maxLength: 96,
-      },
-    }),
-    defineField({
       type: "string",
+      validation: (e) => e.required(),
+    }),
+    defineField({
+      description: "This is the slug of the page",
+      name: "slug",
+      options: {
+        maxLength: 96,
+        source: "name",
+      },
+      title: "Slug",
+      type: "slug",
+      validation: (e) => e.required(),
+    }),
+    defineField({
+      description: "This is the title of the page",
       name: "title",
       title: "Title",
+      type: "string",
       validation: (e) => e.required(),
-      description: "This is the title of the page",
     }),
     defineField({
-      type: "text",
+      description: "This is the description of the page",
       name: "description",
       title: "Description",
+      type: "text",
       validation: (e) => e.required(),
-      description: "This is the description of the page",
     }),
     defineField({
-      type: "array",
-      name: "keywords",
-      title: "Keywords",
       description: "This is the keywords of the page",
+      name: "keywords",
       of: [
         defineArrayMember({
-          type: "string",
           title: "Keyword",
+          type: "string",
         }),
       ],
+      title: "Keywords",
+      type: "array",
     }),
   ],
+  name: "pages",
+  preview: {
+    select: {
+      subtitle: "slug.current",
+      title: "name",
+    },
+  },
+  title: "Pages",
+  type: "document",
 });
