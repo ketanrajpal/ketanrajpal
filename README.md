@@ -1,22 +1,24 @@
 ### :necktie: &nbsp; Ketan Rajpal
-As a dynamic and accomplished **Full Stack Developer** and **UI/UX Designer** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing **high-performance**, **adaptable web applications** using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
+As a dynamic and accomplished **Full-Stack Developer & Product Builder** with over a decade of expertise, I take pride in my passion and success in the field. My experience developing high-performance, adaptable web applications using contemporary software design methodologies is unparalleled. I thrive in challenging environments that allow me to push boundaries, enhance existing products, and innovate new services. Fuelled by my ambition and aspirations, I'm a motivated self-starter and effective leader with a proven track record of delivering exceptional results in my industry. With my creative flair and original thinking, I'm always looking for ways to stand out and make a positive impact.
 
-*At present, my role is a Manager Developer within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
+*At present, my role is a **Senior Manager** within the Tax & Legal branch of KPMG UK. In this position, I develop legal technology tools that incorporate knowledge from diverse industries to solve client challenges.*
 
 
 ### :toolbox: &nbsp; Technologies.
-* **Front-End** :point_right: React JS, CSS3, Material UI, Javascript, Bootstrap, SCSS, HTML5 & JQuery
-* **Back-End** :point_right: PHP, Typescript, Node JS, Python & GraphQL
-* **Framework & Database** :point_right: Express JS, Mongo DB, PostgreSQL, Sqlite, Flask, MySql & Django
-* **Deployment** :point_right: Google Cloud, Serverless & Amazon Web Services
-* **Testing Framework** :point_right: Chai, Supertest, Jest & Mocha
-* **Digital Design** :point_right: Adobe Creative Suite, User Experience Journeys & Prototyping & Wireframing
-* **Platforms** :point_right: Wordpress, Moodle & WooCommerce
-* **Legal Tech** :point_right:  & HighQ
+* **Product & Application Development** :point_right: React, Next.js, TypeScript, JavaScript, Tailwind CSS, & Material UI
+* **Backend & API Engineering** :point_right: Node.js, Python, PHP, REST APIs, GraphQL, & Flask APIs
+* **Platform & Data Engineering** :point_right: PostgreSQL, MySQL, MongoDB, SQLite, Prisma, tRPC, & schema-driven APIs
+* **AI & Agentic Systems** :point_right: AI agents, agent orchestration, tool-calling workflows, application-embedded LLMs, & automation pipelines
+* **Authentication & Security** :point_right: Authentication systems, RBAC, role-based access control, & audit-safe architectures
+* **Cloud & Infrastructure** :point_right: Amazon Web Services, Microsoft Azure, Google Cloud, Serverless architectures, & CI/CD pipelines
+* **System Reliability & Quality** :point_right: Jest, Mocha, Chai, Supertest, production monitoring, & reliability-first design
+* **Design & Product Craft** :point_right: UX journeys, prototyping & wireframing, & Adobe Creative Suite
+* **Domain Experience** :point_right: Legal Technology (HighQ, internal platforms), & Education Technology
 
 
 ### :briefcase: &nbsp; Professional Experience.
-* **Manager Developer** :point_right: [KPMG LLP](https://kpmg.com/) :heavy_check_mark:
+* **Senior Manager** :point_right: [KPMG LLP](https://kpmg.com/) :heavy_check_mark:
+* **Manager Developer** :point_right: [KPMG LLP](https://kpmg.com/)
 * **Full Stack Developer** :point_right: [London School of Commerce](https://www.lsclondon.co.uk) 
 * **Web Developer** :point_right: [Study Smart Overseas Education](https://www.studysmart.co.in) 
 * **Front End Designer** :point_right: [Torus Labs](https://www.tor.us) 
