@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #fa8128;
-  --color-secondary: rgb(22, 24, 28);
+  --color-primary: #ff5e0e;
+  --color-secondary: rgb(34, 34, 34);
 }
 
 :root.dark {
-  --background: rgb(22, 24, 28);
+  --background: rgb(34, 34, 34);
   --foreground: rgb(255, 240, 235);
 }
 
 :root.light {
   --background: rgb(255, 255, 255);
-  --foreground: rgb(22, 24, 28);
+  --foreground: rgb(34, 34, 34);
 }
 
 body {

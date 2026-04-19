@@ -36,15 +36,15 @@ const item = {
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center h-screen w-screen">
+    <main className="flex items-center justify-center p-6 md:h-screen md:w-screen md:p-0 lg:h-screen lg:w-screen lg:p-0">
       <motion.div
         animate="visible"
-        className="container flex flex-col gap-12"
+        className="container flex flex-col gap-8 md:gap-10 lg:gap-12"
         initial="hidden"
         variants={container}
       >
         <motion.h1
-          className="text-6xl leading-snug tracking-wide"
+          className="leading-snug tracking-wide text-4xl md:text-5xl lg:text-6xl"
           variants={item}
         >
           <strong className="text-primary font-medium">Senior Engineer</strong>{" "}
@@ -57,7 +57,7 @@ export default function Home() {
           at the scale where it matters.
         </motion.h1>
         <motion.h2
-          className="text-3xl leading-relaxed tracking-wide"
+          className="leading-relaxed tracking-wide text-xl md:text-2xl lg:text-3xl"
           variants={item}
         >
           I&apos;m{" "}
@@ -72,7 +72,7 @@ export default function Home() {
         </motion.h2>
 
         <motion.div
-          className="flex flex-row items-center gap-10 text-2xl"
+          className="flex flex-row items-center gap-6 text-xl md:gap-8 md:text-2xl lg:gap-10 lg:text-2xl"
           variants={item}
         >
           {socialLinks.map((link) => (
