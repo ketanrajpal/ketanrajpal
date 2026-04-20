@@ -12,6 +12,7 @@ export const Logo = ({ size }: { size: number }) => {
       height={size}
       initial={false}
       key={isDark ? "dark" : "light"}
+      overflow="visible"
       style={{ display: "inline-flex", transformOrigin: "center" }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       viewBox="0 0 43 42.9"

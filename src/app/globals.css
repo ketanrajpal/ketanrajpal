@@ -1,21 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #ff5e0e;
-  --color-secondary: rgb(34, 34, 34);
+  --color-primary: rgb(255, 135, 66);
+  --color-secondary: rgb(3, 3, 3);
 }
 
 :root.dark {
-  --background: rgb(34, 34, 34);
+  --background: rgb(3, 3, 3);
   --foreground: rgb(255, 240, 235);
 }
 
 :root.light {
   --background: rgb(255, 255, 255);
-  --foreground: rgb(34, 34, 34);
+  --foreground: rgb(3, 3, 3);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+.header-bg {
+  position: relative;
+}
+
+.header-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    color-mix(in srgb, var(--background) 80%, transparent) 60%,
+    transparent 100%
+  );
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }

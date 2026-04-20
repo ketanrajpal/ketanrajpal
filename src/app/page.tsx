@@ -4,6 +4,7 @@ import { ArrowAngularTopRightSolid } from "@lineiconshq/free-icons";
 import { motion } from "motion/react";
 
 import { Icon } from "@/components/Icon";
+import { Story } from "@/components/Story";
 
 const socialLinks = [
   {
@@ -36,10 +37,10 @@ const item = {
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center p-6 md:h-screen md:w-screen md:p-0 lg:h-screen lg:w-screen lg:p-0">
+    <>
       <motion.div
         animate="visible"
-        className="container flex flex-col gap-8 md:gap-10 lg:gap-12"
+        className="flex flex-col gap-8 md:gap-10 lg:gap-12 py-25"
         initial="hidden"
         variants={container}
       >
@@ -104,6 +105,8 @@ export default function Home() {
           ))}
         </motion.div>
       </motion.div>
-    </main>
+
+      <Story />
+    </>
   );
 }

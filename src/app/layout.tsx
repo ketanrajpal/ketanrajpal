@@ -4,6 +4,7 @@ import { Inter_Tight } from "next/font/google";
 
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { LenisProvider } from "@/components/LenisProvider";
 
 const inter = Inter_Tight({
   subsets: ["latin"],
@@ -23,8 +24,12 @@ export default function RootLayout({
   return (
     <html className={`${inter.variable} h-full antialiased`} lang="en">
       <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
+        <LenisProvider>
+          <main className="max-w-7xl m-auto">
+            <Header />
+            {children}
+          </main>
+        </LenisProvider>
       </body>
     </html>
   );
