@@ -23,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${inter.variable} h-full antialiased`} lang="en">
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full">
         <LenisProvider>
-          <main className="max-w-7xl m-auto">
+          <main className="max-w-7xl mx-auto pt-5 md:pt-10 lg:pt-15">
             <Header />
             {children}
           </main>

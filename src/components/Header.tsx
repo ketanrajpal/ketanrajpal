@@ -9,8 +9,8 @@ import { Mode } from "./Mode";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full py-10 pb-20 header-bg">
-      <div className="flex items-center justify-between">
+    <header className="fixed top-0 z-50 w-full header-bg">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
         <NextLink href="/">
           <Logo size={50} />
         </NextLink>

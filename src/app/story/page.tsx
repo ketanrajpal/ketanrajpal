@@ -2,6 +2,8 @@
 
 import { motion } from "motion/react";
 
+import { Section } from "@/components/Section";
+
 const reveal = {
   hidden: { opacity: 0, y: 32 },
   visible: {
@@ -25,7 +27,7 @@ const P = ({ children }: { children: React.ReactNode }) => (
 
 export default function StoryPage() {
   return (
-    <div className="flex flex-col gap-10 md:gap-14 py-25">
+    <Section className="flex flex-col gap-10 md:gap-14">
       <motion.h1
         className="leading-snug tracking-wide text-4xl md:text-5xl lg:text-6xl"
         initial="hidden"
@@ -211,6 +213,6 @@ export default function StoryPage() {
         That is the standard I have always worked toward. And the most important
         chapter is still ahead.
       </P>
-    </div>
+    </Section>
   );
 }
