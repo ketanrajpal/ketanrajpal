@@ -48,7 +48,7 @@ const experiences = [
     year: "2019",
   },
   {
-    color: "#e7edef",
+    color: "#0a5a4f",
     company: "Study Smart Overseas Education",
     description:
       "Built and maintained a Student Management System and IELTS portal end to end, alongside landing pages and social media across four platforms to support recruitment and digital marketing.",

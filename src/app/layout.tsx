@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   creator: "Ketan Rajpal",
   description:
     "Portfolio of Ketan Rajpal — Senior Manager at KPMG UK specialising in legal technology, education technology, and AI. Fifteen years shipping resilient, scalable digital platforms that keep working when stakes are high.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   keywords: [
     "Ketan Rajpal",
     "Senior Engineer",
