@@ -85,7 +85,7 @@ export const Experience = () => {
             className="w-full"
             key={`${experience.company}-${experience.year}`}
           >
-            <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-md">
+            <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-sm">
               <div
                 className="absolute right-4 top-4 inline-block rounded-2xl p-3"
                 style={{ backgroundColor: experience.color }}
