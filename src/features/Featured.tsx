@@ -95,54 +95,89 @@ export const Featured = () => {
   });
 
   return (
-    <div ref={containerRef} style={{ height: `${projects.length * 100}vh` }}>
-      <div className="sticky top-0 flex  flex-col justify-center gap-16 overflow-visible md:h-screen">
-        <div className="mx-auto flex flex-col gap-6 max-w-sm p-10 md:gap-12 md:max-w-2xl md:p-0 lg:max-w-3xl lg:p-0">
-          <div className="flex flex-col gap-8">
-            <h2 className="font-serif font-medium tracking-wide text-4xl md:text-7xl">
-              Featured Projects
-            </h2>
-            <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
-              A handful of the platforms behind the work. Each one built to
-              last. Each one still running.
-            </p>
-          </div>
+    <div>
+      <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
+        <div className="flex flex-col gap-8">
+          <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
+            Featured Projects
+          </h2>
+          <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
+            A handful of the platforms behind the work. Each one built to last.
+            Each one still running.
+          </p>
         </div>
+      </div>
 
-        <motion.div className="flex mt-10" style={{ gap: GAP, x }}>
-          {projects.map((project) => (
-            <article
-              className="relative shrink-0 flex items-center flex-row"
-              key={project.title}
-              style={{ width: CARD_WIDTH }}
-            >
-              <div className="h-125 w-125 shrink-0 overflow-hidden rounded-3xl">
+      <div className="flex flex-col gap-6 px-0 pb-10 mx-5 md:hidden">
+        {projects.map((project) => (
+          <article className="w-full" key={project.title}>
+            <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
+              <div className="relative aspect-16/10 w-full overflow-hidden">
                 <Image
                   alt={project.title}
                   className="h-full w-full object-cover"
                   src={project.image}
                 />
               </div>
-
-              <div className="-ml-10 flex flex-col justify-between rounded-3xl bg-white p-15 shadow-xl">
-                <div className="flex flex-col gap-5">
-                  <div>
-                    <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                      {project.category}
-                    </p>
-                  </div>
-                  <h3 className="font-serif text-3xl font-medium tracking-wide leading-relaxed text-pretty">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-lg font-medium leading-loose text-pretty tracking-wide text-gray-500">
-                    {project.description}
+              <div className="flex flex-col gap-4 p-6">
+                <div>
+                  <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
+                    {project.category}
                   </p>
                 </div>
+                <h3 className="font-serif text-2xl font-medium leading-snug tracking-wide text-pretty">
+                  {project.title}
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-pretty tracking-wide text-gray-500">
+                  {project.description}
+                </p>
               </div>
-            </article>
-          ))}
-        </motion.div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div
+        className="hidden md:block"
+        ref={containerRef}
+        style={{ height: `${projects.length * 100}vh` }}
+      >
+        <div className="sticky top-0 flex flex-col justify-center gap-16 overflow-visible md:h-screen">
+          <motion.div className="mt-10 flex" style={{ gap: GAP, x }}>
+            {projects.map((project) => (
+              <article
+                className="relative flex shrink-0 flex-row items-center"
+                key={project.title}
+                style={{ width: CARD_WIDTH }}
+              >
+                <div className="h-125 w-125 shrink-0 overflow-hidden rounded-3xl">
+                  <Image
+                    alt={project.title}
+                    className="h-full w-full object-cover"
+                    src={project.image}
+                  />
+                </div>
+
+                <div className="-ml-10 flex flex-col justify-between rounded-3xl bg-white p-15 shadow-xl">
+                  <div className="flex flex-col gap-5">
+                    <div>
+                      <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
+                        {project.category}
+                      </p>
+                    </div>
+                    <h3 className="font-serif text-3xl font-medium leading-relaxed tracking-wide text-pretty">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-lg font-medium leading-loose text-pretty tracking-wide text-gray-500">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
