@@ -104,7 +104,7 @@ export function Technologies() {
         {marqueeItems.map((tech, index) => (
           <span
             aria-hidden={index >= technologies.length}
-            className="text-base uppercase font-bold tracking-wide text-slate-500 leading-loose"
+            className="text-sm md:text-base uppercase font-bold tracking-wide text-slate-500 leading-loose"
             key={`${tech.name}-${index}`}
           >
             {tech.name}
