@@ -28,9 +28,9 @@ export const Footer = () => {
       />
       <Link
         className="text-6xl font-semibold font-serif text-slate-300 tracking-wide"
-        href="mailto:hi@ketanrajpal.dev"
+        href="mailto:hello@ketanrajpal.dev"
       >
-        hi@ketanrajpal.dev
+        hello@ketanrajpal.dev
       </Link>
       <div className="flex gap-6">
         {socials.map((social) => (
