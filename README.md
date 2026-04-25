@@ -4,13 +4,6 @@ Senior Manager at KPMG UK · Legal & Education Technology · 15+ years building 
 
 I don't just write code — I architect systems that hold under pressure, adapt to change, and keep working long after the moment they were built for has passed. From keeping six campuses operational across six countries during a global pandemic, to reimagining enterprise legal platforms at KPMG, the thread has always been the same: build things that matter, and build them properly.
 
-## ⚡ At a Glance
-
-- 🗓️ **15+** years of professional development across enterprise, government, and education
-- 🚀 **100+** projects delivered across **60+** clients
-- 🏆 **21** first-place awards at technical competitions across India's top institutions
-- 📈 Promoted to **Senior Manager** at KPMG within a year of joining
-
 ## 🏢 Currently
 
 **Senior Manager, Legal Technology — KPMG UK** · February 2023 – Present
