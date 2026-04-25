@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-serif: var(--font-outfit), sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--foreground);
+  font-family: var(--font-jakarta), sans-serif;
+}

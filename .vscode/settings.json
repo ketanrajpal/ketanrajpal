@@ -1,6 +1,15 @@
 {
-  "editor.formatOnSave": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "svg.preview.background": "black",
+  "cSpell.words": [
+    "Agentic",
+    "Behance",
+    "Gunicorn",
+    "ketan",
+    "Lenis",
+    "Lineicons",
+    "lineiconshq",
+    "Pydantic",
+    "rajpal",
+    "Wireframing"
+  ]
 }
