@@ -78,20 +78,8 @@ export const Experience = () => {
 
   return (
     <div className="bg-amber-100">
-      <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
-        <div className="flex flex-col gap-8">
-          <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
-            Experience
-          </h2>
-          <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
-            The systems most people never see are often the ones they depend on
-            most. I have spent fifteen years building exactly those - the quiet
-            infrastructure that keeps things working when it matters.
-          </p>
-        </div>
-      </div>
-
       <div className="flex flex-col gap-8 px-0 pb-10 mx-5 md:hidden">
+        <ExperienceHeading />
         {experiences.map((experience) => (
           <article
             className="w-full"
@@ -133,6 +121,7 @@ export const Experience = () => {
         style={{ height: `${experiences.length * 100}vh` }}
       >
         <div className="sticky top-0 flex flex-col justify-center gap-16 overflow-visible md:h-screen">
+          <ExperienceHeading />
           <motion.div className="flex md:mt-20" style={{ gap: GAP, x }}>
             {experiences.map((experience) => (
               <article
@@ -174,3 +163,18 @@ export const Experience = () => {
     </div>
   );
 };
+
+const ExperienceHeading = () => (
+  <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 pt-15 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
+    <div className="flex flex-col gap-8">
+      <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
+        Experience
+      </h2>
+      <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
+        The systems most people never see are often the ones they depend on
+        most. I have spent fifteen years building exactly those - the quiet
+        infrastructure that keeps things working when it matters.
+      </p>
+    </div>
+  </div>
+);
