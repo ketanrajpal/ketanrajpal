@@ -1,6 +1,7 @@
 import { Experience } from "@/features/Experience";
 import { Featured } from "@/features/Featured";
 import { Footer } from "@/features/Footer";
+import { FromTheBlog } from "@/features/FromTheBlog";
 import { Home } from "@/features/Home";
 import { Scroll } from "@/features/Scroll";
 import { Technologies } from "@/features/Technologies";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Home />
       <Experience />
       <Featured />
+      <FromTheBlog />
       <Technologies />
       <Footer />
     </div>

@@ -2,14 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  reactCompiler: true,
-  turbopack: {
-    rules: {
-      "*.mp4": {
-        type: "asset",
+  images: {
+    remotePatterns: [
+      {
+        hostname: "cdn.sanity.io",
+        protocol: "https",
       },
-    },
+    ],
   },
+  reactCompiler: true,
+  turbopack: {},
 };
 
 export default nextConfig;
