@@ -4,8 +4,8 @@ import ProfileImage from "@/images/ketan-rajpal.jpg";
 
 export const Home = () => {
   return (
-    <section className="flex min-h-screen items-center overflow-hidden">
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 md:gap-12">
+    <section className="flex items-center overflow-hidden md:min-h-screen">
+      <div className="mx-auto flex flex-col gap-6 max-w-sm p-10 md:gap-12 md:max-w-2xl md:p-0 lg:max-w-3xl lg:p-0">
         <div className="flex items-center gap-4">
           <span className="h-0.5 w-10 shrink-0 bg-black block" />
           <h2 className="text-lg font-medium tracking-wide md:text-2xl">

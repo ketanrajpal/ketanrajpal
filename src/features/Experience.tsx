@@ -82,11 +82,11 @@ export const Experience = () => {
       ref={containerRef}
       style={{ height: `${experiences.length * 100}vh` }}
     >
-      <div className="sticky top-0 flex h-screen flex-col justify-center gap-16 overflow-visible">
-        <div className="mx-auto w-full max-w-3xl shrink-0">
+      <div className="sticky top-0 flex  flex-col justify-center gap-16 overflow-visible md:h-screen">
+        <div className="mx-auto flex flex-col gap-6 max-w-sm p-10 md:gap-12 md:max-w-2xl md:p-0 lg:max-w-3xl lg:p-0">
           <div className="flex flex-col gap-8">
-            <h2 className="font-serif text-7xl font-medium tracking-wide">
-              Job Experience
+            <h2 className="font-serif  font-medium tracking-wide text-4xl md:text-7xl">
+              Experience
             </h2>
             <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
               The systems most people never see are often the ones they depend
@@ -96,7 +96,7 @@ export const Experience = () => {
           </div>
         </div>
 
-        <motion.div className="flex mt-20" style={{ gap: GAP, x }}>
+        <motion.div className="flex md:mt-20" style={{ gap: GAP, x }}>
           {experiences.map((experience) => (
             <article
               className="shrink-0"
