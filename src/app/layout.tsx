@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 
-import "./globals.css";
 import { LenisProvider } from "@/components/LenisProvider";
+
+import "./globals.css";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -105,6 +108,8 @@ export default function RootLayout({
         <LenisProvider>
           <main>{children}</main>
         </LenisProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
