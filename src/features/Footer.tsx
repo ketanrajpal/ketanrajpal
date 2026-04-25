@@ -20,14 +20,14 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center gap-12 py-12 bg-blue-300">
+    <footer className="flex flex-col items-center gap-12 py-12 bg-slate-950">
       <Image
         alt="Ketan Rajpal"
-        className="h-24 w-24 rounded-3xl object-cover sm:h-32 sm:w-32 md:h-40 md:w-40"
+        className="h-24 w-24 rounded-3xl object-cover sm:h-32 sm:w-32 md:h-40 md:w-40 rotate-2"
         src={ProfileImage}
       />
       <Link
-        className="text-7xl font-bold font-serif text-white/75 tracking-wide"
+        className="text-6xl font-semibold font-serif text-slate-300 tracking-wide"
         href="mailto:hi@ketanrajpal.dev"
       >
         hi@ketanrajpal.dev
@@ -35,7 +35,7 @@ export const Footer = () => {
       <div className="flex gap-6">
         {socials.map((social) => (
           <Link
-            className="bg-blue-100 p-2 px-5 rounded-full font-semibold leading-wide tracking-wide hover:bg-blue-200"
+            className="bg-slate-300 p-2 px-5 rounded-full font-semibold leading-wide tracking-wide hover:bg-slate-600 transition-colors hover:text-white"
             href={social.href}
             key={social.label}
             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export const Footer = () => {
           </Link>
         ))}
       </div>
-      <div className="flex gap-2 text-base font-bold tracking-wide items-center">
+      <div className="flex gap-2 text-base font-bold tracking-wide items-center text-slate-300">
         <span>Made with</span>
         <span className="text-rose-500">
           <svg

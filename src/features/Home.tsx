@@ -9,7 +9,7 @@ export const Home = () => {
         <div className="flex items-center gap-4">
           <span className="h-0.5 w-10 shrink-0 bg-black block" />
           <h2 className="text-lg font-medium tracking-wide md:text-2xl">
-            Hello, I&apos;m Ketan Rajpal
+            I&apos;m Ketan Rajpal
           </h2>
         </div>
 

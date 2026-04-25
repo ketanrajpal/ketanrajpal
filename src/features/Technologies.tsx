@@ -87,9 +87,9 @@ export function Technologies() {
   const marqueeItems = [...technologies, ...technologies];
 
   return (
-    <section className="relative flex flex-col overflow-hidden gap-6 bg-blue-300 py-4">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-50 bg-linear-to-r from-blue-300 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-50 bg-linear-to-l from-blue-300 to-transparent" />
+    <section className="relative flex flex-col overflow-hidden gap-6 bg-slate-950 py-4">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-50 bg-linear-to-r from-slate-950 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-50 bg-linear-to-l from-slate-950 to-transparent" />
       <motion.div
         animate={{ x: "-50%" }}
         className="flex min-w-max gap-6 items-center whitespace-nowrap"
@@ -104,7 +104,7 @@ export function Technologies() {
         {marqueeItems.map((tech, index) => (
           <span
             aria-hidden={index >= technologies.length}
-            className="text-base uppercase font-bold tracking-wide text-white leading-loose"
+            className="text-base uppercase font-bold tracking-wide text-slate-500 leading-loose"
             key={`${tech.name}-${index}`}
           >
             {tech.name}
