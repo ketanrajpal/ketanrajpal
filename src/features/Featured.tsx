@@ -96,19 +96,8 @@ export const Featured = () => {
 
   return (
     <div>
-      <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
-        <div className="flex flex-col gap-8">
-          <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
-            Featured Projects
-          </h2>
-          <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
-            A handful of the platforms behind the work. Each one built to last.
-            Each one still running.
-          </p>
-        </div>
-      </div>
-
       <div className="flex flex-col gap-6 px-0 pb-10 mx-5 md:hidden">
+        <FeaturedHeading />
         {projects.map((project) => (
           <article className="w-full" key={project.title}>
             <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
@@ -143,6 +132,7 @@ export const Featured = () => {
         style={{ height: `${projects.length * 100}vh` }}
       >
         <div className="sticky top-0 flex flex-col justify-center gap-16 overflow-visible md:h-screen">
+          <FeaturedHeading />
           <motion.div className="mt-10 flex" style={{ gap: GAP, x }}>
             {projects.map((project) => (
               <article
@@ -182,3 +172,17 @@ export const Featured = () => {
     </div>
   );
 };
+
+const FeaturedHeading = () => (
+  <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 pt-15 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
+    <div className="flex flex-col gap-8">
+      <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
+        Featured Projects
+      </h2>
+      <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
+        A handful of the platforms behind the work. Each one built to last. Each
+        one still running.
+      </p>
+    </div>
+  </div>
+);
