@@ -1,65 +1,71 @@
-import {DocumentTextIcon} from '@sanity/icons'
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import { DocumentTextIcon } from "@sanity/icons";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 export const postType = defineType({
-  name: 'post',
-  title: 'Post',
-  type: 'document',
-  icon: DocumentTextIcon,
   fields: [
     defineField({
-      name: 'title',
-      type: 'string',
+      name: "title",
+      type: "string",
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
+      name: "slug",
       options: {
-        source: 'title',
+        source: "title",
       },
+      type: "slug",
     }),
     defineField({
-      name: 'author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: "author",
+      to: { type: "author" },
+      type: "reference",
     }),
     defineField({
-      name: 'mainImage',
-      type: 'image',
+      fields: [
+        defineField({
+          name: "alt",
+          title: "Alternative text",
+          type: "string",
+        }),
+      ],
+      name: "mainImage",
       options: {
         hotspot: true,
       },
-      fields: [
-        defineField({
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-        })
-      ]
+      type: "image",
     }),
     defineField({
-      name: 'categories',
-      type: 'array',
-      of: [defineArrayMember({type: 'reference', to: {type: 'category'}})],
+      name: "categories",
+      of: [defineArrayMember({ to: { type: "category" }, type: "reference" })],
+      type: "array",
     }),
     defineField({
-      name: 'publishedAt',
-      type: 'datetime',
+      name: "publishedAt",
+      type: "datetime",
     }),
     defineField({
-      name: 'body',
-      type: 'blockContent',
+      initialValue: false,
+      name: "featured",
+      title: "Featured",
+      type: "boolean",
+    }),
+    defineField({
+      name: "body",
+      type: "blockContent",
     }),
   ],
+  icon: DocumentTextIcon,
+  name: "post",
   preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
     prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      const { author } = selection;
+      return { ...selection, subtitle: author && `by ${author}` };
+    },
+    select: {
+      author: "author.name",
+      media: "mainImage",
+      title: "title",
     },
   },
-})
+  title: "Post",
+  type: "document",
+});
