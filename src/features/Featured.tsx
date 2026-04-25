@@ -88,7 +88,9 @@ export const Featured = () => {
 
   const totalDistance = (projects.length - 1) * (CARD_WIDTH + GAP);
   const x = useTransform(scrollYProgress, (v) => {
-    const space = (window.innerWidth - CARD_WIDTH) / 2;
+    const viewportWidth =
+      typeof window !== "undefined" ? window.innerWidth : 1280;
+    const space = (viewportWidth - CARD_WIDTH) / 2;
     return -v * totalDistance + space;
   });
 
