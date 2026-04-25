@@ -8,6 +8,11 @@ export const postType = defineType({
       type: "string",
     }),
     defineField({
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
+    }),
+    defineField({
       name: "slug",
       options: {
         source: "title",
