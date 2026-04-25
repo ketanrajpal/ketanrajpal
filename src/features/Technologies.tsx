@@ -2,116 +2,115 @@
 
 import { motion } from "motion/react";
 
-import { Section } from "@/components/Section";
+const duration = 200;
 
-const rows: {
-  bold?: boolean;
-  color: string;
-  direction: number;
-  items: { bold?: boolean; name: string }[];
-}[] = [
-  {
-    color: "text-primary",
-    direction: -1,
-    items: [
-      { bold: true, name: "React" },
-      { bold: true, name: "Next.js" },
-      { bold: true, name: "TypeScript" },
-      { name: "JavaScript" },
-      { bold: true, name: "Tailwind CSS" },
-      { name: "Vue.js" },
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "SCSS" },
-      { name: "Material UI" },
-      { bold: true, name: "Node.js" },
-      { name: "Express" },
-      { bold: true, name: "Python" },
-      { name: "Django" },
-      { name: "Flask" },
-      { bold: true, name: "REST APIs" },
-      { name: "tRPC" },
-      { name: "GraphQL" },
-    ],
-  },
-  {
-    color: "text-foreground",
-    direction: 1,
-    items: [
-      { bold: true, name: "Google Gemini" },
-      { bold: true, name: "LLMs" },
-      { bold: true, name: "AI Agents" },
-      { name: "Tool Calling" },
-      { name: "Agentic Pipelines" },
-      { name: "Pydantic" },
-      { name: "Celery" },
-      { bold: true, name: "PostgreSQL" },
-      { name: "MySQL" },
-      { bold: true, name: "MongoDB" },
-      { name: "SQLite" },
-      { bold: true, name: "Prisma" },
-      { name: "Redis" },
-      { name: "Pandas" },
-      { name: "NumPy" },
-    ],
-  },
-  {
-    color: "text-primary",
-    direction: -1,
-    items: [
-      { bold: true, name: "AWS" },
-      { name: "EC2" },
-      { name: "Lambda" },
-      { name: "S3" },
-      { bold: true, name: "Azure" },
-      { bold: true, name: "Google Cloud" },
-      { bold: true, name: "Docker" },
-      { name: "Nginx" },
-      { bold: true, name: "OAuth 2.0" },
-      { name: "JWT" },
-      { name: "RBAC" },
-      { name: "AES Encryption" },
-      { bold: true, name: "CI/CD" },
-      { bold: true, name: "GitHub Actions" },
-      { name: "Sentry" },
-      { name: "Adobe XD" },
-      { name: "UX Design" },
-    ],
-  },
+const technologies = [
+  { name: "React" },
+  { name: "Next.js" },
+  { name: "TypeScript" },
+  { name: "JavaScript" },
+  { name: "Tailwind CSS" },
+  { name: "Material UI" },
+  { name: "Vue.js" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "SCSS" },
+  { name: "Node.js" },
+  { name: "Python" },
+  { name: "Django" },
+  { name: "Express" },
+  { name: "Flask" },
+  { name: "REST APIs" },
+  { name: "tRPC" },
+  { name: "GraphQL" },
+  { name: "Google Gemini" },
+  { name: "Application-embedded LLMs" },
+  { name: "AI Agent Design" },
+  { name: "Tool-calling Workflows" },
+  { name: "Agentic Pipelines" },
+  { name: "Automated Content & Data Pipelines" },
+  { name: "Pydantic Schema Validation" },
+  { name: "Celery-based Async Orchestration" },
+  { name: "PostgreSQL" },
+  { name: "MySQL" },
+  { name: "MongoDB" },
+  { name: "SQLite" },
+  { name: "Prisma" },
+  { name: "Redis" },
+  { name: "Pandas" },
+  { name: "NumPy" },
+  { name: "Schema-driven API Design" },
+  { name: "OAuth 2.0" },
+  { name: "JWT" },
+  { name: "Iron Session" },
+  { name: "RBAC" },
+  { name: "AES Encryption" },
+  { name: "CSRF Protection" },
+  { name: "Audit-safe Architectures" },
+  { name: "Government-grade Security Standards" },
+  { name: "AWS" },
+  { name: "EC2" },
+  { name: "Lambda" },
+  { name: "S3" },
+  { name: "Elastic Beanstalk" },
+  { name: "SES" },
+  { name: "Microsoft Azure" },
+  { name: "Application Insights" },
+  { name: "Google Cloud" },
+  { name: "Docker" },
+  { name: "Nginx" },
+  { name: "Gunicorn" },
+  { name: "CI/CD Pipelines" },
+  { name: "GitHub Actions" },
+  { name: "Code Review Practices" },
+  { name: "Git-based Workflows" },
+  { name: "Production Monitoring" },
+  { name: "Sentry" },
+  { name: "Azure Application Insights" },
+  { name: "Reliability-first Engineering" },
+  { name: "UX Journeys" },
+  { name: "Wireframing" },
+  { name: "Prototyping" },
+  { name: "Adobe XD" },
+  { name: "Adobe Creative Suite" },
+  { name: "Legal Technology" },
+  { name: "KPMG HighQ" },
+  { name: "M&A Platforms" },
+  { name: "Enterprise Legal Workflows" },
+  { name: "Education Technology" },
+  { name: "Admissions Systems" },
+  { name: "VLEs" },
+  { name: "Assessment & Proctoring Platforms" },
 ];
 
-const duration = 60;
-
 export function Technologies() {
+  const marqueeItems = [...technologies, ...technologies];
+
   return (
-    <Section className="overflow-hidden flex flex-col gap-6 md:gap-8 lg:gap-10">
-      {rows.map((row, i) => {
-        const doubled = [...row.items, ...row.items];
-        return (
-          <div className="flex" key={i}>
-            <motion.div
-              animate={{ x: row.direction === -1 ? "-50%" : "0%" }}
-              className="flex min-w-max gap-6 md:gap-8 lg:gap-10"
-              initial={{ x: row.direction === -1 ? "0%" : "-50%" }}
-              transition={{
-                duration,
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-            >
-              {doubled.map((tech, j) => (
-                <span
-                  className={`text-xl md:text-2xl lg:text-3xl tracking-wide whitespace-nowrap ${row.color} ${tech.bold ? "font-bold" : "font-medium"}`}
-                  key={j}
-                >
-                  {tech.name}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        );
-      })}
-    </Section>
+    <section className="relative flex flex-col overflow-hidden gap-6 bg-blue-300 py-4">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-50 bg-linear-to-r from-blue-300 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-50 bg-linear-to-l from-blue-300 to-transparent" />
+      <motion.div
+        animate={{ x: "-50%" }}
+        className="flex min-w-max gap-6 items-center whitespace-nowrap"
+        initial={{ x: "0%" }}
+        transition={{
+          duration,
+          ease: "linear",
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      >
+        {marqueeItems.map((tech, index) => (
+          <span
+            aria-hidden={index >= technologies.length}
+            className="text-base uppercase font-bold tracking-wide text-white leading-loose"
+            key={`${tech.name}-${index}`}
+          >
+            {tech.name}
+          </span>
+        ))}
+      </motion.div>
+    </section>
   );
 }

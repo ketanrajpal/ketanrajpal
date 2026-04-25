@@ -1,13 +1,17 @@
-import { Story } from "@/features/Story";
+import { Experience } from "@/features/Experience";
+import { Featured } from "@/features/Featured";
+import { Footer } from "@/features/Footer";
+import { Home } from "@/features/Home";
 import { Technologies } from "@/features/Technologies";
-import { Welcome } from "@/features/Welcome";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Welcome />
-      <Story />
+    <div className="overflow-x-clip">
+      <Home />
+      <Experience />
+      <Featured />
       <Technologies />
-    </>
+      <Footer />
+    </div>
   );
 }
