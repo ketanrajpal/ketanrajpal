@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { submitToIndexNow } from "@/lib/indexnow";
 import { client } from "@/sanity/lib/client";
 
 const SITE_URL = "https://ketanrajpal.dev";
@@ -43,6 +44,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
     url: `${SITE_URL}/blog/${post.slug}`,
   }));
+
+  const allUrls = [
+    SITE_URL,
+    `${SITE_URL}/blog`,
+    ...posts.map((p) => `${SITE_URL}/blog/${p.slug}`),
+  ];
+
+  // Fire-and-forget — don't block sitemap response
+  void submitToIndexNow(allUrls);
 
   return [...staticRoutes, ...blogRoutes];
 }
