@@ -71,6 +71,7 @@ const PostCard = ({ post }: { post: BlogPost }) => {
             </p>
           )}
           <motion.a
+            aria-label={`Read more about ${post.title ?? "this article"}`}
             className="group inline-flex w-fit cursor-pointer items-center gap-2 rounded-full bg-red-400 p-2 px-6 text-sm font-bold uppercase tracking-wide text-white"
             href={`/blog/${post.slug?.current ?? ""}`}
             onHoverEnd={() => setHovered(false)}
@@ -78,6 +79,7 @@ const PostCard = ({ post }: { post: BlogPost }) => {
             whileHover="hover"
           >
             <span>Read More</span>
+            <span className="sr-only"> about {post.title}</span>
             <motion.svg
               fill="none"
               height="30"

@@ -7,6 +7,7 @@ import {
   useTransform,
 } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { client } from "@/sanity/lib/client";
@@ -87,12 +88,13 @@ const StickyCard = ({
                 {post.subtitle}
               </p>
             )}
-            <motion.a
+            <Link
+              aria-label={`Read more about ${post.title ?? "this article"}`}
               className="group inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-red-400 text-white rounded-full p-2 px-6 uppercase"
               href={`/blog/${post.slug?.current ?? ""}`}
-              whileHover="hover"
             >
               <span>Read More</span>
+              <span className="sr-only"> about {post.title}</span>
               <motion.svg
                 fill="none"
                 height="30"
@@ -107,7 +109,7 @@ const StickyCard = ({
                 <path d="M18 8L22 12L18 16" />
                 <path d="M2 12H22" />
               </motion.svg>
-            </motion.a>
+            </Link>
           </div>
         </div>
       </motion.article>
