@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const primaryNavigation = [
-  { href: "/", label: "Home" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
+const baseNavigation = [
+  { hash: "home", href: "/", label: "Home" },
+  { hash: "experience", href: "/#experience", label: "Experience" },
+  { hash: "projects", href: "/#projects", label: "Projects" },
+  { hash: null, href: "/blog", label: "Blog" },
 ];
 
 const ease: Transition["ease"] = [0.22, 1, 0.36, 1];
@@ -18,6 +18,12 @@ const SCROLL_DURATION_MS = 1400;
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const primaryNavigation = baseNavigation.map((item) => ({
+    ...item,
+    href: isHome && item.hash ? `/#${item.hash}` : item.href,
+  }));
 
   const handleLinkClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -61,7 +67,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed flex w-full justify-between p-10 z-50">
+    <header className="fixed top-0 flex w-full justify-between p-10 z-50">
       <div></div>
       <div className="relative">
         <button
