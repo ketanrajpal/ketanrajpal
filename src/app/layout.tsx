@@ -7,6 +7,10 @@ import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import { LenisProvider } from "@/components/LenisProvider";
 
 import "./globals.css";
+import { Footer } from "@/features/Footer";
+import { Header } from "@/features/Header";
+import { Scroll } from "@/features/Scroll";
+import { Technologies } from "@/features/Technologies";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -106,7 +110,13 @@ export default function RootLayout({
     >
       <body className="min-h-full">
         <LenisProvider>
-          <main>{children}</main>
+          <main>
+            <Scroll />
+            <Header />
+            {children}
+            <Technologies />
+            <Footer />
+          </main>
         </LenisProvider>
         <Analytics />
         <SpeedInsights />
