@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 
 import { LenisProvider } from "@/components/LenisProvider";
 
@@ -108,7 +109,28 @@ export default function RootLayout({
       className={`${outfit.variable} ${jakarta.variable} h-full antialiased`}
       lang="en"
     >
+      <head>
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W9X7WRP');`,
+          }}
+          id="gtm-script"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="min-h-full">
+        <noscript>
+          <iframe
+            height="0"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W9X7WRP"
+            style={{ display: "none", visibility: "hidden" }}
+            width="0"
+          />
+        </noscript>
         <LenisProvider>
           <main>
             <Scroll />
