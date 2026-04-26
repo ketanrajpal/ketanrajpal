@@ -56,7 +56,7 @@ const StickyCard = ({
       style={{ zIndex: index }}
     >
       <motion.article
-        className="flex w-full max-w-3xl flex-col items-center"
+        className="flex w-full max-w-3xl flex-col items-center mx-5"
         style={{ opacity: 1, scale }}
       >
         {post.mainImage && (
@@ -72,33 +72,12 @@ const StickyCard = ({
         )}
         <div className="-mt-15 max-w-2xl rounded-3xl bg-white p-10 shadow-xl">
           <div className="flex flex-col gap-6">
-            <div className="flex items-center justify-between">
+            <div>
               {post.category && (
-                <p className="inline-block w-fit rounded-full bg-amber-300 p-1 px-3 font-bold tracking-wide text-black">
+                <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
                   {post.category}
                 </p>
               )}
-              <motion.a
-                className="group inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-red-400 text-white rounded-full p-1 px-3"
-                href={`/blog/${post.slug?.current ?? ""}`}
-                whileHover="hover"
-              >
-                <span>Read More</span>
-                <motion.svg
-                  fill="none"
-                  height="30"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  variants={{ hover: { x: 6 } }}
-                  viewBox="0 0 24 24"
-                  width="30"
-                >
-                  <path d="M18 8L22 12L18 16" />
-                  <path d="M2 12H22" />
-                </motion.svg>
-              </motion.a>
             </div>
             <h3 className="font-serif text-3xl font-medium leading-relaxed tracking-wide text-pretty">
               {post.title}
@@ -108,6 +87,27 @@ const StickyCard = ({
                 {post.subtitle}
               </p>
             )}
+            <motion.a
+              className="group inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-red-400 text-white rounded-full p-2 px-6 uppercase"
+              href={`/blog/${post.slug?.current ?? ""}`}
+              whileHover="hover"
+            >
+              <span>Read More</span>
+              <motion.svg
+                fill="none"
+                height="30"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                variants={{ hover: { x: 6 } }}
+                viewBox="0 0 24 24"
+                width="30"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </motion.svg>
+            </motion.a>
           </div>
         </div>
       </motion.article>

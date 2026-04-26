@@ -77,7 +77,7 @@ export const Experience = () => {
   });
 
   return (
-    <div className="bg-amber-100">
+    <div className="bg-amber-100 scroll-mt-28" id="experience">
       <div className="flex flex-col gap-8 px-0 pb-10 mx-5 md:hidden">
         <ExperienceHeading />
         {experiences.map((experience) => (

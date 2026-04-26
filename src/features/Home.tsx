@@ -13,7 +13,7 @@ export const Home = () => {
           </h2>
         </div>
 
-        <div className="flex flex-row flex-wrap items-center gap-x-4 gap-y-0">
+        <div className="flex flex-row flex-wrap items-center gap-x-4 gap-y-0 md:gap-x-10">
           <h1 className="font-serif text-[clamp(3.5rem,12vw,10rem)] font-medium leading-none tracking-wide">
             Senior
           </h1>

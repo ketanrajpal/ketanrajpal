@@ -19,10 +19,16 @@ export const LenisProvider = ({ children }: { children: React.ReactNode }) => {
 
     requestAnimationFrame(raf);
 
-    const ro = new ResizeObserver(() => lenis.resize());
+    const resizeLenis = () => lenis.resize();
+
+    const ro = new ResizeObserver(resizeLenis);
     ro.observe(document.documentElement);
+    if (document.body) ro.observe(document.body);
+
+    window.addEventListener("lenis:resize", resizeLenis);
 
     return () => {
+      window.removeEventListener("lenis:resize", resizeLenis);
       ro.disconnect();
       lenis.destroy();
       lenisRef.current = null;
