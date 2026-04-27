@@ -4,6 +4,9 @@ import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
+import { CardHeading, CardParagraph, CardTag } from "@/components/Card";
+import { Heading } from "@/components/Heading";
+
 import FreelanceLogo from "../images/logos/freelance.svg";
 import KpmgUkLogo from "../images/logos/kpmg-uk.svg";
 import LscGroupLogo from "../images/logos/lsc-group.svg";
@@ -96,20 +99,12 @@ export const Experience = () => {
                   src={experience.logo}
                 />
               </div>
-              <div>
-                <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                  {experience.year}
-                </p>
-              </div>
-              <h3 className="font-serif pr-16 text-2xl font-medium tracking-wide">
-                {experience.company}
-              </h3>
+              <CardTag tag={experience.year} />
+              <CardHeading title={experience.company} />
               <h4 className="text-base font-semibold uppercase tracking-wide">
                 {experience.role}
               </h4>
-              <p className="text-base font-medium leading-relaxed text-pretty tracking-wide text-gray-500">
-                {experience.description}
-              </p>
+              <CardParagraph description={experience.description} />
             </div>
           </article>
         ))}
@@ -129,7 +124,7 @@ export const Experience = () => {
                 key={`${experience.company}-${experience.year}`}
                 style={{ width: CARD_WIDTH }}
               >
-                <div className="relative flex flex-col gap-5 rounded-3xl bg-white p-10 shadow-xl">
+                <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-12 shadow-xl">
                   <div
                     className="absolute -right-12.5 -top-12.5 inline-block rounded-2xl p-5"
                     style={{ backgroundColor: experience.color }}
@@ -140,20 +135,12 @@ export const Experience = () => {
                       src={experience.logo}
                     />
                   </div>
-                  <div>
-                    <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                      {experience.year}
-                    </p>
-                  </div>
-                  <h3 className="font-serif text-3xl font-medium tracking-wide">
-                    {experience.company}
-                  </h3>
+                  <CardTag tag={experience.year} />
+                  <CardHeading title={experience.company} />
                   <h4 className="text-xl font-semibold uppercase tracking-wide">
                     {experience.role}
                   </h4>
-                  <p className="text-lg font-medium leading-loose text-pretty tracking-wide text-gray-500">
-                    {experience.description}
-                  </p>
+                  <CardParagraph description={experience.description} />
                 </div>
               </article>
             ))}
@@ -165,16 +152,8 @@ export const Experience = () => {
 };
 
 const ExperienceHeading = () => (
-  <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 pt-15 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
-    <div className="flex flex-col gap-8">
-      <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
-        Experience
-      </h2>
-      <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
-        The systems most people never see are often the ones they depend on
-        most. I have spent fifteen years building exactly those - the quiet
-        infrastructure that keeps things working when it matters.
-      </p>
-    </div>
-  </div>
+  <Heading
+    description="The systems most people never see are often the ones they depend on most. I have spent fifteen years building exactly those - the quiet infrastructure that keeps things working when it matters."
+    title="Experience"
+  />
 );

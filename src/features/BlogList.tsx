@@ -4,6 +4,13 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import {
+  CardHeading,
+  CardLink,
+  CardParagraph,
+  CardTag,
+} from "@/components/Card";
+import { Heading } from "@/components/Heading";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
@@ -53,48 +60,15 @@ const PostCard = ({ post }: { post: BlogPost }) => {
           )}
         </motion.div>
       </div>
-      <div className="relative -mt-20 mx-auto max-w-2xl rounded-3xl bg-white p-10 shadow-xl">
-        <div className="flex flex-col gap-6">
-          <div>
-            {post.category && (
-              <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                {post.category}
-              </p>
-            )}
-          </div>
-          <h3 className="font-serif text-3xl font-medium leading-relaxed tracking-wide text-pretty">
-            {post.title}
-          </h3>
-          {post.subtitle && (
-            <p className="text-lg font-medium leading-loose text-pretty tracking-wide text-gray-500">
-              {post.subtitle}
-            </p>
-          )}
-          <motion.a
-            aria-label={`Read more about ${post.title ?? "this article"}`}
-            className="group inline-flex w-fit cursor-pointer items-center gap-2 rounded-full bg-red-400 p-2 px-6 text-sm font-bold uppercase tracking-wide text-white"
-            href={`/blog/${post.slug?.current ?? ""}`}
-            onHoverEnd={() => setHovered(false)}
-            onHoverStart={() => setHovered(true)}
-            whileHover="hover"
-          >
-            <span>Read More</span>
-            <span className="sr-only"> about {post.title}</span>
-            <motion.svg
-              fill="none"
-              height="30"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              variants={{ hover: { x: 6 } }}
-              viewBox="0 0 24 24"
-              width="30"
-            >
-              <path d="M18 8L22 12L18 16" />
-              <path d="M2 12H22" />
-            </motion.svg>
-          </motion.a>
+      <div className="relative -mt-20 mx-auto max-w-2xl rounded-3xl bg-white p-12 shadow-xl">
+        <div className="flex flex-col gap-4">
+          {post.category && <CardTag tag={post.category} />}
+          {post.title && <CardHeading title={post.title} />}
+          {post.subtitle && <CardParagraph description={post.subtitle} />}
+          <CardLink
+            ariaLabel={"Read more about " + (post.title ?? "this article")}
+            link={`/blog/${post.slug?.current ?? ""}`}
+          />
         </div>
       </div>
     </article>
@@ -102,17 +76,10 @@ const PostCard = ({ post }: { post: BlogPost }) => {
 };
 
 const BlogHeading = () => (
-  <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 pt-15 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
-    <div className="flex flex-col gap-8">
-      <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
-        Thinking Out Loud
-      </h2>
-      <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
-        Where the real work lives. Writing about technology, decisions, and the
-        craft behind the systems people rely on.
-      </p>
-    </div>
-  </div>
+  <Heading
+    description="Where the real work lives. Writing about technology, decisions, and the craft behind the systems people rely on."
+    title="Thinking Out Loud"
+  />
 );
 
 export const BlogList = () => {
