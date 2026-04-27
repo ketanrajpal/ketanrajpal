@@ -97,7 +97,7 @@ export const Header = () => {
                 clipPath: "inset(0% 0% 0% 0% round 24px)",
                 opacity: 1,
               }}
-              className="-right-3 -top-4 absolute z-50 flex w-xs flex-col gap-1 rounded-3xl p-5 pt-18 bg-blue-200 backdrop-blur-sm shadow-xl"
+              className="-right-3 -top-4 absolute z-50 flex w-xs flex-col gap-1 rounded-3xl p-5 pt-18 bg-orange-200 backdrop-blur-sm shadow-xl"
               exit={{
                 clipPath: "inset(0% 0% 100% 0% round 24px)",
                 opacity: 0,

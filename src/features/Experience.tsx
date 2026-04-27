@@ -80,7 +80,7 @@ export const Experience = () => {
   });
 
   return (
-    <div className="bg-amber-100 scroll-mt-28" id="experience">
+    <section className="bg-amber-100 scroll-mt-28" id="experience">
       <div className="flex flex-col gap-8 px-0 pb-10 mx-5 md:hidden">
         <ExperienceHeading />
         {experiences.map((experience) => (
@@ -88,7 +88,7 @@ export const Experience = () => {
             className="w-full"
             key={`${experience.company}-${experience.year}`}
           >
-            <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-sm">
+              <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-xl">
               <div
                 className="absolute right-4 top-4 inline-block rounded-2xl p-3"
                 style={{ backgroundColor: experience.color }}
@@ -147,7 +147,7 @@ export const Experience = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

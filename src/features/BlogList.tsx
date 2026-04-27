@@ -4,12 +4,8 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import {
-  CardHeading,
-  CardLink,
-  CardParagraph,
-  CardTag,
-} from "@/components/Card";
+import { CardHeading, CardParagraph, CardTag } from "@/components/Card";
+import { CardLink } from "@/components/CardLink";
 import { Heading } from "@/components/Heading";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -37,28 +33,19 @@ const QUERY = `
 `;
 
 const PostCard = ({ post }: { post: BlogPost }) => {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <article className="w-full items-center">
       <div className="overflow-hidden rounded-3xl">
-        <motion.div
-          animate={hovered ? "zoom" : "rest"}
-          initial="rest"
-          transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-          variants={{ rest: { scale: 1 }, zoom: { scale: 1.07 } }}
-        >
-          {post.mainImage && (
-            <Image
-              alt={post.title ?? "Blog post"}
-              className="h-full w-full object-cover"
-              height={450}
-              loading="eager"
-              src={urlFor(post.mainImage).width(800).height(450).url()}
-              width={800}
-            />
-          )}
-        </motion.div>
+        {post.mainImage && (
+          <Image
+            alt={post.title ?? "Blog post"}
+            className="h-full w-full object-cover"
+            height={450}
+            loading="eager"
+            src={urlFor(post.mainImage).width(800).height(450).url()}
+            width={800}
+          />
+        )}
       </div>
       <div className="relative -mt-20 mx-auto max-w-2xl rounded-3xl bg-white p-12 shadow-xl">
         <div className="flex flex-col gap-4">
@@ -128,7 +115,7 @@ export const BlogList = () => {
   }, [posts.length]);
 
   return (
-    <section className="min-h-screen bg-blue-100 pt-[10%]">
+    <section className="min-h-screen bg-blue-100 pt-30">
       <div className="mx-auto flex max-w-4xl flex-col gap-20">
         <BlogHeading />
         {posts.map((post) => (
@@ -139,12 +126,12 @@ export const BlogList = () => {
           {loading && (
             <motion.div
               animate={{ opacity: 1 }}
-              className="flex items-center gap-3 text-sm font-medium text-gray-500"
+              className="flex items-center gap-3 text-sm font-medium text-zinc-500"
               initial={{ opacity: 0 }}
             >
               <motion.span
                 animate={{ rotate: 360 }}
-                className="block h-5 w-5 rounded-full border-2 border-gray-300 border-t-gray-600"
+                className="block h-5 w-5 rounded-full border-2 border-zinc-300 border-t-zinc-600"
                 transition={{
                   duration: 0.8,
                   ease: "linear",

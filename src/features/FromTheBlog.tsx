@@ -9,12 +9,8 @@ import {
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-import {
-  CardHeading,
-  CardLink,
-  CardParagraph,
-  CardTag,
-} from "@/components/Card";
+import { CardHeading, CardParagraph, CardTag } from "@/components/Card";
+import { CardLink } from "@/components/CardLink";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 

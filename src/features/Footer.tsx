@@ -35,7 +35,7 @@ export const Footer = () => {
       <div className="flex gap-3 md:gap-6">
         {socials.map((social) => (
           <Link
-            className="bg-slate-300 p-2 px-5 rounded-full font-semibold leading-wide tracking-wide hover:bg-slate-600 transition-colors hover:text-white"
+            className="bg-slate-300 p-2 px-5 rounded-lg font-semibold leading-wide tracking-wide hover:bg-slate-600 transition-colors hover:text-white"
             href={social.href}
             key={social.label}
             rel="noopener noreferrer"

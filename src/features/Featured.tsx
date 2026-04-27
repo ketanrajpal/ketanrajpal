@@ -98,7 +98,7 @@ export const Featured = () => {
   });
 
   return (
-    <div className="scroll-mt-28" id="projects">
+    <section className="scroll-mt-28" id="projects">
       <div className="flex flex-col gap-6 px-0 pb-10 mx-5 md:hidden">
         <FeaturedHeading />
         {projects.map((project) => (
@@ -155,7 +155,7 @@ export const Featured = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
