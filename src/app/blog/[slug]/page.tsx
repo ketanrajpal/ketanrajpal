@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { CardTag } from "@/components/Card";
 import ProfileImage from "@/images/ketan-rajpal.jpg";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -87,7 +88,7 @@ const portableTextComponents: PortableTextComponents = {
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-10 mb-3 font-serif text-2xl font-semibold tracking-wide text-orange-600">
+      <h3 className="mt-10 mb-3 font-serif text-2xl font-semibold tracking-wide text-zinc-900">
         {children}
       </h3>
     ),
@@ -149,20 +150,16 @@ export default async function BlogPost({
     <section className="bg-blue-100 min-h-screen ">
       <div className="max-w-5xl mx-auto flex flex-col pt-30">
         <div className="mx-auto max-w-4xl px-6 md:px-0 w-full">
-          <div className="rounded-t-2xl bg-white p-10 w-full">
+          <div className="rounded-t-3xl bg-white p-10 w-full shadow-xl">
             <div className="flex flex-row justify-between items-center mb-6">
-              {post.category && (
-                <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black text-sm">
-                  {post.category}
-                </p>
-              )}
+              {post.category && <CardTag tag={post.category} />}
               <Link className="flex items-center gap-4" href="/">
                 <Image
                   alt="Ketan Rajpal"
-                  className="h-10 w-10 rotate-2 rounded-3xl object-cover"
+                  className="h-10 w-10 rotate-2 rounded-full object-cover"
                   src={ProfileImage}
                 />
-                <p className="text-sm leading-loose text-pretty tracking-wide text-zinc-500 font-semibold">
+                <p className="text-base leading-loose text-pretty tracking-wide text-zinc-500 font-bold">
                   Ketan Rajpal
                 </p>
               </Link>
@@ -193,7 +190,7 @@ export default async function BlogPost({
         )}
 
         <div className="mx-auto max-w-4xl px-6 md:px-0">
-          <div className="rounded-b-3xl bg-white p-10">
+          <div className="rounded-b-3xl bg-white p-10 shadow-xl">
             {post.body && (
               <PortableText
                 components={portableTextComponents}
@@ -204,7 +201,7 @@ export default async function BlogPost({
         </div>
 
         <div className="mx-auto max-w-3xl px-6 py-10 md:px-0">
-          <a
+          <Link
             className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-zinc-500 transition-colors hover:text-zinc-900"
             href="/blog"
           >
@@ -221,7 +218,7 @@ export default async function BlogPost({
               <path d="M12 19l-7-7 7-7" />
             </svg>
             All posts
-          </a>
+          </Link>
         </div>
       </div>
     </section>

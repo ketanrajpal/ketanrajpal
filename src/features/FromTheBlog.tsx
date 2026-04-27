@@ -7,9 +7,10 @@ import {
   useTransform,
 } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+import { CardHeading, CardParagraph, CardTag } from "@/components/Card";
+import { CardLink } from "@/components/CardLink";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
@@ -72,44 +73,14 @@ const StickyCard = ({
           </div>
         )}
         <div className="-mt-15 max-w-2xl rounded-3xl bg-white p-10 shadow-xl">
-          <div className="flex flex-col gap-6">
-            <div>
-              {post.category && (
-                <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                  {post.category}
-                </p>
-              )}
-            </div>
-            <h3 className="font-serif text-3xl font-medium leading-relaxed tracking-wide text-pretty">
-              {post.title}
-            </h3>
-            {post.subtitle && (
-              <p className="text-lg font-medium leading-loose text-pretty tracking-wide text-gray-500">
-                {post.subtitle}
-              </p>
-            )}
-            <Link
-              aria-label={`Read more about ${post.title ?? "this article"}`}
-              className="group inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-red-400 text-white rounded-full p-2 px-6 uppercase"
-              href={`/blog/${post.slug?.current ?? ""}`}
-            >
-              <span>Read More</span>
-              <span className="sr-only"> about {post.title}</span>
-              <motion.svg
-                fill="none"
-                height="30"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                variants={{ hover: { x: 6 } }}
-                viewBox="0 0 24 24"
-                width="30"
-              >
-                <path d="M18 8L22 12L18 16" />
-                <path d="M2 12H22" />
-              </motion.svg>
-            </Link>
+          <div className="flex flex-col gap-4">
+            {post.category && <CardTag tag={post.category} />}
+            {post.title && <CardHeading title={post.title} />}
+            {post.subtitle && <CardParagraph description={post.subtitle} />}
+            <CardLink
+              ariaLabel={post.title ?? "this article"}
+              link={`/blog/${post.slug?.current ?? ""}`}
+            />
           </div>
         </div>
       </motion.article>

@@ -4,6 +4,9 @@ import { motion, useScroll, useTransform } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 
+import { CardHeading, CardParagraph, CardTag } from "@/components/Card";
+import { Heading } from "@/components/Heading";
+
 import GenesisEngine from "../images/featured/genesis-engine.jpg";
 import GlobalLegalServicesDataPlatform from "../images/featured/global-legal-services-data-platform.jpg";
 import IndianDevelopmentFoundationOfOverseasIndiansWebPortal from "../images/featured/indian-development-foundation-of-overseas-indians-web-portal.jpg";
@@ -95,7 +98,7 @@ export const Featured = () => {
   });
 
   return (
-    <div className="scroll-mt-28" id="projects">
+    <section className="scroll-mt-28" id="projects">
       <div className="flex flex-col gap-6 px-0 pb-10 mx-5 md:hidden">
         <FeaturedHeading />
         {projects.map((project) => (
@@ -109,17 +112,9 @@ export const Featured = () => {
                 />
               </div>
               <div className="flex flex-col gap-4 p-6">
-                <div>
-                  <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                    {project.category}
-                  </p>
-                </div>
-                <h3 className="font-serif text-2xl font-medium leading-snug tracking-wide text-pretty">
-                  {project.title}
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-pretty tracking-wide text-gray-500">
-                  {project.description}
-                </p>
+                <CardTag tag={project.category} />
+                <CardHeading title={project.title} />
+                <CardParagraph description={project.description} />
               </div>
             </div>
           </article>
@@ -148,20 +143,11 @@ export const Featured = () => {
                   />
                 </div>
 
-                <div className="-ml-10 flex flex-col justify-between rounded-3xl bg-white p-15 shadow-xl">
-                  <div className="flex flex-col gap-5">
-                    <div>
-                      <p className="inline-block rounded-full bg-amber-300 p-1 px-3 font-bold uppercase tracking-wide text-black">
-                        {project.category}
-                      </p>
-                    </div>
-                    <h3 className="font-serif text-3xl font-medium leading-relaxed tracking-wide text-pretty">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-lg font-medium leading-loose text-pretty tracking-wide text-gray-500">
-                      {project.description}
-                    </p>
+                <div className="-ml-10 flex flex-col justify-between rounded-3xl bg-white p-12 shadow-xl">
+                  <div className="flex flex-col gap-4">
+                    <CardTag tag={project.category} />
+                    <CardHeading title={project.title} />
+                    <CardParagraph description={project.description} />
                   </div>
                 </div>
               </article>
@@ -169,20 +155,13 @@ export const Featured = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const FeaturedHeading = () => (
-  <div className="mx-auto flex max-w-sm flex-col gap-6 p-6 pt-15 md:max-w-2xl md:gap-12 md:px-0 md:pt-0 lg:max-w-3xl">
-    <div className="flex flex-col gap-8">
-      <h2 className="font-serif text-4xl font-medium tracking-wide md:text-7xl">
-        Featured Projects
-      </h2>
-      <p className="text-base font-medium leading-loose text-pretty tracking-wide sm:text-lg md:text-xl lg:text-2xl">
-        A handful of the platforms behind the work. Each one built to last. Each
-        one still running.
-      </p>
-    </div>
-  </div>
+  <Heading
+    description="A handful of the platforms behind the work. Each one built to last. Each one still running."
+    title="Featured Projects"
+  />
 );
