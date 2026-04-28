@@ -39,7 +39,7 @@ const experiences = [
       "Delivered 100+ projects for 60+ clients across government, education, and commercial sectors, covering full-stack engineering, product design, and infrastructure guidance.",
     logo: FreelanceLogo,
     role: "Designer and Developer",
-    year: "2011 - Present",
+    year: "2011 - 2021",
   },
   {
     color: "#7d16f2",
@@ -88,7 +88,7 @@ export const Experience = () => {
             className="w-full"
             key={`${experience.company}-${experience.year}`}
           >
-              <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-xl">
+            <div className="relative flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-xl">
               <div
                 className="absolute right-4 top-4 inline-block rounded-2xl p-3"
                 style={{ backgroundColor: experience.color }}
