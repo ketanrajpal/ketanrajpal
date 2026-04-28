@@ -31,10 +31,10 @@ export const Home = () => {
         </div>
 
         <p className="max-w-3xl text-zinc-500 leading-loose font-medium sm:text-lg md:text-xl lg:text-2xl text-pretty tracking-wide">
-          I design and build durable digital products across legal technology,
-          education, and AI. Fifteen years shipping platforms that keep working
-          when stakes are high. The code stays invisible. The impact
-          doesn&apos;t.
+          Based in London, United Kingdom. I design and build durable digital
+          products across legal technology, education, and AI. Fifteen years
+          shipping platforms that keep working when stakes are high. The code
+          stays invisible. The impact doesn&apos;t.
         </p>
       </div>
     </section>

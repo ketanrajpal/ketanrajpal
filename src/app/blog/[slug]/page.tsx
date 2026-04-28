@@ -13,7 +13,9 @@ import { urlFor } from "@/sanity/lib/image";
 
 type Post = {
   _id: string;
+  _updatedAt: string;
   body: TypedObject[];
+  categories: string[];
   category: null | string;
   mainImage: null | Parameters<typeof urlFor>[0];
   publishedAt: null | string;
@@ -24,13 +26,19 @@ type Post = {
 const QUERY = `
   *[_type == "post" && slug.current == $slug][0] {
     _id,
+    _updatedAt,
     title,
     subtitle,
     publishedAt,
     mainImage,
     body,
-    "category": categories[0]->title
+    "category": categories[0]->title,
+    "categories": categories[]->title
   }
+`;
+
+const SLUGS_QUERY = `
+  *[_type == "post" && defined(slug.current)] { "slug": slug.current }
 `;
 
 export async function generateMetadata({
@@ -47,13 +55,21 @@ export async function generateMetadata({
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : undefined;
 
+  const ogImageAlt = post.title ?? "Ketan Rajpal";
+
   return {
     alternates: { canonical: `https://ketanrajpal.dev/blog/${slug}` },
+    authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
     description: post.subtitle ?? undefined,
+    keywords: post.categories?.length ? post.categories : undefined,
     openGraph: {
-      ...(ogImage && { images: [{ height: 630, url: ogImage, width: 1200 }] }),
+      authors: ["Ketan Rajpal"],
+      ...(ogImage && {
+        images: [{ alt: ogImageAlt, height: 630, url: ogImage, width: 1200 }],
+      }),
       description: post.subtitle ?? undefined,
       locale: "en_GB",
+      modifiedTime: post._updatedAt,
       publishedTime: post.publishedAt ?? undefined,
       siteName: "Ketan Rajpal",
       title: post.title ?? undefined,
@@ -62,12 +78,19 @@ export async function generateMetadata({
     },
     title: post.title ?? undefined,
     twitter: {
-      ...(ogImage && { images: [ogImage] }),
+      ...(ogImage && {
+        images: [{ alt: ogImageAlt, url: ogImage }],
+      }),
       card: "summary_large_image",
       description: post.subtitle ?? undefined,
       title: post.title ?? undefined,
     },
   };
+}
+
+export async function generateStaticParams() {
+  const posts = await client.fetch<{ slug: string }[]>(SLUGS_QUERY);
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 const portableTextComponents: PortableTextComponents = {
@@ -146,81 +169,117 @@ export default async function BlogPost({
       })
     : null;
 
+  const ogImage = post.mainImage
+    ? urlFor(post.mainImage).width(1200).height(630).url()
+    : "https://ketanrajpal.dev/og-image.png";
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    author: {
+      "@type": "Person",
+      name: "Ketan Rajpal",
+      url: "https://ketanrajpal.dev",
+    },
+    dateModified: post._updatedAt,
+    datePublished: post.publishedAt ?? undefined,
+    description: post.subtitle ?? undefined,
+    headline: post.title ?? undefined,
+    image: ogImage,
+    keywords: post.categories?.join(", "),
+    mainEntityOfPage: {
+      "@id": `https://ketanrajpal.dev/blog/${slug}`,
+      "@type": "WebPage",
+    },
+    publisher: {
+      "@type": "Person",
+      image: "https://ketanrajpal.dev/og-image.png",
+      name: "Ketan Rajpal",
+    },
+    url: `https://ketanrajpal.dev/blog/${slug}`,
+  };
+
   return (
-    <section className="bg-blue-100 min-h-screen ">
-      <div className="max-w-5xl mx-auto flex flex-col pt-30">
-        <div className="mx-auto max-w-4xl px-6 md:px-0 w-full">
-          <div className="rounded-t-3xl bg-white p-10 w-full shadow-xl">
-            <div className="flex flex-row justify-between items-center mb-6">
-              {post.category && <CardTag tag={post.category} />}
-              <Link className="flex items-center gap-4" href="/">
-                <Image
-                  alt="Ketan Rajpal"
-                  className="h-10 w-10 rotate-2 rounded-full object-cover"
-                  src={ProfileImage}
-                />
-                <p className="text-base leading-loose text-pretty tracking-wide text-zinc-500 font-bold">
-                  Ketan Rajpal
+    <>
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        type="application/ld+json"
+      />
+      <section className="bg-blue-100 min-h-screen ">
+        <div className="max-w-5xl mx-auto flex flex-col pt-30">
+          <div className="mx-auto max-w-4xl px-6 md:px-0 w-full">
+            <div className="rounded-t-3xl bg-white p-10 w-full shadow-xl">
+              <div className="flex flex-row justify-between items-center mb-6">
+                {post.category && <CardTag tag={post.category} />}
+                <Link className="flex items-center gap-4" href="/">
+                  <Image
+                    alt="Ketan Rajpal"
+                    className="h-10 w-10 rotate-2 rounded-full object-cover"
+                    src={ProfileImage}
+                  />
+                  <p className="text-base leading-loose text-pretty tracking-wide text-zinc-500 font-bold">
+                    Ketan Rajpal
+                  </p>
+                </Link>
+              </div>
+              <h1 className="font-serif text-3xl font-medium leading-snug tracking-wide text-pretty text-zinc-900 md:text-5xl">
+                {post.title}
+              </h1>
+              {publishedDate && (
+                <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mt-4">
+                  {publishedDate}
                 </p>
-              </Link>
+              )}
             </div>
-            <h1 className="font-serif text-3xl font-medium leading-snug tracking-wide text-pretty text-zinc-900 md:text-5xl">
-              {post.title}
-            </h1>
-            {publishedDate && (
-              <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mt-4">
-                {publishedDate}
-              </p>
-            )}
           </div>
-        </div>
-        {post.mainImage && (
-          <div className="overflow-hidden rounded-3xl">
-            {post.mainImage && (
-              <Image
-                alt={post.title ?? "Blog post"}
-                className="h-full w-full object-cover"
-                height={450}
-                loading="eager"
-                src={urlFor(post.mainImage).width(800).height(450).url()}
-                width={800}
-              />
-            )}
-          </div>
-        )}
+          {post.mainImage && (
+            <div className="overflow-hidden rounded-3xl">
+              {post.mainImage && (
+                <Image
+                  alt={post.title ?? "Blog post"}
+                  className="h-full w-full object-cover"
+                  height={450}
+                  loading="eager"
+                  src={urlFor(post.mainImage).width(800).height(450).url()}
+                  width={800}
+                />
+              )}
+            </div>
+          )}
 
-        <div className="mx-auto max-w-4xl px-6 md:px-0">
-          <div className="rounded-b-3xl bg-white p-10 shadow-xl">
-            {post.body && (
-              <PortableText
-                components={portableTextComponents}
-                value={post.body}
-              />
-            )}
+          <div className="mx-auto max-w-4xl px-6 md:px-0">
+            <div className="rounded-b-3xl bg-white p-10 shadow-xl">
+              {post.body && (
+                <PortableText
+                  components={portableTextComponents}
+                  value={post.body}
+                />
+              )}
+            </div>
           </div>
-        </div>
 
-        <div className="mx-auto max-w-3xl px-6 py-10 md:px-0">
-          <Link
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-zinc-500 transition-colors hover:text-zinc-900"
-            href="/blog"
-          >
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
+          <div className="mx-auto max-w-3xl px-6 py-10 md:px-0">
+            <Link
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-zinc-500 transition-colors hover:text-zinc-900"
+              href="/blog"
             >
-              <path d="M19 12H5" />
-              <path d="M12 19l-7-7 7-7" />
-            </svg>
-            All posts
-          </Link>
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
+              All posts
+            </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

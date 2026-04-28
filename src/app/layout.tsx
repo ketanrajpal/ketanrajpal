@@ -26,12 +26,15 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://ketanrajpal.dev",
+    types: {
+      "application/rss+xml": "https://ketanrajpal.dev/rss.xml",
+    },
   },
   authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
   category: "Technology",
   creator: "Ketan Rajpal",
   description:
-    "Portfolio of Ketan Rajpal — Senior Manager at KPMG UK specialising in legal technology, education technology, and AI. Fifteen years shipping resilient, scalable digital platforms that keep working when stakes are high.",
+    "Portfolio of Ketan Rajpal — Senior Manager at KPMG UK based in London, United Kingdom, specialising in legal technology, education technology, and AI. Fifteen years shipping resilient, scalable digital platforms that keep working when stakes are high.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -67,7 +70,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ketanrajpal.dev"),
   openGraph: {
     description:
-      "Senior Manager at KPMG UK. Fifteen years building resilient digital platforms across legal technology, education, and AI.",
+      "Senior Manager at KPMG UK, based in London, United Kingdom. Fifteen years building resilient digital platforms across legal technology, education, and AI.",
+    images: [
+      {
+        alt: "Ketan Rajpal — Senior Engineer",
+        height: 941,
+        url: "/og-image.png",
+        width: 1672,
+      },
+    ],
     locale: "en_GB",
     siteName: "Ketan Rajpal",
     title: "Ketan Rajpal | Senior Engineer",
@@ -94,7 +105,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@ketanrajpal",
     description:
-      "Senior Manager at KPMG UK. Fifteen years building resilient digital platforms across legal technology, education, and AI.",
+      "Senior Manager at KPMG UK, based in London, United Kingdom. Fifteen years building resilient digital platforms across legal technology, education, and AI.",
+    images: ["/og-image.png"],
     title: "Ketan Rajpal | Senior Engineer",
   },
 };
@@ -110,6 +122,12 @@ export default function RootLayout({
       lang="en"
     >
       <head>
+        <link
+          href="https://ketanrajpal.dev/rss.xml"
+          rel="alternate"
+          title="Ketan Rajpal RSS Feed"
+          type="application/rss+xml"
+        />
         <Script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

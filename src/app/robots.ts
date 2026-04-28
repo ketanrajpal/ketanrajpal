@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         allow: "/",
-        disallow: ["/studio", "/studio/", "/api/*"],
+        disallow: ["/studio", "/studio/", "/api/*", "/indexnow"],
         userAgent: "*",
       },
       {
