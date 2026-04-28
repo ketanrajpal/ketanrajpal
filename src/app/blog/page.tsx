@@ -3,7 +3,12 @@ import type { Metadata } from "next";
 import { BlogList } from "@/features/BlogList";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://ketanrajpal.dev/blog" },
+  alternates: {
+    canonical: "https://ketanrajpal.dev/blog",
+    types: {
+      "application/rss+xml": "https://ketanrajpal.dev/rss.xml",
+    },
+  },
   description:
     "Writing about technology, engineering decisions, and the craft behind the systems people rely on. By Ketan Rajpal.",
   openGraph: {
