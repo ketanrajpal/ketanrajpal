@@ -44,8 +44,27 @@ export const postType = defineType({
       type: "array",
     }),
     defineField({
+      name: "tags",
+      of: [defineArrayMember({ to: { type: "tag" }, type: "reference" })],
+      title: "Tags",
+      type: "array",
+    }),
+    defineField({
       name: "publishedAt",
       type: "datetime",
+    }),
+    defineField({
+      description: "SEO meta description (recommended: 150–160 characters).",
+      name: "metaDescription",
+      rows: 3,
+      title: "Meta Description",
+      type: "text",
+    }),
+    defineField({
+      name: "metaKeywords",
+      of: [defineArrayMember({ to: { type: "keyword" }, type: "reference" })],
+      title: "Meta Keywords",
+      type: "array",
     }),
     defineField({
       initialValue: false,
