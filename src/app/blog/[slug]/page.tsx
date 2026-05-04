@@ -18,8 +18,11 @@ type Post = {
   categories: string[];
   category: null | string;
   mainImage: null | Parameters<typeof urlFor>[0];
+  metaDescription: null | string;
+  metaKeywords: string[];
   publishedAt: null | string;
   subtitle: null | string;
+  tags: string[];
   title: null | string;
 };
 
@@ -29,11 +32,14 @@ const QUERY = `
     _updatedAt,
     title,
     subtitle,
+    metaDescription,
     publishedAt,
     mainImage,
     body,
     "category": categories[0]->title,
-    "categories": categories[]->title
+    "categories": categories[]->title,
+    "tags": tags[]->title,
+    "metaKeywords": metaKeywords[]->title
   }
 `;
 
@@ -60,14 +66,18 @@ export async function generateMetadata({
   return {
     alternates: { canonical: `https://ketanrajpal.dev/blog/${slug}` },
     authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
-    description: post.subtitle ?? undefined,
-    keywords: post.categories?.length ? post.categories : undefined,
+    description: post.metaDescription ?? post.subtitle ?? undefined,
+    keywords: post.metaKeywords?.length
+      ? post.metaKeywords
+      : post.categories?.length
+        ? post.categories
+        : undefined,
     openGraph: {
       authors: ["Ketan Rajpal"],
       ...(ogImage && {
         images: [{ alt: ogImageAlt, height: 630, url: ogImage, width: 1200 }],
       }),
-      description: post.subtitle ?? undefined,
+      description: post.metaDescription ?? post.subtitle ?? undefined,
       locale: "en_GB",
       modifiedTime: post._updatedAt,
       publishedTime: post.publishedAt ?? undefined,
@@ -82,7 +92,7 @@ export async function generateMetadata({
         images: [{ alt: ogImageAlt, url: ogImage }],
       }),
       card: "summary_large_image",
-      description: post.subtitle ?? undefined,
+      description: post.metaDescription ?? post.subtitle ?? undefined,
       title: post.title ?? undefined,
     },
   };
@@ -183,10 +193,17 @@ export default async function BlogPost({
     },
     dateModified: post._updatedAt,
     datePublished: post.publishedAt ?? undefined,
-    description: post.subtitle ?? undefined,
+    description: post.metaDescription ?? post.subtitle ?? undefined,
     headline: post.title ?? undefined,
     image: ogImage,
-    keywords: post.categories?.join(", "),
+    keywords:
+      [
+        ...(post.metaKeywords ?? []),
+        ...(post.tags ?? []),
+        ...(post.categories ?? []),
+      ]
+        .filter(Boolean)
+        .join(", ") || undefined,
     mainEntityOfPage: {
       "@id": `https://ketanrajpal.dev/blog/${slug}`,
       "@type": "WebPage",
