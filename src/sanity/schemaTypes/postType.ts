@@ -45,7 +45,7 @@ export const postType = defineType({
     }),
     defineField({
       name: "tags",
-      of: [defineArrayMember({ to: { type: "tag" }, type: "reference" })],
+      of: [defineArrayMember({ to: { type: "keyword" }, type: "reference" })],
       title: "Tags",
       type: "array",
     }),
