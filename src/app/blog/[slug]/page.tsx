@@ -37,9 +37,9 @@ const QUERY = `
     mainImage,
     body,
     "category": categories[0]->title,
-    "categories": categories[]->title,
-    "tags": tags[]->title,
-    "metaKeywords": metaKeywords[]->title
+    "categories": coalesce(categories[]->title, []),
+    "tags": coalesce(tags[]->title, []),
+    "metaKeywords": coalesce(metaKeywords[]->title, [])
   }
 `;
 
@@ -78,8 +78,8 @@ export async function generateMetadata({
   ];
 
   defaultKeywords.push(...(post.metaKeywords ?? []));
-  defaultKeywords.push(...post.tags);
-  defaultKeywords.push(...post.categories);
+  defaultKeywords.push(...(post.tags ?? []));
+  defaultKeywords.push(...(post.categories ?? []));
 
   const seen = new Set<string>();
   const keywords = defaultKeywords
