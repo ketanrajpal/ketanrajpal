@@ -63,15 +63,38 @@ export async function generateMetadata({
 
   const ogImageAlt = post.title ?? "Ketan Rajpal";
 
+  const defaultKeywords = [
+    "Ketan Rajpal",
+    "Freelance full stack developer London",
+    "Senior software engineer for hire UK",
+    "Custom web application development",
+    "React and Django developer UK",
+    "AI integration developer",
+    "Enterprise platform development",
+    "Legal technology developer UK",
+    "Education technology developer",
+    "Cloud migration consultant",
+    "Bespoke software development London",
+  ];
+
+  defaultKeywords.push(...(post.metaKeywords ?? []));
+  defaultKeywords.push(...post.tags);
+  defaultKeywords.push(...post.categories);
+
+  const seen = new Set<string>();
+  const keywords = defaultKeywords
+    .map((keyword) => keyword.toLowerCase())
+    .filter((keyword) => {
+      if (seen.has(keyword)) return false;
+      seen.add(keyword);
+      return true;
+    });
+
   return {
     alternates: { canonical: `https://ketanrajpal.dev/blog/${slug}` },
     authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
     description: post.metaDescription ?? post.subtitle ?? undefined,
-    keywords: post.metaKeywords?.length
-      ? post.metaKeywords
-      : post.categories?.length
-        ? post.categories
-        : undefined,
+    keywords: keywords,
     openGraph: {
       authors: ["Ketan Rajpal"],
       ...(ogImage && {
@@ -216,10 +239,39 @@ export default async function BlogPost({
     url: `https://ketanrajpal.dev/blog/${slug}`,
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        item: "https://ketanrajpal.dev",
+        name: "Home",
+        position: 1,
+      },
+      {
+        "@type": "ListItem",
+        item: "https://ketanrajpal.dev/blog",
+        name: "Blog",
+        position: 2,
+      },
+      {
+        "@type": "ListItem",
+        item: `https://ketanrajpal.dev/blog/${slug}`,
+        name: post.title ?? slug,
+        position: 3,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         type="application/ld+json"
       />
       <section className="bg-blue-100 min-h-screen ">
@@ -271,6 +323,19 @@ export default async function BlogPost({
                   components={portableTextComponents}
                   value={post.body}
                 />
+              )}
+
+              {post.tags.length > 0 && (
+                <div className="mt-10 flex flex-wrap gap-3">
+                  {post.tags.map((tag) => (
+                    <span
+                      className="rounded bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500"
+                      key={tag}
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
           </div>

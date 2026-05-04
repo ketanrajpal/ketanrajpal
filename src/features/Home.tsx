@@ -23,6 +23,7 @@ export const Home = () => {
           <Image
             alt="Ketan Rajpal"
             className="h-24 w-24 rotate-2 rounded-3xl object-cover sm:h-32 sm:w-32 md:h-40 md:w-40"
+            priority
             src={ProfileImage}
           />
           <h2 className="font-serif text-[clamp(3.5rem,12vw,10rem)] font-medium leading-none tracking-wide">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Ketan Rajpal — Senior Manager at KPMG UK based in London, United Kingdom, specialising in legal technology, education technology, and AI. Fifteen years shipping resilient, scalable digital platforms that keep working when stakes are high.",
   icons: {
+    apple: [{ sizes: "180x180", url: "/apple-icon.png" }],
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
@@ -48,24 +49,20 @@ export const metadata: Metadata = {
     "Education Technology",
     "AI Engineer",
     "Full Stack Developer",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "Python",
-    "Django",
-    "GraphQL",
-    "tRPC",
-    "PostgreSQL",
-    "AWS",
-    "Google Cloud",
-    "Azure",
-    "Docker",
-    "Tailwind CSS",
     "Software Portfolio",
     "London Developer",
     "Agentic AI",
     "LLM Integration",
+    "Freelance full stack developer London",
+    "Senior software engineer for hire UK",
+    "Custom web application development",
+    "React and Django developer UK",
+    "AI integration developer",
+    "Enterprise platform development",
+    "Legal technology developer UK",
+    "Education technology developer",
+    "Cloud migration consultant",
+    "Bespoke software development London",
   ],
   metadataBase: new URL("https://ketanrajpal.dev"),
   openGraph: {
@@ -111,6 +108,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -122,11 +123,37 @@ export default function RootLayout({
       lang="en"
     >
       <head>
+        <link href="https://cdn.sanity.io" rel="preconnect" />
+        <link
+          crossOrigin="anonymous"
+          href="https://cdn.sanity.io"
+          rel="dns-prefetch"
+        />
         <link
           href="https://ketanrajpal.dev/rss.xml"
           rel="alternate"
           title="Ketan Rajpal RSS Feed"
           type="application/rss+xml"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Ketan Rajpal",
+              potentialAction: {
+                "@type": "SearchAction",
+                "query-input": "required name=search_term_string",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate:
+                    "https://ketanrajpal.dev/blog?q={search_term_string}",
+                },
+              },
+              url: "https://ketanrajpal.dev",
+            }),
+          }}
+          type="application/ld+json"
         />
         <Script
           dangerouslySetInnerHTML={{
