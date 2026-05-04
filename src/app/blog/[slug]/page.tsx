@@ -81,11 +81,20 @@ export async function generateMetadata({
   defaultKeywords.push(...post.tags);
   defaultKeywords.push(...post.categories);
 
+  const seen = new Set<string>();
+  const keywords = defaultKeywords
+    .map((keyword) => keyword.toLowerCase())
+    .filter((keyword) => {
+      if (seen.has(keyword)) return false;
+      seen.add(keyword);
+      return true;
+    });
+
   return {
     alternates: { canonical: `https://ketanrajpal.dev/blog/${slug}` },
     authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
     description: post.metaDescription ?? post.subtitle ?? undefined,
-    keywords: defaultKeywords,
+    keywords: keywords,
     openGraph: {
       authors: ["Ketan Rajpal"],
       ...(ogImage && {
@@ -314,6 +323,19 @@ export default async function BlogPost({
                   components={portableTextComponents}
                   value={post.body}
                 />
+              )}
+
+              {post.tags.length > 0 && (
+                <div className="mt-10 flex flex-wrap gap-3">
+                  {post.tags.map((tag) => (
+                    <span
+                      className="rounded bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500"
+                      key={tag}
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
           </div>
