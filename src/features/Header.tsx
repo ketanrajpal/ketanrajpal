@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+import { Logo } from "./Logo";
+
 const baseNavigation = [
   { hash: "home", href: "/", label: "Home" },
   { hash: "experience", href: "/#experience", label: "Experience" },
@@ -68,7 +70,9 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 flex w-full justify-between p-10 z-50">
-      <div></div>
+      <div>
+        <Logo />
+      </div>
       <div className="relative">
         <button
           aria-controls="site-nav"

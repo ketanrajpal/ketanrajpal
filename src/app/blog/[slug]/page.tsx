@@ -332,7 +332,7 @@ export default async function BlogPost({
                       className="rounded bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500"
                       key={tag}
                     >
-                      #{tag}
+                      #{tag.replace(/\s+/g, "")}
                     </span>
                   ))}
                 </div>
