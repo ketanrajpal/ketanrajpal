@@ -7,20 +7,26 @@ const MotionLink = motion.create(Link);
 
 export const CardLink = ({
   ariaLabel,
+  label = "Read More",
   link,
+  type = "internal",
 }: {
   ariaLabel: string;
+  label?: string;
   link: string;
+  type?: "external" | "internal";
 }) => (
   <MotionLink
     aria-label={ariaLabel}
-    className="inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-zinc-900 text-white rounded-xl p-2 px-6 uppercase mt-5"
+    className="inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-zinc-600 text-white rounded-xl p-2 px-6 uppercase mt-5"
     href={link}
+    rel={type === "external" ? "noopener noreferrer" : undefined}
+    target={type === "external" ? "_blank" : undefined}
     transition={{ damping: 20, stiffness: 400, type: "spring" }}
     whileHover="hover"
     whileTap={{ scale: 0.95 }}
   >
-    <span>Read More</span>
+    <span>{label}</span>
     <span className="sr-only"> about {ariaLabel}</span>
     <motion.svg
       fill="none"

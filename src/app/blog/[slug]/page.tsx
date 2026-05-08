@@ -61,7 +61,9 @@ export async function generateMetadata({
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : undefined;
 
-  const ogImageAlt = post.title ?? "Ketan Rajpal";
+  const metaTitle = post.title
+    ? `Ketan Rajpal - ${post.title}`
+    : "Ketan Rajpal";
 
   const defaultKeywords = [
     "Ketan Rajpal",
@@ -98,25 +100,25 @@ export async function generateMetadata({
     openGraph: {
       authors: ["Ketan Rajpal"],
       ...(ogImage && {
-        images: [{ alt: ogImageAlt, height: 630, url: ogImage, width: 1200 }],
+        images: [{ alt: metaTitle, height: 630, url: ogImage, width: 1200 }],
       }),
       description: post.metaDescription ?? post.subtitle ?? undefined,
       locale: "en_GB",
       modifiedTime: post._updatedAt,
       publishedTime: post.publishedAt ?? undefined,
       siteName: "Ketan Rajpal",
-      title: post.title ?? undefined,
+      title: metaTitle,
       type: "article",
       url: `https://ketanrajpal.dev/blog/${slug}`,
     },
-    title: post.title ?? undefined,
+    title: metaTitle,
     twitter: {
       ...(ogImage && {
-        images: [{ alt: ogImageAlt, url: ogImage }],
+        images: [{ alt: metaTitle, url: ogImage }],
       }),
       card: "summary_large_image",
       description: post.metaDescription ?? post.subtitle ?? undefined,
-      title: post.title ?? undefined,
+      title: metaTitle,
     },
   };
 }

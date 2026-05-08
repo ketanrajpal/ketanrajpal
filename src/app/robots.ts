@@ -4,7 +4,7 @@ const SITE_URL = "https://ketanrajpal.dev";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    host: SITE_URL,
+    host: "ketanrajpal.dev",
     rules: [
       {
         allow: "/",
