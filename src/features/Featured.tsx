@@ -5,20 +5,22 @@ import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 
 import { CardHeading, CardParagraph, CardTag } from "@/components/Card";
+import { CardLink } from "@/components/CardLink";
 import { Heading } from "@/components/Heading";
 
-import GenesisEngine from "../images/featured/genesis-engine.jpg";
-import GlobalLegalServicesDataPlatform from "../images/featured/global-legal-services-data-platform.jpg";
-import IndianDevelopmentFoundationOfOverseasIndiansWebPortal from "../images/featured/indian-development-foundation-of-overseas-indians-web-portal.jpg";
-import LondonSchoolOfCommerceGroupOfCollegesApplication from "../images/featured/london-school-of-commerce-group-of-colleges-application.jpg";
-import TheEducationGroupAdmissionsSystem from "../images/featured/the-education-group-admissions-system.jpg";
-import UsaAirportsLimoService from "../images/featured/usa-airports-limo-service.jpg";
+import GenesisEngine from "../images/projects/genesis-engine.png";
+import GlobalLegalServicesDataPlatform from "../images/projects/global-legal-services-data-platform.png";
+import IndianDevelopmentFoundationOfOverseasIndiansWebPortal from "../images/projects/indian-development-foundation-of-overseas-indians-web-portal.png";
+import LondonSchoolOfCommerceGroupOfCollegesApplication from "../images/projects/london-school-of-commerce-group-of-colleges-application.png";
+import TheEducationGroupAdmissionsSystem from "../images/projects/the-education-group-admissions-system.png";
+import UsaAirportsLimoService from "../images/projects/usa-airports-limo-service.png";
 
 const projects: {
   category: string;
   description: string;
   href: string;
   image: StaticImageData;
+  link?: string;
   slug: string;
   title: string;
 }[] = [
@@ -37,6 +39,7 @@ const projects: {
       "An enterprise legal platform built to hold the full weight of cross-border M&A — so the people navigating it could focus on judgment, not administration.",
     href: "/projects/global-legal-services-data-platform",
     image: GlobalLegalServicesDataPlatform,
+    link: "https://kpmg.com/xx/en/what-we-do/services/law/international-business-reorganizations.html",
     slug: "global-legal-services-data-platform",
     title: "Global Legal Services Tax & Legal Data Platform",
   },
@@ -46,6 +49,7 @@ const projects: {
       "A government-grade platform that gave millions of overseas Indians a trusted, transparent way to invest in the country they never stopped caring about.",
     href: "/projects/indian-development-foundation-of-overseas-indians-web-portal",
     image: IndianDevelopmentFoundationOfOverseasIndiansWebPortal,
+    link: "https://www.indembarg.gov.in/page/india-development-foundation-of-overseas-indians-idf-oi/",
     slug: "indian-development-foundation-of-overseas-indians-web-portal",
     title: "Indian Development Foundation of Overseas Indians Web Portal",
   },
@@ -55,6 +59,7 @@ const projects: {
       "A bespoke admissions platform that replaced the chaos of disconnected tools with one clear, end-to-end view of every person walking through the door.",
     href: "/projects/london-school-of-commerce-group-of-colleges-application",
     image: LondonSchoolOfCommerceGroupOfCollegesApplication,
+    link: "https://crm.lsc.group/",
     slug: "london-school-of-commerce-group-of-colleges-application",
     title: "London School of Commerce Group of Colleges CRM",
   },
@@ -64,8 +69,8 @@ const projects: {
       "A purpose-built admissions platform that made the first step into higher education feel as considered and human as everything that follows.",
     href: "/projects/the-education-group-admissions-system",
     image: TheEducationGroupAdmissionsSystem,
+    link: "https://app.teg.london/",
     slug: "the-education-group-admissions-system",
-
     title: "The Education Group Admissions System",
   },
   {
@@ -74,6 +79,7 @@ const projects: {
       "A single platform that powers multiple businesses simultaneously — each fully branded, each built to be found, each running without friction in the background.",
     href: "/projects/usa-airports-limo-service",
     image: UsaAirportsLimoService,
+    link: "https://www.usairportlimoservice.com/",
     slug: "usa-airports-limo-service",
     title: "United States of America Airports Limo Service",
   },
@@ -98,13 +104,13 @@ export const Featured = () => {
   });
 
   return (
-    <section className="scroll-mt-28" id="projects">
+    <section className="scroll-mt-28 bg-gray-100" id="projects">
       <div className="flex flex-col gap-6 px-0 pb-10 mx-5 md:hidden">
         <FeaturedHeading />
         {projects.map((project) => (
           <article className="w-full" key={project.title}>
             <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
-              <div className="relative aspect-16/10 w-full overflow-hidden">
+              <div className="relative aspect-square w-full overflow-hidden">
                 <Image
                   alt={project.title}
                   className="h-full w-full object-cover"
@@ -115,6 +121,10 @@ export const Featured = () => {
                 <CardTag tag={project.category} />
                 <CardHeading title={project.title} />
                 <CardParagraph description={project.description} />
+                <CardLink
+                  ariaLabel={project.title ?? "this article"}
+                  link={`/projects/${project.slug ?? ""}`}
+                />
               </div>
             </div>
           </article>
@@ -148,6 +158,14 @@ export const Featured = () => {
                     <CardTag tag={project.category} />
                     <CardHeading title={project.title} />
                     <CardParagraph description={project.description} />
+                    {project.link && (
+                      <CardLink
+                        ariaLabel={project.title ?? "this article"}
+                        label="Visit Project"
+                        link={project.link}
+                        type="external"
+                      />
+                    )}
                   </div>
                 </div>
               </article>
