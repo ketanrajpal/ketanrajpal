@@ -11,6 +11,8 @@ import ProfileImage from "@/images/ketan-rajpal.jpg";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
+import { RelatedPostsSlider } from "../../../features/RelatedPostsSlider";
+
 type PortableTextBlock = TypedObject & {
   _type: "block";
   children?: Array<{ text?: string }>;
@@ -33,6 +35,15 @@ type Post = {
 
 type PostImage = Parameters<typeof urlFor>[0] & {
   alt?: null | string;
+};
+
+type RelatedPost = {
+  _id: string;
+  category: null | string;
+  mainImage: null | PostImage;
+  slug: null | { current: string };
+  subtitle: null | string;
+  title: null | string;
 };
 
 const QUERY = `
@@ -368,6 +379,8 @@ export default async function BlogPost({
                   ))}
                 </div>
               )}
+
+              <FromTheBlogSection slug={slug} />
             </div>
           </div>
 
@@ -396,3 +409,25 @@ export default async function BlogPost({
     </>
   );
 }
+
+const FromTheBlogSection = async ({ slug }: { slug: string }) => {
+  const posts = await client.fetch<RelatedPost[]>(
+    `
+    *[_type == "post" && slug.current != $slug] | order(publishedAt desc) [0...3] {
+      _id,
+      title,
+      subtitle,
+      "category": categories[0]->title,
+      mainImage,
+      slug
+    }
+  `,
+    { slug },
+  );
+
+  if (posts.length === 0) return null;
+
+  return (
+    <RelatedPostsSlider posts={posts.filter((post) => post.slug?.current)} />
+  );
+};
