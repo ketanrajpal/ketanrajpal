@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
+
 import { Experience } from "@/features/Experience";
 import { Featured } from "@/features/Featured";
 import { FromTheBlog } from "@/features/FromTheBlog";
 import { Home } from "@/features/Home";
 import { Welcome } from "@/features/Welcome";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://ketanrajpal.dev",
+  },
+};
 
 const personJsonLd = {
   "@context": "https://schema.org",

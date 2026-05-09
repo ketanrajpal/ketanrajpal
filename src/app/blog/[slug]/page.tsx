@@ -11,19 +11,28 @@ import ProfileImage from "@/images/ketan-rajpal.jpg";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
+type PortableTextBlock = TypedObject & {
+  _type: "block";
+  children?: Array<{ text?: string }>;
+};
+
 type Post = {
   _id: string;
   _updatedAt: string;
   body: TypedObject[];
   categories: string[];
   category: null | string;
-  mainImage: null | Parameters<typeof urlFor>[0];
+  mainImage: null | PostImage;
   metaDescription: null | string;
   metaKeywords: string[];
   publishedAt: null | string;
   subtitle: null | string;
   tags: string[];
   title: null | string;
+};
+
+type PostImage = Parameters<typeof urlFor>[0] & {
+  alt?: null | string;
 };
 
 const QUERY = `
@@ -61,9 +70,9 @@ export async function generateMetadata({
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : undefined;
 
-  const metaTitle = post.title
-    ? `Ketan Rajpal - ${post.title}`
-    : "Ketan Rajpal";
+  const description = getPostDescription(post);
+  const metaTitle = post.title ? post.title : "Ketan Rajpal's Blog Post";
+  const ogImageAlt = post.mainImage?.alt ?? metaTitle;
 
   const defaultKeywords = [
     "Ketan Rajpal",
@@ -95,14 +104,14 @@ export async function generateMetadata({
   return {
     alternates: { canonical: `https://ketanrajpal.dev/blog/${slug}` },
     authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
-    description: post.metaDescription ?? post.subtitle ?? undefined,
+    description,
     keywords: keywords,
     openGraph: {
       authors: ["Ketan Rajpal"],
       ...(ogImage && {
-        images: [{ alt: metaTitle, height: 630, url: ogImage, width: 1200 }],
+        images: [{ alt: ogImageAlt, height: 630, url: ogImage, width: 1200 }],
       }),
-      description: post.metaDescription ?? post.subtitle ?? undefined,
+      description,
       locale: "en_GB",
       modifiedTime: post._updatedAt,
       publishedTime: post.publishedAt ?? undefined,
@@ -114,10 +123,10 @@ export async function generateMetadata({
     title: metaTitle,
     twitter: {
       ...(ogImage && {
-        images: [{ alt: metaTitle, url: ogImage }],
+        images: [{ alt: ogImageAlt, url: ogImage }],
       }),
       card: "summary_large_image",
-      description: post.metaDescription ?? post.subtitle ?? undefined,
+      description,
       title: metaTitle,
     },
   };
@@ -126,6 +135,25 @@ export async function generateMetadata({
 export async function generateStaticParams() {
   const posts = await client.fetch<{ slug: string }[]>(SLUGS_QUERY);
   return posts.map((post) => ({ slug: post.slug }));
+}
+
+function getBodyTextExcerpt(body: TypedObject[], maxLength = 160) {
+  const text = body
+    .filter((block): block is PortableTextBlock => block._type === "block")
+    .flatMap((block) => block.children ?? [])
+    .map((child) => child.text ?? "")
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!text) return undefined;
+  if (text.length <= maxLength) return text;
+
+  return `${text.slice(0, maxLength).trimEnd()}...`;
+}
+
+function getPostDescription(post: Post) {
+  return post.metaDescription ?? post.subtitle ?? getBodyTextExcerpt(post.body);
 }
 
 const portableTextComponents: PortableTextComponents = {
@@ -204,6 +232,7 @@ export default async function BlogPost({
       })
     : null;
 
+  const description = getPostDescription(post);
   const ogImage = post.mainImage
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : "https://ketanrajpal.dev/og-image.png";
@@ -218,7 +247,7 @@ export default async function BlogPost({
     },
     dateModified: post._updatedAt,
     datePublished: post.publishedAt ?? undefined,
-    description: post.metaDescription ?? post.subtitle ?? undefined,
+    description,
     headline: post.title ?? undefined,
     image: ogImage,
     keywords:
@@ -307,7 +336,7 @@ export default async function BlogPost({
             <div className="overflow-hidden rounded-3xl">
               {post.mainImage && (
                 <Image
-                  alt={post.title ?? "Blog post"}
+                  alt={post.mainImage.alt ?? post.title ?? "Blog post"}
                   className="h-full w-full object-cover"
                   height={450}
                   loading="eager"

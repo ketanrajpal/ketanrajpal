@@ -18,6 +18,9 @@ export const dynamic = "force-static";
 export { viewport } from "next-sanity/studio";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://ketanrajpal.dev/studio",
+  },
   robots: { follow: false, index: false },
 };
 
