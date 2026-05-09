@@ -25,7 +25,6 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://ketanrajpal.dev",
     types: {
       "application/rss+xml": "https://ketanrajpal.dev/rss.xml",
     },
@@ -141,15 +140,6 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Ketan Rajpal",
-              potentialAction: {
-                "@type": "SearchAction",
-                "query-input": "required name=search_term_string",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate:
-                    "https://ketanrajpal.dev/blog?q={search_term_string}",
-                },
-              },
               url: "https://ketanrajpal.dev",
             }),
           }}

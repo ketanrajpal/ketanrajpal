@@ -9,16 +9,22 @@ export const CardLink = ({
   ariaLabel,
   label = "Read More",
   link,
+  small = false,
   type = "internal",
 }: {
   ariaLabel: string;
   label?: string;
   link: string;
+  small?: boolean;
   type?: "external" | "internal";
 }) => (
   <MotionLink
     aria-label={ariaLabel}
-    className="inline-flex w-fit cursor-pointer items-center gap-2 font-bold text-sm tracking-wide bg-zinc-600 text-white rounded-xl p-2 px-6 uppercase mt-5"
+    className={
+      small
+        ? "inline-flex w-fit cursor-pointer items-center gap-2 rounded-xl bg-zinc-600 px-4 py-2 text-xs font-bold uppercase tracking-wide text-white"
+        : "mt-5 inline-flex w-fit cursor-pointer items-center gap-2 rounded-xl bg-zinc-600 px-6 py-2 text-sm font-bold uppercase tracking-wide text-white"
+    }
     href={link}
     rel={type === "external" ? "noopener noreferrer" : undefined}
     target={type === "external" ? "_blank" : undefined}
@@ -30,7 +36,7 @@ export const CardLink = ({
     <span className="sr-only"> about {ariaLabel}</span>
     <motion.svg
       fill="none"
-      height="30"
+      height={small ? "24" : "30"}
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -38,7 +44,7 @@ export const CardLink = ({
       transition={{ damping: 20, stiffness: 400, type: "spring" }}
       variants={{ hover: { x: 5 } }}
       viewBox="0 0 24 24"
-      width="30"
+      width={small ? "24" : "30"}
     >
       <path d="M18 8L22 12L18 16" />
       <path d="M2 12H22" />

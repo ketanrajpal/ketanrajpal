@@ -6,6 +6,7 @@ export const postType = defineType({
     defineField({
       name: "title",
       type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "subtitle",
@@ -18,6 +19,7 @@ export const postType = defineType({
         source: "title",
       },
       type: "slug",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "author",
@@ -30,6 +32,16 @@ export const postType = defineType({
           name: "alt",
           title: "Alternative text",
           type: "string",
+          validation: (Rule) =>
+            Rule.custom((value, context) => {
+              const parent = context.parent as { asset?: unknown } | undefined;
+
+              if (parent?.asset && !value?.trim()) {
+                return "Alternative text is required when a main image is set.";
+              }
+
+              return true;
+            }),
         }),
       ],
       name: "mainImage",
@@ -52,6 +64,7 @@ export const postType = defineType({
     defineField({
       name: "publishedAt",
       type: "datetime",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       description: "SEO meta description (recommended: 150–160 characters).",
@@ -59,6 +72,7 @@ export const postType = defineType({
       rows: 3,
       title: "Meta Description",
       type: "text",
+      validation: (Rule) => Rule.required().min(50).max(160),
     }),
     defineField({
       name: "metaKeywords",
