@@ -33,7 +33,7 @@ const experiences = [
     year: "2013 - 2023",
   },
   {
-    color: "#f12f16",
+    color: "#020618",
     company: "Freelance",
     description:
       "Delivered 100+ projects for 60+ clients across government, education, and commercial sectors, covering full-stack engineering, product design, and infrastructure guidance.",
