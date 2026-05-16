@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 
 import { BlogList } from "@/features/BlogList";
+import { client } from "@/sanity/lib/client";
+
+type BlogListSchemaPost = {
+  slug: string;
+  title: null | string;
+};
+
+const BLOG_LIST_SCHEMA_QUERY = `
+  *[_type == "post" && defined(slug.current)]
+  | order(coalesce(publishedAt, _updatedAt) desc) {
+    title,
+    "slug": slug.current
+  }
+`;
 
 export const metadata: Metadata = {
   alternates: {
@@ -48,6 +62,37 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
-  return <BlogList />;
+export default async function BlogPage() {
+  const posts = await client.fetch<BlogListSchemaPost[]>(
+    BLOG_LIST_SCHEMA_QUERY,
+  );
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: posts.map((post, index) => ({
+        "@type": "ListItem",
+        item: {
+          "@type": "BlogPosting",
+          headline: post.title ?? "Untitled",
+          url: `https://ketanrajpal.dev/blog/${post.slug}`,
+        },
+        position: index + 1,
+      })),
+    },
+    name: "Thinking Out Loud",
+    url: "https://ketanrajpal.dev/blog",
+  };
+
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        type="application/ld+json"
+      />
+      <BlogList />
+    </>
+  );
 }

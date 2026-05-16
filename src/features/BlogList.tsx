@@ -6,10 +6,6 @@ import { Heading } from "@/components/Heading";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
-type PostImage = Parameters<typeof urlFor>[0] & {
-  alt?: null | string;
-};
-
 type BlogPost = {
   _id: string;
   category: null | string;
@@ -17,6 +13,10 @@ type BlogPost = {
   slug: null | { current: string };
   subtitle: null | string;
   title: null | string;
+};
+
+type PostImage = Parameters<typeof urlFor>[0] & {
+  alt?: null | string;
 };
 
 const QUERY = `
@@ -72,7 +72,7 @@ export const BlogList = async () => {
   const posts = await client.fetch<BlogPost[]>(QUERY);
 
   return (
-    <section className="min-h-screen bg-blue-100 pt-30">
+    <section className="min-h-screen bg-blue-100 py-30">
       <div className="mx-auto flex max-w-4xl flex-col gap-20">
         <BlogHeading />
         {posts.length === 0 && (

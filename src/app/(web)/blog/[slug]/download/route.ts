@@ -55,8 +55,10 @@ export async function GET(
 
   return new Response(json, {
     headers: {
+      "Cache-Control": "private, no-store, no-cache, must-revalidate",
       "Content-Disposition": `attachment; filename="${filename}"`,
       "Content-Type": "application/json; charset=utf-8",
+      "X-Robots-Tag": "noindex, nofollow, noarchive",
     },
   });
 }

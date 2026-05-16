@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, type Transition } from "motion/react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { Logo } from "./Logo";
@@ -20,6 +20,7 @@ const SCROLL_DURATION_MS = 1400;
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const isHome = pathname === "/";
 
   const primaryNavigation = baseNavigation.map((item) => ({
@@ -32,6 +33,15 @@ export const Header = () => {
     href: string,
   ) => {
     setIsOpen(false);
+
+    if (href.startsWith("/#") && pathname !== "/") {
+      event.preventDefault();
+
+      const targetId = href.replace("/#", "");
+      sessionStorage.setItem("pending-scroll-target", targetId);
+      router.push("/");
+      return;
+    }
 
     // Smooth-scroll only for section links when already on home.
     if (pathname !== "/" || !href.startsWith("/#")) return;

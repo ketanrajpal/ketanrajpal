@@ -7,6 +7,9 @@ import Script from "next/script";
 
 import "./globals.css";
 
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -87,6 +90,16 @@ export const metadata: Metadata = {
     },
     index: true,
   },
+  ...(googleSiteVerification || bingSiteVerification
+    ? {
+        verification: {
+          ...(googleSiteVerification ? { google: googleSiteVerification } : {}),
+          ...(bingSiteVerification
+            ? { other: { "msvalidate.01": bingSiteVerification } }
+            : {}),
+        },
+      }
+    : {}),
   title: {
     default: "Ketan Rajpal | Senior Engineer",
     template: "%s | Ketan Rajpal",
@@ -134,6 +147,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Ketan Rajpal",
+              potentialAction: {
+                "@type": "SearchAction",
+                query: "required",
+                "query-input": "required name=query",
+                target: "https://ketanrajpal.dev/blog?query={query}",
+              },
               url: "https://ketanrajpal.dev",
             }),
           }}
