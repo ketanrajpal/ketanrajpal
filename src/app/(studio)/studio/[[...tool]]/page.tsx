@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 
 import { NextStudio } from "next-sanity/studio";
 
-import config from "../../../../sanity.config";
+import config from "../../../../../sanity.config";
 
 export const dynamic = "force-static";
 
