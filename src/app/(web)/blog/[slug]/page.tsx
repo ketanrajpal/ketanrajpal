@@ -7,11 +7,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { CardTag } from "@/components/Card";
+import { RelatedPostsSlider } from "@/features/RelatedPostsSlider";
 import ProfileImage from "@/images/ketan-rajpal.jpg";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-
-import { RelatedPostsSlider } from "../../../features/RelatedPostsSlider";
 
 type PortableTextBlock = TypedObject & {
   _type: "block";

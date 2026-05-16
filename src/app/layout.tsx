@@ -5,13 +5,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
-import { LenisProvider } from "@/components/LenisProvider";
-
 import "./globals.css";
-import { Footer } from "@/features/Footer";
-import { Header } from "@/features/Header";
-import { Scroll } from "@/features/Scroll";
-import { Technologies } from "@/features/Technologies";
+
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -93,6 +90,16 @@ export const metadata: Metadata = {
     },
     index: true,
   },
+  ...(googleSiteVerification || bingSiteVerification
+    ? {
+        verification: {
+          ...(googleSiteVerification ? { google: googleSiteVerification } : {}),
+          ...(bingSiteVerification
+            ? { other: { "msvalidate.01": bingSiteVerification } }
+            : {}),
+        },
+      }
+    : {}),
   title: {
     default: "Ketan Rajpal | Senior Engineer",
     template: "%s | Ketan Rajpal",
@@ -140,6 +147,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Ketan Rajpal",
+              potentialAction: {
+                "@type": "SearchAction",
+                query: "required",
+                "query-input": "required name=query",
+                target: "https://ketanrajpal.dev/blog?query={query}",
+              },
               url: "https://ketanrajpal.dev",
             }),
           }}
@@ -166,15 +179,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width="0"
           />
         </noscript>
-        <LenisProvider>
-          <main>
-            <Scroll />
-            <Header />
-            {children}
-            <Technologies />
-            <Footer />
-          </main>
-        </LenisProvider>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

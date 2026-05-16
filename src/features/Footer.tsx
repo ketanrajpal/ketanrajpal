@@ -79,7 +79,7 @@ export const Footer = () => {
       >
         hello@ketanrajpal.dev
       </Link>
-      <div className="flex gap-3 md:gap-6">
+      <div className="flex gap-3 md:gap-6 flex-wrap justify-center">
         {socials.map((social) => (
           <Link
             className="flex items-center gap-2 bg-slate-300 font-bold tracking-wide text-sm rounded-lg p-2 px-3 text-slate-950"

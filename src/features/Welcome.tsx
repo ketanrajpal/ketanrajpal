@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const letters = "Hello".split("");
+const WELCOME_SEEN_AT_KEY = "welcome-seen-at";
+const WELCOME_TTL_MS = 5 * 60 * 1000;
 
 const containerVariants = {
   exit: {
@@ -22,12 +24,28 @@ const containerVariants = {
 };
 
 export function Welcome() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(() => {
+    if (typeof window === "undefined") return false;
+
+    const seenAtRaw = window.localStorage.getItem(WELCOME_SEEN_AT_KEY);
+    const seenAt = seenAtRaw ? Number(seenAtRaw) : NaN;
+    const hasValidSession =
+      Number.isFinite(seenAt) && Date.now() - seenAt < WELCOME_TTL_MS;
+    const shouldShow = !hasValidSession;
+
+    if (shouldShow) {
+      window.localStorage.setItem(WELCOME_SEEN_AT_KEY, String(Date.now()));
+    }
+
+    return shouldShow;
+  });
 
   useEffect(() => {
+    if (!visible) return;
+
     const timer = setTimeout(() => setVisible(false), 2600);
     return () => clearTimeout(timer);
-  }, []);
+  }, [visible]);
 
   return (
     <AnimatePresence>
