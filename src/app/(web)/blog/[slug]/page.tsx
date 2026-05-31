@@ -18,6 +18,7 @@ type PortableTextBlock = TypedObject & {
 };
 
 type Post = {
+  _createdAt: string;
   _id: string;
   _updatedAt: string;
   body: TypedObject[];
@@ -26,7 +27,6 @@ type Post = {
   mainImage: null | PostImage;
   metaDescription: null | string;
   metaKeywords: string[];
-  publishedAt: null | string;
   subtitle: null | string;
   tags: string[];
   title: null | string;
@@ -47,12 +47,12 @@ type RelatedPost = {
 
 const QUERY = `
   *[_type == "post" && slug.current == $slug][0] {
+    _createdAt,
     _id,
     _updatedAt,
     title,
     subtitle,
     metaDescription,
-    publishedAt,
     mainImage,
     body,
     "category": categories[0]->title,
@@ -124,7 +124,7 @@ export async function generateMetadata({
       description,
       locale: "en_GB",
       modifiedTime: post._updatedAt,
-      publishedTime: post.publishedAt ?? undefined,
+      publishedTime: post._createdAt,
       siteName: "Ketan Rajpal",
       title: metaTitle,
       type: "article",
@@ -234,13 +234,11 @@ export default async function BlogPost({
 
   if (!post) notFound();
 
-  const publishedDate = post.publishedAt
-    ? new Date(post.publishedAt).toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-      })
-    : null;
+  const publishedDate = new Date(post._createdAt).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   const description = getPostDescription(post);
   const ogImage = post.mainImage
@@ -256,7 +254,7 @@ export default async function BlogPost({
       url: "https://ketanrajpal.dev",
     },
     dateModified: post._updatedAt,
-    datePublished: post.publishedAt ?? undefined,
+    datePublished: post._createdAt,
     description,
     headline: post.title ?? undefined,
     image: ogImage,
@@ -335,11 +333,9 @@ export default async function BlogPost({
               <h1 className="font-serif text-3xl font-medium leading-snug tracking-wide text-pretty text-zinc-900 md:text-5xl">
                 {post.title}
               </h1>
-              {publishedDate && (
-                <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mt-4">
-                  {publishedDate}
-                </p>
-              )}
+              <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mt-4">
+                {publishedDate}
+              </p>
             </div>
           </div>
           {post.mainImage && (
@@ -412,7 +408,7 @@ export default async function BlogPost({
 const FromTheBlogSection = async ({ slug }: { slug: string }) => {
   const posts = await client.fetch<RelatedPost[]>(
     `
-    *[_type == "post" && slug.current != $slug] | order(publishedAt desc) [0...3] {
+    *[_type == "post" && slug.current != $slug] | order(_createdAt desc) [0...3] {
       _id,
       title,
       subtitle,

@@ -4,23 +4,15 @@ type PortableTextBlock = TypedObject & {
   _type: string;
   children?: Array<{
     _type: string;
-    text?: string;
     bold?: boolean;
-    italic?: boolean;
     code?: boolean;
+    italic?: boolean;
     marks?: string[];
+    text?: string;
   }>;
-  style?: string;
   level?: number;
   listItem?: string;
-};
-
-type PortableTextImage = TypedObject & {
-  _type: "image";
-  asset?: {
-    _ref: string;
-  };
-  alt?: string;
+  style?: string;
 };
 
 type PortableTextCode = TypedObject & {
@@ -29,20 +21,47 @@ type PortableTextCode = TypedObject & {
   language?: string;
 };
 
-function serializeChildren(
-  children: PortableTextBlock["children"] = [],
+type PortableTextImage = TypedObject & {
+  _type: "image";
+  alt?: string;
+  asset?: {
+    _ref: string;
+  };
+};
+
+export function generateJsonContent(
+  post: {
+    _createdAt?: null | string;
+    body: TypedObject[];
+    categories?: string[];
+    mainImage?: null | { alt?: null | string; asset?: { _ref: string } };
+    metaDescription?: null | string;
+    metaKeywords?: string[];
+    subtitle?: null | string;
+    tags?: string[];
+    title?: null | string;
+  },
+  slug: string,
+  author = "Ketan Rajpal",
 ): string {
-  return children
-    .map((child) => {
-      let text = child.text || "";
+  const bodyMarkdown = portableTextToMarkdown(post.body);
 
-      if (child.bold) text = `**${text}**`;
-      if (child.italic) text = `*${text}*`;
-      if (child.code) text = `\`${text}\``;
+  const content = {
+    author,
+    body: bodyMarkdown,
+    category: post.categories?.[0] ?? null,
+    createdAt: post._createdAt ?? null,
+    image: post.mainImage?.asset?._ref ?? null,
+    imageAlt: post.mainImage?.alt ?? null,
+    metaDescription: post.metaDescription ?? null,
+    metaKeywords: post.metaKeywords ?? [],
+    slug,
+    subtitle: post.subtitle ?? null,
+    tags: post.tags ?? [],
+    title: post.title ?? null,
+  };
 
-      return text;
-    })
-    .join("");
+  return JSON.stringify(content, null, 2);
 }
 
 export function portableTextToMarkdown(body: TypedObject[]): string {
@@ -55,6 +74,8 @@ export function portableTextToMarkdown(body: TypedObject[]): string {
         const style = typedBlock.style || "normal";
 
         switch (style) {
+          case "blockquote":
+            return `> ${text}`;
           case "h1":
             return `# ${text}`;
           case "h2":
@@ -67,8 +88,6 @@ export function portableTextToMarkdown(body: TypedObject[]): string {
             return `##### ${text}`;
           case "h6":
             return `###### ${text}`;
-          case "blockquote":
-            return `> ${text}`;
           case "normal":
           default:
             if (typedBlock.listItem === "bullet") {
@@ -101,37 +120,18 @@ export function portableTextToMarkdown(body: TypedObject[]): string {
     .join("\n\n");
 }
 
-export function generateJsonContent(
-  post: {
-    title?: string | null;
-    subtitle?: string | null;
-    publishedAt?: string | null;
-    metaDescription?: string | null;
-    mainImage?: { alt?: string | null; asset?: { _ref: string } } | null;
-    categories?: string[];
-    tags?: string[];
-    metaKeywords?: string[];
-    body: TypedObject[];
-  },
-  slug: string,
-  author = "Ketan Rajpal",
+function serializeChildren(
+  children: PortableTextBlock["children"] = [],
 ): string {
-  const bodyMarkdown = portableTextToMarkdown(post.body);
+  return children
+    .map((child) => {
+      let text = child.text || "";
 
-  const content = {
-    title: post.title ?? null,
-    subtitle: post.subtitle ?? null,
-    slug,
-    author,
-    image: post.mainImage?.asset?._ref ?? null,
-    imageAlt: post.mainImage?.alt ?? null,
-    category: post.categories?.[0] ?? null,
-    tags: post.tags ?? [],
-    publishedAt: post.publishedAt ?? null,
-    metaDescription: post.metaDescription ?? null,
-    metaKeywords: post.metaKeywords ?? [],
-    body: bodyMarkdown,
-  };
+      if (child.bold) text = `**${text}**`;
+      if (child.italic) text = `*${text}*`;
+      if (child.code) text = `\`${text}\``;
 
-  return JSON.stringify(content, null, 2);
+      return text;
+    })
+    .join("");
 }

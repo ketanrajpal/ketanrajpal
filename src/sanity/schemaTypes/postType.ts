@@ -34,7 +34,7 @@ export const postType = defineType({
           type: "string",
           validation: (Rule) =>
             Rule.custom((value, context) => {
-              const parent = context.parent as { asset?: unknown } | undefined;
+              const parent = context.parent as undefined | { asset?: unknown };
 
               if (parent?.asset && !value?.trim()) {
                 return "Alternative text is required when a main image is set.";
@@ -60,11 +60,6 @@ export const postType = defineType({
       of: [defineArrayMember({ to: { type: "keyword" }, type: "reference" })],
       title: "Tags",
       type: "array",
-    }),
-    defineField({
-      name: "publishedAt",
-      type: "datetime",
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       description: "SEO meta description (recommended: 150–160 characters).",

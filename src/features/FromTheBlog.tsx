@@ -1,8 +1,8 @@
-import { client } from "@/sanity/lib/client";
 import {
-  type PostImage,
   FromTheBlogClient,
+  type PostImage,
 } from "@/features/FromTheBlogClient";
+import { client } from "@/sanity/lib/client";
 
 type BlogPost = {
   _id: string;
@@ -15,7 +15,7 @@ type BlogPost = {
 
 const QUERY = `
   *[_type == "post" && featured == true && defined(slug.current)]
-  | order(coalesce(publishedAt, _updatedAt) desc) [0...3] {
+  | order(_createdAt desc) [0...3] {
     _id,
     title,
     slug,

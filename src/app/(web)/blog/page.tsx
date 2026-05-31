@@ -10,7 +10,7 @@ type BlogListSchemaPost = {
 
 const BLOG_LIST_SCHEMA_QUERY = `
   *[_type == "post" && defined(slug.current)]
-  | order(coalesce(publishedAt, _updatedAt) desc) {
+  | order(_createdAt desc) {
     title,
     "slug": slug.current
   }

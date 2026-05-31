@@ -21,7 +21,7 @@ type PostImage = Parameters<typeof urlFor>[0] & {
 
 const QUERY = `
   *[_type == "post" && defined(slug.current)]
-  | order(coalesce(publishedAt, _updatedAt) desc) {
+  | order(_createdAt desc) {
     _id,
     title,
     slug,
