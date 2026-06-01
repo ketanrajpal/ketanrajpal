@@ -14,7 +14,7 @@ type BlogPost = {
 };
 
 const QUERY = `
-  *[_type == "post" && featured == true && defined(slug.current)]
+  *[_type == "post" && featured == true && defined(slug.current) && !(_id in path("drafts.**"))]
   | order(_createdAt desc) [0...3] {
     _id,
     title,

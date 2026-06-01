@@ -20,7 +20,7 @@ type PostImage = Parameters<typeof urlFor>[0] & {
 };
 
 const QUERY = `
-  *[_type == "post" && defined(slug.current)]
+  *[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))]
   | order(_createdAt desc) {
     _id,
     title,

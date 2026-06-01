@@ -12,7 +12,7 @@ type Post = {
 };
 
 const QUERY = `
-  *[_type == "post"] | order(_createdAt desc) {
+  *[_type == "post" && !(_id in path("drafts.**"))] | order(_createdAt desc) {
     _id,
     title,
     slug,

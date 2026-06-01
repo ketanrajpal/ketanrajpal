@@ -23,7 +23,7 @@ type PostImage = {
 };
 
 const QUERY = `
-  *[_type == "post" && slug.current == $slug][0] {
+  *[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     _createdAt,
     _id,
     title,

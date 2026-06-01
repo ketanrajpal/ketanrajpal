@@ -46,7 +46,7 @@ type RelatedPost = {
 };
 
 const QUERY = `
-  *[_type == "post" && slug.current == $slug][0] {
+  *[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     _createdAt,
     _id,
     _updatedAt,
@@ -63,7 +63,7 @@ const QUERY = `
 `;
 
 const SLUGS_QUERY = `
-  *[_type == "post" && defined(slug.current)] { "slug": slug.current }
+  *[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))] { "slug": slug.current }
 `;
 
 export async function generateMetadata({
@@ -408,7 +408,7 @@ export default async function BlogPost({
 const FromTheBlogSection = async ({ slug }: { slug: string }) => {
   const posts = await client.fetch<RelatedPost[]>(
     `
-    *[_type == "post" && slug.current != $slug] | order(_createdAt desc) [0...3] {
+    *[_type == "post" && slug.current != $slug && !(_id in path("drafts.**"))] | order(_createdAt desc) [0...3] {
       _id,
       title,
       subtitle,

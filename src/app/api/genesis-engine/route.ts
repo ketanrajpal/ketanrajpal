@@ -356,7 +356,8 @@ export async function POST(request: NextRequest) {
 
   const writeClient = buildWriteClient();
 
-  const postId = `genesis-post-${blog.id}`;
+  const publishedPostId = `genesis-post-${blog.id}`;
+  const postId = `drafts.${publishedPostId}`;
   const slugCurrent = slugify(blog.title);
   const categoryNames = [blog.parent_category, blog.category, blog.subcategory]
     .filter(
@@ -448,6 +449,7 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({
     ok: true,
     postId,
+    publishedPostId,
     revalidatedPaths: ["/blog", `/blog/${slugCurrent}`, "/sitemap.xml"],
     source: SITE_URL,
   });

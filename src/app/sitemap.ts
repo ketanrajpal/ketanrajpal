@@ -11,7 +11,7 @@ type SitemapPost = {
 };
 
 const SITEMAP_QUERY = `
-  *[_type == "post" && defined(slug.current)]
+  *[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))]
   | order(_createdAt desc) {
     "slug": slug.current,
     _createdAt,
