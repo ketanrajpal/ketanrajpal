@@ -8,8 +8,8 @@ type LlmPost = {
 };
 
 const LLM_POSTS_QUERY = `
-  *[_type == "post" && defined(slug.current)]
-  | order(coalesce(publishedAt, _updatedAt) desc)[0...25] {
+  *[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))]
+  | order(_createdAt desc)[0...25] {
     title,
     "slug": slug.current
   }

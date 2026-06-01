@@ -4,6 +4,7 @@ import { generateJsonContent } from "@/lib/portableTextToMarkdown";
 import { client } from "@/sanity/lib/client";
 
 type Post = {
+  _createdAt: string;
   _id: string;
   body: TypedObject[];
   categories: string[];
@@ -11,7 +12,6 @@ type Post = {
   mainImage: null | PostImage;
   metaDescription: null | string;
   metaKeywords: string[];
-  publishedAt: null | string;
   subtitle: null | string;
   tags: string[];
   title: null | string;
@@ -23,12 +23,12 @@ type PostImage = {
 };
 
 const QUERY = `
-  *[_type == "post" && slug.current == $slug][0] {
+  *[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
+    _createdAt,
     _id,
     title,
     subtitle,
     metaDescription,
-    publishedAt,
     mainImage,
     body,
     "slug": slug.current,

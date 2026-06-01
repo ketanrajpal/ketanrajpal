@@ -3,21 +3,21 @@ import { client } from "@/sanity/lib/client";
 const SITE_URL = "https://ketanrajpal.dev";
 
 type Post = {
+  _createdAt: string;
   _id: string;
   category: null | string;
-  publishedAt: null | string;
   slug: null | { current: string };
   subtitle: null | string;
   title: null | string;
 };
 
 const QUERY = `
-  *[_type == "post"] | order(publishedAt desc) {
+  *[_type == "post" && !(_id in path("drafts.**"))] | order(_createdAt desc) {
     _id,
     title,
     slug,
     subtitle,
-    publishedAt,
+    _createdAt,
     "category": categories[0]->title
   }
 `;
@@ -29,9 +29,7 @@ export async function GET() {
     .filter((post) => post.slug?.current && post.title)
     .map((post) => {
       const url = `${SITE_URL}/blog/${post.slug!.current}`;
-      const pubDate = post.publishedAt
-        ? new Date(post.publishedAt).toUTCString()
-        : "";
+      const pubDate = new Date(post._createdAt).toUTCString();
       const description = post.subtitle ? escapeXml(post.subtitle) : "";
       const category = post.category ? escapeXml(post.category) : "";
 
