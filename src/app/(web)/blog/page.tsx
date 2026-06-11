@@ -18,12 +18,12 @@ const BLOG_LIST_SCHEMA_QUERY = `
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://ketanrajpal.dev/blog",
+    canonical: "https://www.ketanrajpal.dev/blog",
     types: {
-      "application/rss+xml": "https://ketanrajpal.dev/rss.xml",
+      "application/rss+xml": "https://www.ketanrajpal.dev/rss.xml",
     },
   },
-  authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
+  authors: [{ name: "Ketan Rajpal", url: "https://www.ketanrajpal.dev" }],
   description:
     "Writing about technology, engineering decisions, and the craft behind the systems people rely on. By Ketan Rajpal.",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Ketan Rajpal",
     title: "Thinking Out Loud",
     type: "website",
-    url: "https://ketanrajpal.dev/blog",
+    url: "https://www.ketanrajpal.dev/blog",
   },
   title: "Thinking Out Loud",
   twitter: {
@@ -77,13 +77,13 @@ export default async function BlogPage() {
         item: {
           "@type": "BlogPosting",
           headline: post.title ?? "Untitled",
-          url: `https://ketanrajpal.dev/blog/${post.slug}`,
+          url: `https://www.ketanrajpal.dev/blog/${post.slug}`,
         },
         position: index + 1,
       })),
     },
     name: "Thinking Out Loud",
-    url: "https://ketanrajpal.dev/blog",
+    url: "https://www.ketanrajpal.dev/blog",
   };
 
   return (

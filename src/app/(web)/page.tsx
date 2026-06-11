@@ -8,7 +8,7 @@ import { Welcome } from "@/features/Welcome";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://ketanrajpal.dev",
+    canonical: "https://www.ketanrajpal.dev",
   },
 };
 
@@ -22,7 +22,7 @@ const personJsonLd = {
   },
   description:
     "Senior Manager at KPMG UK based in London, United Kingdom. Fifteen years building resilient digital platforms across legal technology, education, and AI.",
-  image: "https://ketanrajpal.dev/og-image.png",
+  image: "https://www.ketanrajpal.dev/og-image.png",
   jobTitle: "Senior Manager",
   name: "Ketan Rajpal",
   sameAs: [
@@ -30,7 +30,7 @@ const personJsonLd = {
     "https://github.com/ketanrajpal",
     "https://twitter.com/ketanrajpal",
   ],
-  url: "https://ketanrajpal.dev",
+  url: "https://www.ketanrajpal.dev",
   worksFor: {
     "@type": "Organization",
     name: "KPMG UK",

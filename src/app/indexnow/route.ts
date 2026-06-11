@@ -2,7 +2,7 @@
  * Serves the IndexNow key verification file.
  *
  * IndexNow requires a plain-text file at:
- *   https://ketanrajpal.dev/{INDEXNOW_KEY}.txt
+ *   https://www.ketanrajpal.dev/{INDEXNOW_KEY}.txt
  *
  * Rewrite in next.config.ts maps /{key}.txt → /indexnow
  * so this single route handles it without polluting the app directory.

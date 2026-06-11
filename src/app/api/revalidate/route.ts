@@ -3,13 +3,13 @@ import { type NextRequest, NextResponse } from "next/server";
 
 import { submitToIndexNow } from "@/lib/indexnow";
 
-const SITE_URL = "https://ketanrajpal.dev";
+const SITE_URL = "https://www.ketanrajpal.dev";
 
 /**
  * Sanity webhook endpoint.
  *
  * Configure in Sanity dashboard:
- *   URL:    https://ketanrajpal.dev/api/revalidate
+ *   URL:    https://www.ketanrajpal.dev/api/revalidate
  *   Method: POST
  *   Trigger: on publish / on update
  *   Header: x-webhook-secret = <SANITY_WEBHOOK_SECRET>

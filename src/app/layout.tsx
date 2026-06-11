@@ -23,10 +23,10 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   alternates: {
     types: {
-      "application/rss+xml": "https://ketanrajpal.dev/rss.xml",
+      "application/rss+xml": "https://www.ketanrajpal.dev/rss.xml",
     },
   },
-  authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
+  authors: [{ name: "Ketan Rajpal", url: "https://www.ketanrajpal.dev" }],
   category: "Technology",
   creator: "Ketan Rajpal",
   description:
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "Cloud migration consultant",
     "Bespoke software development London",
   ],
-  metadataBase: new URL("https://ketanrajpal.dev"),
+  metadataBase: new URL("https://www.ketanrajpal.dev"),
   openGraph: {
     description:
       "Senior Manager at KPMG UK, based in London, United Kingdom. Fifteen years building resilient digital platforms across legal technology, education, and AI.",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     siteName: "Ketan Rajpal",
     title: "Ketan Rajpal | Senior Engineer",
     type: "website",
-    url: "https://ketanrajpal.dev",
+    url: "https://www.ketanrajpal.dev",
   },
   publisher: "Ketan Rajpal",
   robots: {
@@ -136,7 +136,7 @@ export default function RootLayout({
           rel="dns-prefetch"
         />
         <link
-          href="https://ketanrajpal.dev/rss.xml"
+          href="https://www.ketanrajpal.dev/rss.xml"
           rel="alternate"
           title="Ketan Rajpal RSS Feed"
           type="application/rss+xml"
@@ -151,9 +151,9 @@ export default function RootLayout({
                 "@type": "SearchAction",
                 query: "required",
                 "query-input": "required name=query",
-                target: "https://ketanrajpal.dev/blog?query={query}",
+                target: "https://www.ketanrajpal.dev/blog?query={query}",
               },
-              url: "https://ketanrajpal.dev",
+              url: "https://www.ketanrajpal.dev",
             }),
           }}
           type="application/ld+json"
