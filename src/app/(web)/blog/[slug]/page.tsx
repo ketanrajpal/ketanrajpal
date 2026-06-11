@@ -112,8 +112,8 @@ export async function generateMetadata({
     });
 
   return {
-    alternates: { canonical: `https://ketanrajpal.dev/blog/${slug}` },
-    authors: [{ name: "Ketan Rajpal", url: "https://ketanrajpal.dev" }],
+    alternates: { canonical: `https://www.ketanrajpal.dev/blog/${slug}` },
+    authors: [{ name: "Ketan Rajpal", url: "https://www.ketanrajpal.dev" }],
     description,
     keywords: keywords,
     openGraph: {
@@ -128,7 +128,7 @@ export async function generateMetadata({
       siteName: "Ketan Rajpal",
       title: metaTitle,
       type: "article",
-      url: `https://ketanrajpal.dev/blog/${slug}`,
+      url: `https://www.ketanrajpal.dev/blog/${slug}`,
     },
     title: metaTitle,
     twitter: {
@@ -243,7 +243,7 @@ export default async function BlogPost({
   const description = getPostDescription(post);
   const ogImage = post.mainImage
     ? urlFor(post.mainImage).width(1200).height(630).url()
-    : "https://ketanrajpal.dev/og-image.png";
+    : "https://www.ketanrajpal.dev/og-image.png";
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -251,7 +251,7 @@ export default async function BlogPost({
     author: {
       "@type": "Person",
       name: "Ketan Rajpal",
-      url: "https://ketanrajpal.dev",
+      url: "https://www.ketanrajpal.dev",
     },
     dateModified: post._updatedAt,
     datePublished: post._createdAt,
@@ -267,15 +267,15 @@ export default async function BlogPost({
         .filter(Boolean)
         .join(", ") || undefined,
     mainEntityOfPage: {
-      "@id": `https://ketanrajpal.dev/blog/${slug}`,
+      "@id": `https://www.ketanrajpal.dev/blog/${slug}`,
       "@type": "WebPage",
     },
     publisher: {
       "@type": "Person",
-      image: "https://ketanrajpal.dev/og-image.png",
+      image: "https://www.ketanrajpal.dev/og-image.png",
       name: "Ketan Rajpal",
     },
-    url: `https://ketanrajpal.dev/blog/${slug}`,
+    url: `https://www.ketanrajpal.dev/blog/${slug}`,
   };
 
   const breadcrumbJsonLd = {
@@ -284,19 +284,19 @@ export default async function BlogPost({
     itemListElement: [
       {
         "@type": "ListItem",
-        item: "https://ketanrajpal.dev",
+        item: "https://www.ketanrajpal.dev",
         name: "Home",
         position: 1,
       },
       {
         "@type": "ListItem",
-        item: "https://ketanrajpal.dev/blog",
+        item: "https://www.ketanrajpal.dev/blog",
         name: "Blog",
         position: 2,
       },
       {
         "@type": "ListItem",
-        item: `https://ketanrajpal.dev/blog/${slug}`,
+        item: `https://www.ketanrajpal.dev/blog/${slug}`,
         name: post.title ?? slug,
         position: 3,
       },

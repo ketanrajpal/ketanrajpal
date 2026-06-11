@@ -19,7 +19,7 @@ export { viewport } from "next-sanity/studio";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://ketanrajpal.dev/studio",
+    canonical: "https://www.ketanrajpal.dev/studio",
   },
   robots: { follow: false, index: false },
 };

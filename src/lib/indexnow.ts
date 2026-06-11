@@ -1,4 +1,4 @@
-const SITE_URL = "https://ketanrajpal.dev";
+const SITE_URL = "https://www.ketanrajpal.dev";
 
 // IndexNow is supported by Bing, Yandex, and Naver.
 // A single submission to any endpoint propagates to all partners.

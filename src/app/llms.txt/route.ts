@@ -1,6 +1,6 @@
 import { client } from "@/sanity/lib/client";
 
-const SITE_URL = "https://ketanrajpal.dev";
+const SITE_URL = "https://www.ketanrajpal.dev";
 
 type LlmPost = {
   slug: string;

@@ -37,7 +37,7 @@ type SanityReference = {
   _type: "reference";
 };
 
-const SITE_URL = "https://ketanrajpal.dev";
+const SITE_URL = "https://www.ketanrajpal.dev";
 const SUPPORTED_EVENTS = ["BLOG_CREATED", "BLOG_UPDATED"] as const;
 
 export const runtime = "nodejs";
