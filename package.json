@@ -18,10 +18,10 @@
     "lenis": "^1.3.23",
     "motion": "^12.38.0",
     "next": "16.2.6",
-    "next-sanity": "^12.3.0",
+    "next-sanity": "^13.2.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "sanity": "^5.21.0",
+    "sanity": "^6.6.0",
     "styled-components": "^6.4.0"
   },
   "devDependencies": {
