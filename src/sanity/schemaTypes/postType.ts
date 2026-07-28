@@ -1,5 +1,18 @@
-import { DocumentTextIcon } from "@sanity/icons";
+import { createElement } from "react";
 import { defineArrayMember, defineField, defineType } from "sanity";
+
+const DocumentTextIcon = () =>
+  createElement(
+    "svg",
+    { fill: "none", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" },
+    createElement("path", {
+      d: "M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm6 1.5V8h2.5L13 5.5Zm-1 4.5h4m-4 3h4m-8 3h8m-8-3h2m-2-3h2",
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1.6",
+    }),
+  );
 
 export const postType = defineType({
   fields: [
