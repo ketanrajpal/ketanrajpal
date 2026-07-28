@@ -130,7 +130,7 @@ export async function generateMetadata({
       type: "article",
       url: `https://www.ketanrajpal.dev/blog/${slug}`,
     },
-    title: metaTitle,
+    title: { absolute: `${metaTitle} - Ketan Rajpal` },
     twitter: {
       ...(ogImage && {
         images: [{ alt: ogImageAlt, url: ogImage }],
@@ -164,6 +164,18 @@ function getBodyTextExcerpt(body: TypedObject[], maxLength = 160) {
 
 function getPostDescription(post: Post) {
   return post.metaDescription ?? post.subtitle ?? getBodyTextExcerpt(post.body);
+}
+
+function getWordCount(body: TypedObject[]) {
+  const text = body
+    .filter((block): block is PortableTextBlock => block._type === "block")
+    .flatMap((block) => block.children ?? [])
+    .map((child) => child.text ?? "")
+    .join(" ")
+    .trim();
+
+  if (!text) return undefined;
+  return text.split(/\s+/).filter(Boolean).length;
 }
 
 const portableTextComponents: PortableTextComponents = {
@@ -248,6 +260,7 @@ export default async function BlogPost({
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    ...(post.category ? { articleSection: post.category } : {}),
     author: {
       "@type": "Person",
       name: "Ketan Rajpal",
@@ -258,6 +271,8 @@ export default async function BlogPost({
     description,
     headline: post.title ?? undefined,
     image: ogImage,
+    inLanguage: "en-GB",
+    isAccessibleForFree: true,
     keywords:
       [
         ...(post.metaKeywords ?? []),
@@ -276,6 +291,7 @@ export default async function BlogPost({
       name: "Ketan Rajpal",
     },
     url: `https://www.ketanrajpal.dev/blog/${slug}`,
+    ...(getWordCount(post.body) ? { wordCount: getWordCount(post.body) } : {}),
   };
 
   const breadcrumbJsonLd = {
