@@ -1,5 +1,31 @@
-import { CodeIcon, ImageIcon } from "@sanity/icons";
+import { createElement } from "react";
 import { defineArrayMember, defineField, defineType } from "sanity";
+
+const CodeIcon = () =>
+  createElement(
+    "svg",
+    { fill: "none", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" },
+    createElement("path", {
+      d: "m8.5 7.5-4 4.5 4 4.5M15.5 7.5l4 4.5-4 4.5M13.5 4.5l-3 15",
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1.8",
+    }),
+  );
+
+const ImageIcon = () =>
+  createElement(
+    "svg",
+    { fill: "none", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" },
+    createElement("path", {
+      d: "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5Zm2 2v10h12V7H6Zm2.5 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm8.5 6-3-3-3 3-2-2-3 3",
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1.6",
+    }),
+  );
 
 /**
  * This is the schema type for block content used in the post document type
