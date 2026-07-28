@@ -32,9 +32,14 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Ketan Rajpal — Senior Manager at KPMG UK based in London, United Kingdom, specialising in legal technology, education technology, and AI. Fifteen years shipping resilient, scalable digital platforms that keep working when stakes are high.",
   icons: {
-    apple: [{ sizes: "180x180", url: "/apple-icon.png" }],
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    apple: [{ sizes: "180x180", type: "image/png", url: "/apple-icon.png" }],
+    icon: [
+      { sizes: "32x32", type: "image/x-icon", url: "/favicon.ico" },
+      { type: "image/svg+xml", url: "/favicon.svg" },
+      { sizes: "192x192", type: "image/png", url: "/icon-192.png" },
+      { sizes: "512x512", type: "image/png", url: "/icon-512.png" },
+    ],
+    shortcut: "/favicon.ico",
   },
   keywords: [
     "Ketan Rajpal",
